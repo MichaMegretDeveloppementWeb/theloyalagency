@@ -11,18 +11,23 @@
 
     <meta name="description" content="@yield('description', "The Loyal Agency, spécialisée dans la fidélisation client, vous aide à maximiser la valeur de vos relations commerciales et à améliorer votre rentabilité en transformant vos clients en partenaires de croissance.")">
 
-    <link rel="icon" href="{{ asset('assets/images/commons/browser-icon.webp') }}" />
+    <link rel="icon" href="{{ asset('assets/images/commons/browser-crown-icon.webp') }}" />
 
     <link rel="canonical" href="@yield('canonical-url', config('app.url'))" />
 
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=quicksand:300,400,500|ephesis:400|merriweather:300,400,500" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=quicksand:300,400,500|ephesis:400|literata:100,200,300,400,500" rel="stylesheet" />
 
     <!--CSS-->
     <link rel="stylesheet" href="{{ asset("assets/css/commons.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/main-header.css") }}">
     @yield('styles')
 
+    <!--JS-->
+    <script src="{{ asset("assets/js/commons.js") }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/main-header.js") }}"></script>
+    @yield('scripts')
 
 </head>
 
@@ -31,12 +36,10 @@
         <div id="wrapper">
 
             @if($header)
-                <header>
-                    {{ $header }}
-                </header>
+                {{ $header }}
             @endif
 
-            <main id="page_content">
+            <main id="page_content" {{ $attributes->merge(['class' => '']) }}>
 
                 {{ $slot }}
 

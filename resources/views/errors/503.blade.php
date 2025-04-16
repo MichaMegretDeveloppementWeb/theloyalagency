@@ -12,7 +12,7 @@
         <img class="logo" src="{{ asset('assets/images/commons/logo-2.webp') }}" alt="The loyal agency Logo">
 
         <div class="content">
-            Le site de notre agence de consulting en fidélisation et relation client est en cours de création. &Agrave; très vite.
+            Le site de notre agence de consulting en fidélisation et expérience client est en cours de création. &Agrave; très vite.
         </div>
 
     </div>
