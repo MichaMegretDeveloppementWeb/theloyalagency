@@ -3,7 +3,7 @@
 @endsection
 
 @section('scripts')
-    <script type="module" src="{{ asset("assets/js/web/homepage.js") }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/homepage.js?v=".now()->toDateTimeString()) }}"></script>
 @endsection
 
 <x-layouts.web class="homepage">
@@ -72,22 +72,8 @@
 
                 <div class="morph_sub_title_container">
 
-                    <div class="first_part">
-                        <div class="variant variant_1">Treat</div>
-                        <div class="variant variant_2">Make</div>
-                    </div>
-
-                    <div class="middle_part">them</div>
-
-                    <div class="third_part">
-                        <div class="variant_letter">
-                            <div class="variant variant_1">R</div>
-                            <div class="variant variant_2">L</div>
-                        </div>
-                        <div class="fixed_text">
-                            oyal
-                        </div>
-                    </div>
+                    <div class="variant variant_1">Treat &nbsp; them Royal</div>
+                    <div class="variant variant_2">Make &nbsp;them Loyal</div>
 
                 </div>
 
