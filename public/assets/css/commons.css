@@ -1,12 +1,85 @@
 /**-------------------------------------------------------------------------------------------------------------------
+FONTS
+-------------------------------------------------------------------------------------------------------------------**/
+
+@font-face {
+    font-family: 'TT Nooks';
+    src: url('../../fonts/TTNooks/TT Nooks Script Trial Light.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Nooks';
+    src: url('../../fonts/TTNooks/TT Nooks Script Trial Regular.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Nooks';
+    src: url('../../fonts/TTNooks/TT Nooks Script Trial Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+@font-face {
+    font-family: 'American Favorite';
+    src: url("../../fonts/AmericanFavorite/AmericanFavoriteRegular.ttf") format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'American Favorite';
+    src: url("../../fonts/AmericanFavorite/AmericanFavoriteBold.otf") format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+
+@font-face {
+    font-family: 'Lagu';
+    src: url("../../fonts/Lagu/Lagu Sans Light.otf") format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lagu';
+    src: url("../../fonts/Lagu/Lagu Sans Medium.otf") format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lagu';
+    src: url("../../fonts/Lagu/Lagu Sans SemiBold.otf") format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lagu';
+    src: url("../../fonts/Lagu/Lagu Sans Bold.otf") format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+/**-------------------------------------------------------------------------------------------------------------------
 COLORS SETUP
 -------------------------------------------------------------------------------------------------------------------**/
 
 
 :root{
-    --main-cta-color: #FFB24D;
-    --main-cta-color-hover: #e09a3b;
-    --strong-color: #A33404;
+    --main-title-color: #1b55ba;
 }
 
 
@@ -19,7 +92,7 @@ RESET DEFAULT CSS
 
 
 *{
-    font-family: 'literata', serif;
+    font-family: 'Lagu', serif;
     /*font-family: 'quicksand', serif;*/
     box-sizing: border-box;
     margin: 0;
@@ -71,19 +144,40 @@ PAGE WRAPPER
 -------------------------------------------------------------------------------------------------------------------**/
 
 #wrapper{
-    width: calc(100vw - (100vw - 100%));
+    /*width: calc(100vw - (100vw - 100%));
     width: calc(100dvw - (100dvw - 100%));
     min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100dvh;*/
     font-size: 0.85em;
 }
 
 
 
 
-.main_colored_text{
-    color: var(--strong-color);
-    font-weight: 400;
+h1, h2, h3{
+    color: var(--main-title-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**-------------------------------------------------------------------------------------------------------------------
+ICONS
+-------------------------------------------------------------------------------------------------------------------**/
+
+.app_icon{
+    width: 1em;
+    min-width: 1em;
 }
 
 

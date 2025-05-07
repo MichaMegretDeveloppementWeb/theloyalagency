@@ -20,8 +20,8 @@
     <link href="https://fonts.bunny.net/css?family=quicksand:300,400,500|ephesis:400|literata:100,200,300,400,500" rel="stylesheet" />
 
     <!--CSS-->
-    <link rel="stylesheet" href="{{ asset("assets/css/commons.css") }}">
-    <link rel="stylesheet" href="{{ asset("assets/css/web/main-header.css") }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/commons.css?v=".now()->toDateTimeString()) }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/main-header.css?v=".now()->toDateTimeString())}}">
     @yield('styles')
 
     <!--JS-->

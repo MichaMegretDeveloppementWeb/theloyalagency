@@ -15,6 +15,7 @@ ready(() => {
 
         const burger = document.querySelector("#main_header .burger_container");
         const mainNavbar = document.querySelector("#main_navbar");
+        const mainHeader = document.querySelector("#main_header");
 
         if (isOrInId(e.target, 'main_header') && isOrInClass(e.target, "burger_container")){
 
@@ -24,6 +25,9 @@ ready(() => {
             if (mainNavbar){
                 mainNavbar.classList.toggle('open')
             }
+            if (mainHeader){
+                mainHeader.classList.toggle('blue');
+            }
 
         }
         else if(!isOrInId(e.target, "main_navbar")){
@@ -32,6 +36,9 @@ ready(() => {
             }
             if (mainNavbar){
                 mainNavbar.classList.remove('open')
+            }
+            if (mainHeader){
+                mainHeader.classList.remove('blue');
             }
         }
     }

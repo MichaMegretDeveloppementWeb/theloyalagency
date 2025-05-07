@@ -3,7 +3,7 @@ import {ready} from "../dom-utils.js";
 
 ready(() => {
 
-    const masks = [
+   /* const masks = [
         {
             element: document.querySelector("#page_content.homepage section.stats .stat_list .stat.clients_spend_more .image_container .mask1"),
             getTarget: () => {
@@ -13,7 +13,7 @@ ready(() => {
 
                 const offsetMax = window.innerHeight / 15;
                 const top = -offsetMax + (offsetMax * 2 * ratio / 100);
-                const left = (top * -0.745) - 5;
+                const left = (top * -0.890) - 5;
                 return { left, top };
             },
             initialize() {
@@ -28,7 +28,7 @@ ready(() => {
 
                 const offsetMax = window.innerHeight / 15;
                 const top = -offsetMax + (offsetMax * 2 * ratio / 100);
-                const left = (top * -0.745) - 5;
+                const left = (top * -0.890) - 5;
                 this.current = { left, top };
                 this.element.style.transform = `translate(${left.toFixed(2)}px, ${top.toFixed(2)}px)`;
             },
@@ -43,7 +43,7 @@ ready(() => {
 
                 const offsetMax = window.innerHeight / 15;
                 const top = offsetMax - (offsetMax * 2 * ratio / 100);
-                const left = (top * -0.745) + 5;
+                const left = (top * -0.890) + 5;
                 return { left, top };
             },
             initialize() {
@@ -58,7 +58,7 @@ ready(() => {
 
                 const offsetMax = window.innerHeight / 15;
                 const top = offsetMax - (offsetMax * 2 * ratio / 100);
-                const left = (top * -0.745) + 5;
+                const left = (top * -0.890) + 5;
                 this.current = { left, top };
                 this.element.style.transform = `translate(${left.toFixed(2)}px, ${top.toFixed(2)}px)`;
             },
@@ -131,7 +131,7 @@ ready(() => {
 
                 const offsetMax = window.innerHeight / 15;
                 const top = -offsetMax + (offsetMax * 2 * ratio / 100);
-                const left = (top * -0.745) - 5;
+                const left = (top * -0.890) - 5;
                 return { left, top };
             },
             initialize() {
@@ -146,7 +146,7 @@ ready(() => {
 
                 const offsetMax = window.innerHeight / 15;
                 const top = -offsetMax + (offsetMax * 2 * ratio / 100);
-                const left = (top * -0.745) - 5;
+                const left = (top * -0.890) - 5;
                 this.current = { left, top };
                 this.element.style.transform = `translate(${left.toFixed(2)}px, ${top.toFixed(2)}px)`;
             },
@@ -161,7 +161,7 @@ ready(() => {
 
                 const offsetMax = window.innerHeight / 15;
                 const top = offsetMax - (offsetMax * 2 * ratio / 100);
-                const left = (top * 0.745) + 5;
+                const left = (top * 0.890) + 5;
                 return { left, top };
             },
             initialize() {
@@ -176,7 +176,7 @@ ready(() => {
 
                 const offsetMax = window.innerHeight / 15;
                 const top = offsetMax - (offsetMax * 2 * ratio / 100);
-                const left = (top * 0.745) + 5;
+                const left = (top * 0.890) + 5;
                 this.current = { left, top };
                 this.element.style.transform = `translate(${left.toFixed(2)}px, ${top.toFixed(2)}px)`;
             },
@@ -232,54 +232,96 @@ ready(() => {
 
     let isAnimating = false;
 
-    masks.forEach(mask => mask.initialize());
+    masks.forEach(mask => mask.initialize());*/
 
 
 
 
 
+    function defineHeaderVisibility(lastScroll){
 
+        const currentScrollTop = window.scrollY;
 
-    const ourStrategyContainer = document.querySelector("#page_content.homepage section.our_strategy");
+        const header = document.getElementById("main_header");
 
-    function handleRevealOurStrategyContent(){
+        if(currentScrollTop > header.getBoundingClientRect().height){
 
-        const currentScroll = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const top = ourStrategyContainer.offsetTop;
-        const height = ourStrategyContainer.offsetHeight;
+            header.style.top = `0`;
 
-        const dist = (currentScroll + windowHeight) - (top + height / 2);
-
-        if(ourStrategyContainer && dist > 0){
-            if (!ourStrategyContainer.classList.contains('revealed')){
-                ourStrategyContainer.classList.add('revealed');
+            if (lastScroll > currentScrollTop) {
+                header.classList.add("appear");
+                header.classList.add("transition");
             }
+            else {
+                header.classList.remove("appear");
+            }
+
         }
         else {
-            ourStrategyContainer.classList.remove('revealed');
+            if ( (lastScroll < currentScrollTop || !header.classList.contains("transition")) && !header.classList.contains("blue")) {
+                header.style.top = `-${currentScrollTop}px`;
+                header.classList.remove("transition");
+            }
+            else {
+                header.style.top = `0`;
+            }
+        }
+
+
+
+    }
+
+
+    let lastScroll = window.scrollY;
+
+    defineHeaderVisibility(lastScroll);
+
+    document.addEventListener("scroll", () => {
+
+        defineHeaderVisibility(lastScroll);
+
+        lastScroll = window.scrollY;
+
+        /*if (!isAnimating) {
+            isAnimating = true;
+            requestAnimationFrame(animateMasks);
+        }*/
+
+    });
+
+
+
+
+
+
+    window.addEventListener('resize', function (e){
+        defineHeaderLogoSrc();
+    })
+
+    defineHeaderLogoSrc();
+
+    function defineHeaderLogoSrc(){
+
+        const logo = document.querySelector("#main_header .logo_container img");
+
+        const logoSrc = logo.getAttribute('src');
+
+        if (window.innerWidth < 800){
+
+            const nouveauSrc = logoSrc.replace('main-logo-desktop', 'main-logo-mobil');
+
+            logo.setAttribute('src', nouveauSrc);
+        }
+        else {
+
+            const nouveauSrc = logoSrc.replace('main-logo-mobil', 'main-logo-desktop');
+
+            logo.setAttribute('src', nouveauSrc);
+
         }
 
     }
 
-    handleRevealOurStrategyContent();
-
-
-
-
-
-
-
-    document.addEventListener("scroll", () => {
-
-        if (!isAnimating) {
-            isAnimating = true;
-            requestAnimationFrame(animateMasks);
-        }
-
-        handleRevealOurStrategyContent();
-
-    });
 
 
 })
