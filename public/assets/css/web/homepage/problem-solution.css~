@@ -1,23 +1,23 @@
 #page_content.homepage section.problem_solution_container{
     width: 100%;
+    max-width: 120em;
     margin: auto;
-    padding: 7em 0;
+    padding: 9em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    margin-bottom: 50em;
 }
 
 
 #page_content.homepage section.problem_solution_container .title_container{
     width: 95%;
+    padding: 0 1em;
     text-align: center;
+    transform: skewY(3deg);
 }
 
-#page_content.homepage section.problem_solution_container .title_container.no_skew{
-    transform: skewY(0);
-}
 
 #page_content.homepage section.problem_solution_container .title_container>.title{
     font-size: min(6em, 11vw);
@@ -27,12 +27,15 @@
 
 
 #page_content.homepage section.problem_solution_container .card_list_container{
-    width: 100%;
-    max-width: 120em;
-    display: grid;
-    grid-template-columns: 1fr;
+    width: max-content;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 5em;
-    padding: 0 2em;
+    padding: 0 1em;
 }
 
 
@@ -48,11 +51,16 @@ CARD DESIGN DEFAULT
 ---------------------------------------------------------------------------------------------------------------------*/
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container{
-    padding: 2em;
+    padding: 1.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 80vw;
+    max-width: 30em;
+    min-width: 23em;
+    position: sticky;
+    top: 5em;
 }
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container.card_3{
@@ -62,8 +70,7 @@ CARD DESIGN DEFAULT
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .card{
     /*width: 27em;*/
     width: 100%;
-    max-width: 25em;
-    aspect-ratio: 9/12;
+    aspect-ratio: 9/11;
 }
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container{
@@ -252,7 +259,7 @@ CARD DESIGN DEFAULT
 
 
 /*---------------------------------------------------------------------------------------------------------------------
-CARD DESIGN ALT
+CARD DESIGN ALT 1
 ---------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -277,7 +284,7 @@ CARD DESIGN ALT
 #page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch{
     position: absolute;
     z-index: 2;
-    transition: 0.35s transform ease-in-out, 0.25s box-shadow ease-in-out;
+    transition: 0.35s 0.25s transform ease-in-out, 0.25s box-shadow ease-in-out;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
     width: 15em;
     height: 15em;
@@ -296,25 +303,28 @@ CARD DESIGN ALT
 
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch.switch_to_solution{
-    top: 0;
+    bottom: initial;
     right: 0;
     left: initial;
+    top: 0;
     transform: translate(50%, -50%);
     align-items: flex-end;
     justify-content: flex-start;
-    background: var(--main-blue);
+    background: #ffffff2b;
+    backdrop-filter: blur(3px);
     padding: 1em;
 }
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch.switch_to_problem{
     top: initial;
+    left: 0;
     bottom: 0;
     right: initial;
-    left: 0;
     transform: translate(-100%, 100%);
     align-items: flex-start;
     justify-content: flex-end;
-    background: #2e2e2e;
+    background: #ffffff2b;
+    backdrop-filter: blur(3px);
     padding: 1em 0.75em;
 }
 
@@ -449,7 +459,7 @@ CARD DESIGN ALT
 #page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .card_text.problem_text{
     bottom: 0;
     top: initial;
-    background: linear-gradient(0deg, #0000009e 70%, transparent);
+    background: linear-gradient(180deg, #0000009e 20%, transparent);
     padding-right: 1.5em;
     opacity: 1;
     text-align: left;
@@ -458,7 +468,7 @@ CARD DESIGN ALT
 #page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .card_text.solution_text{
     bottom: initial;
     top: 0;
-    background: linear-gradient(180deg, #0000009e 70%, transparent);
+    background: linear-gradient(0deg, #0000009e 20%, transparent);
     padding-left: 1.5em;
     opacity: 0;
     text-align: left;
@@ -518,6 +528,7 @@ CARD DESIGN ALT
     -webkit-tap-highlight-color: transparent;
     outline: none;
     background: transparent;
+    backdrop-filter: blur(2px);
 }
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch:hover{
@@ -639,15 +650,28 @@ CARD DESIGN ALT
 
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
 
     #page_content.homepage section.problem_solution_container .card_list_container{
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 5em;
     }
 
     #page_content.homepage section.problem_solution_container .card_list_container .card_container{
-        padding: 3em;
+        width: 35vw;
+        min-width: 26em;
+        position: relative;
+        top: initial;
     }
+
+    #page_content.homepage section.problem_solution_container .card_list_container .card_container .card{
+        aspect-ratio: 9/10;
+    }
+
 
 
 }
@@ -656,21 +680,63 @@ CARD DESIGN ALT
 
 
 
-
 @media screen and (min-width: 1200px) {
 
+
     #page_content.homepage section.problem_solution_container .card_list_container{
-        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 10em;
+    }
+
+
+    #page_content.homepage section.problem_solution_container .card_list_container .card_container {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 29vw;
+        max-width: 28em;
+        min-width: initial;
+        box-shadow: 0 2em 5em -2em #000000;
+        border-radius: 1em;
+        transition: 0.25s transform ease-in-out, 0.25s box-shadow ease-in-out;
+    }
+
+    #page_content.homepage section.problem_solution_container .card_list_container .card_container:hover{
+        transform: translateY(-1em);
+        box-shadow: 0 4em 4em -2em #000000B6;
+    }
+
+
+    #page_content.homepage section.problem_solution_container .card_list_container .card_container:first-of-type{
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        transform: translate(-10%, -60%);
+    }
+
+    #page_content.homepage section.problem_solution_container .card_list_container .card_container:first-of-type:hover{
+        transform: translate(-10%, calc(-60% - 1em));
+        box-shadow: 0 4em 4em -2em #000000B6;
+    }
+
+    #page_content.homepage section.problem_solution_container .card_list_container .card_container:last-of-type{
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 100%;
+        transform: translate(10%, -60%);
+    }
+
+    #page_content.homepage section.problem_solution_container .card_list_container .card_container:last-of-type:hover{
+        transform: translate(10%, calc(-60% - 1em));
+        box-shadow: 0 4em 4em -2em #000000B6;
     }
 
 
     #page_content.homepage section.problem_solution_container .card_list_container .card_container .card{
-        max-width: 30em;
+        max-width: 100%;
+        aspect-ratio: 9/12;
     }
-
-    #page_content.homepage section.problem_solution_container .card_list_container .card_container.card_3{
-        grid-column: initial;
-    }
-
 
 }

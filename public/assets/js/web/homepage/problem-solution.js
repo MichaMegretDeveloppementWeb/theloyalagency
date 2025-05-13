@@ -64,7 +64,7 @@ ready(() => {
 
 
 
-    const title = document.querySelector("#page_content.homepage section.problem_solution_container .title_container>.title");
+    const title = document.querySelector("#page_content.homepage section.problem_solution_container .title_container");
 
     let currentX = null;
     let targetX = null;
@@ -81,11 +81,11 @@ ready(() => {
 
         let progress = 1 - (Math.min(Math.max(distance / maxDistance, 0), 1));
 
-        targetX = 80 - (80 * progress);
+        targetX = -10 + (10 * progress);
 
         function frame() {
             currentX = currentX + (targetX - currentX) * 0.01;
-            title.style.transform = `translateX(${currentX}vw)`;
+            title.style.transform = `skewY(${currentX}deg)`;
             if (Math.abs(currentX - targetX) > 0.1){
                 requestAnimationFrame(frame);
             }
@@ -100,13 +100,13 @@ ready(() => {
     }
 
 
-    /*defineTitlePosition();
+    defineTitlePosition();
 
     window.addEventListener('scroll', function (e){
 
         defineTitlePosition();
 
-    })*/
+    })
 
 
 
