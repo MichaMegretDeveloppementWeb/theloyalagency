@@ -10,10 +10,11 @@ TOP BANNER SECTION
 
 #page_content.homepage section.top_banner_container .top_banner{
     width: 100%;
+    max-width: 120em;
     height: 55em;
     background: #f7f2ea;
     position: relative;
-    margin-bottom: 200em;
+    margin: auto auto;
 }
 
 
@@ -49,13 +50,13 @@ TOP BANNER SECTION
     font-family: "TT Nooks", sans-serif;
     font-weight: 200;
     font-size: 4.5em;
-    max-width: 7em;
+    max-width: 10em;
     line-height: 1em;
 }
 
 #page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container{
     perspective: 200px;
-    width: 25em;
+    width: 23em;
     height: 5em;
 }
 
@@ -84,7 +85,7 @@ TOP BANNER SECTION
 }
 
 #page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .variant_2{
-    transform: rotateX(-180deg) translateZ(100px);
+    transform: rotateX(-180deg) translateZ(70px);
     opacity: 0;
     animation: 3s animateMorphSubTitleFirstPart_2 ease-in-out infinite;
 }
@@ -99,11 +100,11 @@ TOP BANNER SECTION
         opacity: 1;
     }
     50%{
-        transform: rotateX(180deg)  translateZ(100px);
+        transform: rotateX(180deg)  translateZ(70px);
         opacity: 0;
     }
     75%{
-        transform: rotateX(180deg)  translateZ(100px);
+        transform: rotateX(180deg)  translateZ(70px);
         opacity: 0;
     }
     100%{
@@ -114,11 +115,11 @@ TOP BANNER SECTION
 
 @keyframes animateMorphSubTitleFirstPart_2 {
     0%{
-        transform: rotateX(-180deg)  translateZ(100px);
+        transform: rotateX(-180deg)  translateZ(70px);
         opacity: 0;
     }
     25%{
-        transform: rotateX(-180deg)  translateZ(100px);
+        transform: rotateX(-180deg)  translateZ(70px);
         opacity: 0;
     }
     50%{
@@ -130,7 +131,7 @@ TOP BANNER SECTION
         opacity: 1;
     }
     100%{
-        transform: rotateX(180deg)  translateZ(100px);
+        transform: rotateX(180deg)  translateZ(70px);
         z-index: 0;
     }
 }
@@ -160,14 +161,14 @@ TOP BANNER SECTION
     justify-content: center;
     gap: 1em;
     margin-top: 1em;
-    color: var(--main-title-color);
+    color: var(--main-blue);
     border-bottom: 1px solid;
 }
 
 #page_content.homepage section.top_banner_container .top_banner .title_container .cta.contact .app_icon{
     min-width: 1.75em;
     margin-bottom: -0.2em;
-    fill: var(--main-title-color);
+    fill: var(--main-blue);
     margin-left: -0.5em;
     transition: 0.25s margin-left;
 }
@@ -186,9 +187,9 @@ TOP BANNER SECTION
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 50vw;
-    max-width: 48em;
-    min-width: 30em;
+    width: 47vw;
+    max-width: 47em;
+    min-width: 33em;
     overflow: hidden;
 }
 
@@ -267,13 +268,3 @@ TOP BANNER SECTION
 
 }
 
-
-
-
-@media screen and (min-width: 1580px) {
-
-    #page_content.homepage section.top_banner_container .top_banner .title_container .main_title{
-        max-width: 10em;
-    }
-
-}

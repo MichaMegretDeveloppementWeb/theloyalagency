@@ -19,7 +19,7 @@
     <x-web.homepage.top-banner/>
 
 
-    <x-web.homepage.problem-solution/>
+
 
 
     {{--<section class="stats">

@@ -79,7 +79,8 @@ COLORS SETUP
 
 
 :root{
-    --main-title-color: #1b55ba;
+    --main-blue: #1E58BE;
+    --main-orange : #F67E00;
 }
 
 
@@ -154,8 +155,9 @@ PAGE WRAPPER
 
 
 
-h1, h2, h3{
-    color: var(--main-title-color);
+h1, h2, h3, h4, h5, h6{
+    font-family: "TT Nooks", sans-serif;
+    color: var(--main-blue);
 }
 
 

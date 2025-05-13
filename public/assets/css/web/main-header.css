@@ -212,13 +212,13 @@
 #main_navbar .navbar_links .link.contact a{
     padding: 1em;
     border-radius: 0.25em;
-    border: 1px solid var(--main-title-color);
-    color: var(--main-title-color);
+    border: 1px solid var(--main-blue);
+    color: var(--main-blue);
     transition: 0.25s background;
 }
 
 #main_navbar .navbar_links .link.contact a:hover {
-    background: var(--main-title-color);
+    background: var(--main-blue);
     color: white;
 }
 
@@ -269,7 +269,7 @@
 @media screen and (min-width: 1000px) {
 
     #main_header .header_logo-name{
-        left: calc(50% - 2em);
+        left: calc(50% - 4em);
     }
 
     #main_header .burger_container{
