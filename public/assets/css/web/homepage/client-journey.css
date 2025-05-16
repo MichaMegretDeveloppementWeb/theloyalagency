@@ -1,0 +1,308 @@
+#page_content.homepage section.client_journey_container{
+    width: 100%;
+    margin: 5em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 100em;
+}
+
+
+
+
+#page_content.homepage section.client_journey_container .content_container{
+    width: 100%;
+    position: sticky;
+    top: 10em;
+}
+
+
+
+#page_content.homepage section.client_journey_container header{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 3em;
+}
+
+
+#page_content.homepage section.client_journey_container .title_container{
+    width: 95%;
+    padding: 0 1em;
+    text-align: center;
+    margin: auto;
+}
+
+
+#page_content.homepage section.client_journey_container .title_container>.title{
+    font-size: min(4.5em, 9vw);
+    font-weight: 200;
+    margin: auto;
+}
+
+
+
+
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container{
+    width: 100%;
+    padding-top: min(12em, 15vh);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: -10em;
+}
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_frame{
+    width: 100%;
+    max-width: 70em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform-origin: top;
+    perspective: 50em;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg{
+    width: 90%;
+    max-width: 50vw;
+    transform-origin: top center;
+    transform-box: fill-box;
+    min-height: 40em;
+    position: relative;
+    z-index: 1;
+}
+
+
+#page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg path{
+    stroke: var(--main-blue);
+    opacity: 0.5;
+    stroke-width: min(0.5em, 1vw);
+    fill: none;
+    /*filter: url(#path-shadow);*/
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+    stroke-dashoffset: 0;
+}
+
+
+#page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg path.path_1{
+    stroke: var(--main-blue);
+    stroke-dasharray: min(1.16em, 2vw);
+}
+
+#page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg path.path_2{
+    stroke: #f8f7f2;
+    opacity: 1;
+    z-index: 2;
+    position: relative;
+    stroke-width: 1em;
+    stroke-linecap: square;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m1{
+    z-index: 2;
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m2{
+    z-index: 3;
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m3{
+    z-index: 4;
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m4{
+    z-index: 5;
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m5{
+    z-index: 4;
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m6{
+    z-index: 3;
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m7{
+    z-index: 5;
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m8{
+    z-index: 4;
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.m9{
+    z-index: 3;
+}
+
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker {
+    width: 20em;
+    position: absolute;
+    pointer-events: auto;
+    display: flex;
+    align-items: flex-start;
+    transform-origin: bottom left;
+    transform: translateY(-100%);
+    font-size: min(1em, 2.5vw);
+}
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker:hover{
+    z-index: 11;
+}
+
+
+
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker .marker_content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-left: 2px dashed var(--main-orange);
+    height: 11em;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s max-height cubic-bezier(0.51, 0.43, 0, 1.6), 0.35s opacity ease-in-out;
+}
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.active .marker_content{
+    opacity: 1;
+    max-height: 9em;
+}
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.active:hover .marker_content{
+    opacity: 1;
+    max-height: 11em;
+    transition: 0.35s max-height ease-in-out, 0.35s opacity ease-in-out;
+}
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker::before{
+    pointer-events: none;
+    content: attr(data-step);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    background-color: var(--main-blue);
+    color: white;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.25s opacity ease-in-out;
+}
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.active::before{
+    opacity: 1;
+}
+
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker .label {
+    padding: 0 .75em 1em;
+    margin: 0 0.5em;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5em;
+    border-radius: 1em;
+    transition: 0.25s background ease-in-out;
+}
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.active:hover .label{
+    background: rgba(248, 247, 242, 0.85);
+    backdrop-filter: blur(3px);
+}
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker .label>.title{
+    font-family: "Lagu", sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker .label .content{
+    font-size: 0.9em;
+    color: #505050;
+    font-weight: 100;
+    opacity: 0;
+    transition: 0.25s opacity ease-in-out;
+}
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker.active:hover .label .content{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker:is(.m7,.m8,.m9)::before{
+    left: 100%;
+}
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker:is(.m7,.m8,.m9){
+    transform: translateY(-100%) translateX(-100%) scale(1.05);
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker:is(.m7,.m8,.m9) .marker_content{
+    border-left: none;
+    border-right: 2px dashed var(--main-orange);
+}
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker:is(.m7,.m8,.m9) .label{
+    align-items: flex-end;
+}
+
+
+#page_content.homepage section.client_journey_container .nine_step_container .step_marker:is(.m7,.m8,.m9) .label .content{
+    text-align: right;
+}

@@ -13,12 +13,11 @@ ready(() => {
 
             const cardContainer = switchClicked.closest('.card_container');
 
-            if (!cardContainer) return;
-
             if (cardContainer.classList.contains('to_switch')) return;
 
             cardContainer.classList.add('to_switch');
 
+            if (!cardContainer) return;
 
             if(switchClicked.classList.contains('switch_to_problem')){
                 cardContainer.classList.remove('show_solution');

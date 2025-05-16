@@ -7,7 +7,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50em;
+}
+
+
+#page_content.homepage section.problem_solution_container header{
+    width: 100%;
 }
 
 
@@ -20,11 +24,19 @@
 
 
 #page_content.homepage section.problem_solution_container .title_container>.title{
-    font-size: min(6em, 11vw);
+    font-size: min(5.5em, 11vw);
     font-weight: 200;
     margin: auto;
 }
 
+
+#page_content.homepage section.problem_solution_container main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 #page_content.homepage section.problem_solution_container .card_list_container{
     width: max-content;
@@ -34,6 +46,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 2em;
     margin-top: 5em;
     padding: 0 1em;
 }
@@ -50,121 +63,105 @@
 CARD DESIGN DEFAULT
 ---------------------------------------------------------------------------------------------------------------------*/
 
-#page_content.homepage section.problem_solution_container .card_list_container .card_container{
-    padding: 1.5em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 80vw;
-    max-width: 30em;
-    min-width: 23em;
-    position: sticky;
-    top: 5em;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.card_3{
-    grid-column: 1/-1;
-}
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .card{
-    /*width: 27em;*/
     width: 100%;
-    aspect-ratio: 9/11;
+    aspect-ratio: 9/12;
+    border-radius: 1em;
+    overflow: hidden;
 }
+
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container{
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 
 
 
-/*#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch::before{
-    content: "";
-    position: absolute;
-    z-index: -2;
-    width: calc(100% + 1em);
-    aspect-ratio: 1/1;
-    background: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-}*/
+
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch{
+    cursor: pointer;
     position: absolute;
     z-index: 2;
-    transition: 0.5s transform ease-in-out;
+    transition: 0.35s 0.25s transform ease-in-out, 0.25s box-shadow ease-in-out;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    width: 15em;
+    height: 15em;
+    display: flex;
+    border-radius: 50%;
     font-size: min(1em, 3vw);
     -webkit-tap-highlight-color: transparent;
     outline: none;
-    cursor: pointer;
+}
+
+#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch:hover{
+    box-shadow: 0 0 0 1em #FFFFFF3F;
 }
 
 
 
-#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch.switch_to_problem{
-    top: 50%;
-    left: 0;
-    transform: translate(-50%, -50%) scale(0);
-}
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch.switch_to_solution{
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) scale(1);
+    bottom: initial;
+    left: initial;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%) scale(1);
+    align-items: flex-end;
+    justify-content: flex-start;
+    background: #ffffff2b;
+    backdrop-filter: blur(3px);
+    padding: 1em;
+}
+
+#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch.switch_to_problem{
+    top: initial;
+    right: initial;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%) scale(0);
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: #ffffff2b;
+    backdrop-filter: blur(3px);
+    padding: 1em 0.75em;
 }
 
 
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.show_solution .frame_container .switch.switch_to_problem{
-    transform: translate(-50%, -50%) scale(1);
-}
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container.show_solution .frame_container .switch.switch_to_solution{
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(50%, -50%) scale(0);
 }
 
+#page_content.homepage section.problem_solution_container .card_list_container .card_container.show_solution .frame_container .switch.switch_to_problem{
+    transform: translate(-50%, 50%) scale(1);
+}
 
 
 
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch .content{
-    width: 6em;
+    width: 7em;
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 0.07em;
     color: white;
     fill: white;
     cursor: pointer;
     transition: 0.45s box-shadow ease-in-out, 0.25s transform ease-in-out;
     -webkit-tap-highlight-color: transparent;
     outline: none;
-}
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch .content{
-    background: #2b2b2b;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch .content:hover{
-    /*transform: scale(1.2);*/
-    box-shadow: 0 0 0 1em rgba(0, 0, 0, 0.3);
-}
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch .app_icon{
-    min-width: 2.25em;
-    margin-bottom: -1em;
+    background: transparent;
 }
 
 
@@ -182,16 +179,40 @@ CARD DESIGN DEFAULT
 }
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .image_container{
-    width: 200%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     transform: translateX(0);
     transition: 0.5s transform ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.show_solution .frame_container .frame .image_container{
-    transform: translateX(-50%);
+
+#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .image_container.container_2:not(.reverse){
+    --r: 0;
+    mask-image: radial-gradient(circle at top right, transparent calc(var(--r) * 1%), black calc(var(--r) * 1%));
+    -webkit-mask-image: radial-gradient(circle at top right, transparent calc(var(--r) * 1%), black calc(var(--r) * 1%));
+    mask-mode: alpha;
+    -webkit-mask-mode: alpha;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
 }
+
+#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .image_container.container_2.reverse{
+    --r: 0;
+    mask-image: radial-gradient(circle at bottom left, black calc(var(--r) * 1%), transparent calc(var(--r) * 1%));
+    -webkit-mask-image: radial-gradient(circle at bottom left, black calc(var(--r) * 1%), transparent calc(var(--r) * 1%));
+    mask-mode: alpha;
+    -webkit-mask-mode: alpha;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+}
+
+
+
+
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .image_container img{
     width: 100%;
@@ -199,6 +220,10 @@ CARD DESIGN DEFAULT
     object-fit: cover;
     object-position: center;
 }
+
+
+
+
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .card_text{
     position: absolute;
@@ -208,7 +233,6 @@ CARD DESIGN DEFAULT
     margin: auto;
     padding: 1.5em;
     font-size: min(1.5em, 4.5vw);
-    line-height: 2em;
     font-weight: 100;
     transition: 0.5s opacity ease-in-out;
     color: white;
@@ -216,13 +240,17 @@ CARD DESIGN DEFAULT
 }
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .card_text.problem_text{
-    padding-right: 2.75em;
+    bottom: 0;
+    top: initial;
+    background: linear-gradient(0deg, #0000009e 20%, transparent);
     opacity: 1;
     text-align: left;
 }
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .card_text.solution_text{
-    padding-left: 2.75em;
+    bottom: initial;
+    top: 0;
+    background: linear-gradient(180deg, #0000009e 20%, transparent);
     opacity: 0;
     text-align: left;
 }
@@ -258,387 +286,6 @@ CARD DESIGN DEFAULT
 
 
 
-/*---------------------------------------------------------------------------------------------------------------------
-CARD DESIGN ALT 1
----------------------------------------------------------------------------------------------------------------------*/
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .card{
-    border-radius: 1em;
-    overflow: hidden;
-}
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch{
-    position: absolute;
-    z-index: 2;
-    transition: 0.35s 0.25s transform ease-in-out, 0.25s box-shadow ease-in-out;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
-    width: 15em;
-    height: 15em;
-    display: flex;
-    border-radius: 50%;
-    font-size: min(1em, 3vw);
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch:hover{
-    box-shadow: 0 0 0 1em #FFFFFF3F;
-}
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch.switch_to_solution{
-    bottom: initial;
-    right: 0;
-    left: initial;
-    top: 0;
-    transform: translate(50%, -50%);
-    align-items: flex-end;
-    justify-content: flex-start;
-    background: #ffffff2b;
-    backdrop-filter: blur(3px);
-    padding: 1em;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch.switch_to_problem{
-    top: initial;
-    left: 0;
-    bottom: 0;
-    right: initial;
-    transform: translate(-100%, 100%);
-    align-items: flex-start;
-    justify-content: flex-end;
-    background: #ffffff2b;
-    backdrop-filter: blur(3px);
-    padding: 1em 0.75em;
-}
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1.show_solution .frame_container .switch.switch_to_solution{
-    transform: translate(100%, -100%);
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1.show_solution .frame_container .switch.switch_to_problem{
-    transform: translate(-50%, 50%);
-}
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch .content{
-    width: 7em;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: 0.07em;
-    color: white;
-    fill: white;
-    cursor: pointer;
-    transition: 0.45s box-shadow ease-in-out, 0.25s transform ease-in-out;
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-}
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch .content{
-    background: transparent;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch .content:hover{
-    transform: none;
-    box-shadow: none;
-}
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .switch .app_icon{
-    display: none;
-}
-
-
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .image_container{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transform: translateX(0);
-    transition: 0.5s transform ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .image_container.container_2:not(.reverse){
-    --r: 0;
-    mask-image: radial-gradient(circle at top right, transparent calc(var(--r) * 1%), black calc(var(--r) * 1%));
-    -webkit-mask-image: radial-gradient(circle at top right, transparent calc(var(--r) * 1%), black calc(var(--r) * 1%));
-    mask-mode: alpha;
-    -webkit-mask-mode: alpha;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .image_container.container_2.reverse{
-    --r: 0;
-    mask-image: radial-gradient(circle at bottom left, black calc(var(--r) * 1%), transparent calc(var(--r) * 1%));
-    -webkit-mask-image: radial-gradient(circle at bottom left, black calc(var(--r) * 1%), transparent calc(var(--r) * 1%));
-    mask-mode: alpha;
-    -webkit-mask-mode: alpha;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-}
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1.show_solution .frame_container .frame .image_container{
-    transform: translateX(0);
-}
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .image_container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .card_text{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: auto;
-    padding: 1.5em;
-    font-size: min(1.5em, 4.5vw);
-    line-height: 2em;
-    font-weight: 100;
-    transition: 0.5s opacity ease-in-out;
-    color: white;
-    background: linear-gradient(0deg, #0000009e 70%, transparent);
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .card_text.problem_text{
-    bottom: 0;
-    top: initial;
-    background: linear-gradient(180deg, #0000009e 20%, transparent);
-    padding-right: 1.5em;
-    opacity: 1;
-    text-align: left;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .card_text.solution_text{
-    bottom: initial;
-    top: 0;
-    background: linear-gradient(0deg, #0000009e 20%, transparent);
-    padding-left: 1.5em;
-    opacity: 0;
-    text-align: left;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1.show_solution .frame_container .frame .card_text.problem_text{
-    opacity: 0;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1.show_solution .frame_container .frame .card_text.solution_text{
-    opacity: 1;
-}
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_1 .frame_container .frame .card_text .line{
-    width: 3em;
-    height: 1px;
-    background: white;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*---------------------------------------------------------------------------------------------------------------------
-CARD DESIGN ALT
----------------------------------------------------------------------------------------------------------------------*/
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch{
-    position: absolute;
-    bottom: 1em;
-    z-index: 2;
-    transition: 0.35s transform ease-in-out, 0.25s box-shadow ease-in-out;
-    box-shadow: none;
-    width: max-content;
-    height: initial;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.25em;
-    font-size: min(1em, 3vw);
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    background: transparent;
-    backdrop-filter: blur(2px);
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch:hover{
-    box-shadow: none;
-}
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch.switch_to_solution{
-    bottom: 1em;
-    right: 1em;
-    top: initial;
-    left: initial;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5em 1em;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch.switch_to_problem{
-    bottom: 1em;
-    top: initial;
-    left: 1em;
-    right: initial;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5em 1em;
-}
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch.switch_to_problem{
-    transform: scale(0);
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch.switch_to_solution{
-    transform: scale(1);
-}
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2.show_solution .frame_container .switch.switch_to_problem{
-    transform: scale(1);
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2.show_solution .frame_container .switch.switch_to_solution{
-    transform: scale(0);
-}
-
-
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch .content{
-    width: max-content;
-    aspect-ratio: initial;
-    border-radius: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: 0.07em;
-    color: white;
-    fill: white;
-    cursor: pointer;
-    transition: 0.45s box-shadow ease-in-out, 0.25s transform ease-in-out;
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-}
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch .content{
-    background: transparent;
-}
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch .content:hover{
-    transform: none;
-    box-shadow: none;
-}
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .switch .app_icon {
-    min-width: 2em;
-    margin-bottom: -0.2em;
-}
-
-
-
-
-
-
-#page_content.homepage section.problem_solution_container .card_list_container .card_container.alt_2 .frame_container .frame .card_text{
-    padding-bottom: 3.5em;
-    padding-right: 1em;
-    padding-left: 1em;
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -653,16 +300,13 @@ CARD DESIGN ALT
 @media screen and (min-width: 800px) {
 
     #page_content.homepage section.problem_solution_container .card_list_container{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        gap: 3vw;
         position: relative;
-        margin-top: 5em;
+        margin-top: 10em;
     }
 
     #page_content.homepage section.problem_solution_container .card_list_container .card_container{
-        width: 35vw;
+        width: 40vw;
         min-width: 26em;
         position: relative;
         top: initial;
@@ -685,6 +329,7 @@ CARD DESIGN ALT
 
     #page_content.homepage section.problem_solution_container .card_list_container{
         margin-top: 10em;
+        gap: 3vw;
     }
 
 
@@ -694,44 +339,15 @@ CARD DESIGN ALT
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 29vw;
-        max-width: 28em;
+        width: 30vw;
+        max-width: 32em;
         min-width: initial;
-        box-shadow: 0 2em 5em -2em #000000;
+        box-shadow: 0 4em 2em -3em #00000085;
         border-radius: 1em;
         transition: 0.25s transform ease-in-out, 0.25s box-shadow ease-in-out;
     }
 
-    #page_content.homepage section.problem_solution_container .card_list_container .card_container:hover{
-        transform: translateY(-1em);
-        box-shadow: 0 4em 4em -2em #000000B6;
-    }
 
-
-    #page_content.homepage section.problem_solution_container .card_list_container .card_container:first-of-type{
-        position: absolute;
-        top: 50%;
-        right: 100%;
-        transform: translate(-10%, -60%);
-    }
-
-    #page_content.homepage section.problem_solution_container .card_list_container .card_container:first-of-type:hover{
-        transform: translate(-10%, calc(-60% - 1em));
-        box-shadow: 0 4em 4em -2em #000000B6;
-    }
-
-    #page_content.homepage section.problem_solution_container .card_list_container .card_container:last-of-type{
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 100%;
-        transform: translate(10%, -60%);
-    }
-
-    #page_content.homepage section.problem_solution_container .card_list_container .card_container:last-of-type:hover{
-        transform: translate(10%, calc(-60% - 1em));
-        box-shadow: 0 4em 4em -2em #000000B6;
-    }
 
 
     #page_content.homepage section.problem_solution_container .card_list_container .card_container .card{

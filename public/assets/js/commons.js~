@@ -178,7 +178,7 @@ function animateOnScroll({
         let running = false;
         descriptors.forEach(desc => {
             desc.progress += (prog - desc.progress) * desc.speed;
-            if (Math.abs(desc.progress - prog) > 0.001){
+            if (Math.abs(desc.progress - prog) > 0.01){
                 running = true;
             }else {
                 running = false;

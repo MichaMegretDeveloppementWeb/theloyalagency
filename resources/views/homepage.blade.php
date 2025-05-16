@@ -22,6 +22,9 @@
     <x-web.homepage.problem-solution/>
 
 
+    <x-web.homepage.client-journey/>
+
+
     {{--<section class="stats">
 
         <ul class="stat_list">

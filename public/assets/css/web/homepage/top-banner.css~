@@ -56,7 +56,7 @@ TOP BANNER SECTION
 
 #page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container{
     perspective: 200px;
-    width: 25em;
+    width: 23em;
     height: 5em;
 }
 
@@ -100,26 +100,26 @@ TOP BANNER SECTION
         opacity: 1;
     }
     50%{
-        transform: rotateX(180deg)  translateZ(70px);
+        transform: rotateX(-180deg)  translateZ(70px);
         opacity: 0;
     }
     75%{
-        transform: rotateX(180deg)  translateZ(70px);
+        transform: rotateX(-180deg)  translateZ(70px);
         opacity: 0;
     }
     100%{
-        transform: rotateX(360deg)  translateZ(0px);
+        transform: rotateX(-360deg)  translateZ(0px);
         opacity: 1;
     }
 }
 
 @keyframes animateMorphSubTitleFirstPart_2 {
     0%{
-        transform: rotateX(-180deg)  translateZ(70px);
+        transform: rotateX(180deg)  translateZ(70px);
         opacity: 0;
     }
     25%{
-        transform: rotateX(-180deg)  translateZ(70px);
+        transform: rotateX(180deg)  translateZ(70px);
         opacity: 0;
     }
     50%{
