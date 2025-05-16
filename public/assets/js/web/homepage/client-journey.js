@@ -166,7 +166,7 @@ ready(() => {
             marker.style.left = `${ptX - containerRect.left}px`;
             marker.style.top  = `${ptY - containerRect.top}px`;
 
-            if(progress > fractions[i] || progress === 1) {
+            if((progress > fractions[i] || progress > 0.99) && progress > 0.01) {
                 marker.classList.add('active');
             }
             else {
@@ -190,7 +190,7 @@ ready(() => {
 
     let rafId = null;
     let prevDashOffset = parseFloat(path.style.strokeDashoffset);
-    const EPS = 0.01;
+    const EPS = 0.001;
 
     function loop() {
 

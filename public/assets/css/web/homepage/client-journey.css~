@@ -97,7 +97,7 @@
 #page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg path{
     stroke: var(--main-blue);
     opacity: 0.5;
-    stroke-width: min(0.25em, 0.5vw);
+    stroke-width: min(0.5em, 1vw);
     fill: none;
     /*filter: url(#path-shadow);*/
     stroke-linecap: round;

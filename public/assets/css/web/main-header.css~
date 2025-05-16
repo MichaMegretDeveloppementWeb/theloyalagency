@@ -154,7 +154,7 @@
 #main_navbar{
     position: fixed;
     z-index: 10;
-    top: 7.5em;
+    top: 9em;
     right: 0;
     height: 100vh;
     height: 100dvh;

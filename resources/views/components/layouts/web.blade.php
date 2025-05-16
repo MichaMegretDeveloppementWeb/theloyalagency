@@ -24,7 +24,7 @@
     @stack('styles')
 
     <!--JS-->
-    <script src="{{ asset("assets/js/commons.js") }}"></script>
+    <script src="{{ asset("assets/js/commons.js?v=".now()->toDateTimeString()) }}"></script>
     @stack('scripts')
 
 </head>
