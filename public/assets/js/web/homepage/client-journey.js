@@ -48,6 +48,7 @@ ready(() => {
         path.style.strokeDasharray = `${pathRealLength}`;
         path.style.strokeDashoffset = `0`;
         svg.style.transform = `rotateX(35deg) translateY(-10%)`;
+        subPath.style.strokeDasharray = `${pathRealLength/150}`;
     }
 
 
@@ -170,7 +171,6 @@ ready(() => {
     function initialize() {
         clearAnimations();
         initialiseSvgPath();
-        subPath.style.strokeDasharray = `${pathRealLength/150}`;
         section.style.height = (window.innerHeight * 3) + 'px';
         const total = path.getTotalLength();
         svgDots.forEach((dot,i) => {
@@ -200,9 +200,9 @@ ready(() => {
 
 
     window.addEventListener('scroll', startLoop);
-    window.addEventListener('resize', debounce(() => {
-        if (rafId) cancelAnimationFrame(rafId);
-        initialize();
-    }, 250));
+    // window.addEventListener('resize', debounce(() => {
+    //     if (rafId) cancelAnimationFrame(rafId);
+    //     initialize();
+    // }, 250));
 
 });

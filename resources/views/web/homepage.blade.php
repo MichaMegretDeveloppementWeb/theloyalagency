@@ -25,10 +25,10 @@
     <x-web.homepage.client-journey/>
 
 
-    <x-web.homepage.about-me/>
-
-
     <x-web.homepage.services/>
+
+
+    <x-web.homepage.about-me/>
 
 
     <x-web.homepage.reviews :$reviews/>

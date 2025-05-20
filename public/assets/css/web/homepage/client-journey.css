@@ -1,10 +1,11 @@
 #page_content.homepage section.client_journey_container{
     width: 100%;
-    margin: 5em auto;
+    padding: 10vh 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    background: #f7f2ea;
 }
 
 
@@ -111,7 +112,7 @@
 }
 
 #page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg path.path_2{
-    stroke: #f8f7f2;
+    stroke: #f7f2ea;
     opacity: 1;
     z-index: 2;
     position: relative;

@@ -1,7 +1,6 @@
 #page_content.homepage section.services{
     width: 100%;
-    padding: 5vh 2em;
-    margin: 5vh auto;
+    padding: 10vh 2em;
     overflow: hidden;
 }
 
@@ -71,6 +70,7 @@
     opacity: 0;
     border-radius: 1em;
     transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+    background: white;
 }
 
 

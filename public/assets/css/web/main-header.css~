@@ -35,7 +35,7 @@
 #main_header .header_container{
     width: 100%;
     max-width: 120em;
-    min-height: 7.5em;
+    min-height: 6.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -59,8 +59,8 @@
 }
 
 #main_header .header_logo-name .logo_container{
-    width: 7em;
-    height: 7em;
+    width: 6em;
+    height: 6em;
     overflow: hidden;
 }
 
@@ -154,7 +154,7 @@
 #main_navbar{
     position: fixed;
     z-index: 10;
-    top: 9em;
+    top: 6.5em;
     right: 0;
     height: 100vh;
     height: 100dvh;
@@ -255,10 +255,31 @@
 
 @media screen and (min-width: 800px){
 
+    #main_header .header_container{
+        min-height: 7.5em;
+    }
+
     #main_header .header_logo-name .logo_container{
         width: 22em;
         height: 7em;
         overflow: hidden;
+    }
+
+    #main_navbar{
+        position: fixed;
+        z-index: 10;
+        top: 7.5em;
+        right: 0;
+        height: 100vh;
+        height: 100dvh;
+        overflow: auto;
+        background: #f3f6ff;
+        width: 100%;
+        max-width: 100%;
+        padding: 5em 2em 2em;
+        transform: translateX(110%);
+        opacity: 0;
+        transition: 0.25s opacity, 0.25s 0.25s transform;
     }
 
 }

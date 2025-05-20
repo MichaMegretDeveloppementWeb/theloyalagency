@@ -1,8 +1,8 @@
 #page_content.homepage section.services{
     width: 100%;
-    padding: 5vh 2em;
-    margin: 5vh auto;
+    padding: 10vh 2em;
     overflow: hidden;
+    background: #f7f2ea;
 }
 
 
@@ -71,6 +71,7 @@
     opacity: 0;
     border-radius: 1em;
     transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+    background: white;
 }
 
 
@@ -86,7 +87,7 @@
 
 
 #page_content.homepage section.services .section_content .services_list .service:nth-child(2) .service_content{
-    transform: translateY(10em);
+    transform: translateY(20em);
 }
 
 #page_content.homepage section.services .section_content .services_list .service:nth-child(2) .service_content.appear{
