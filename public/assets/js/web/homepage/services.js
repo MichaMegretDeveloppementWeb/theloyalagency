@@ -1,0 +1,43 @@
+import {ready} from "../../dom-utils.js";
+
+ready(() => {
+
+    const serviceTitle = document.querySelector('#page_content.homepage section.services .section_content .title_container');
+    const serviceList = document.querySelector('#page_content.homepage section.services .section_content .services_list');
+
+    function appearServiceTitle() {
+
+
+        if ((window.innerHeight / 1.5) >= serviceTitle.getBoundingClientRect().top){
+            serviceTitle.classList.add('appear');
+        }
+        else {
+            serviceTitle.classList.remove('appear');
+        }
+
+    }
+
+    function appearServiceItems() {
+
+        serviceList.querySelectorAll(".service").forEach((service) => {
+
+            if ((window.innerHeight / 1.5) >= service.getBoundingClientRect().top){
+                service.querySelector('.service_content').classList.add('appear');
+            }
+            else {
+                service.querySelector('.service_content').classList.remove('appear');
+            }
+
+        })
+
+    }
+
+
+
+    appearServiceTitle();
+    appearServiceItems();
+
+    window.addEventListener('scroll', appearServiceTitle);
+    window.addEventListener('scroll', appearServiceItems);
+
+});

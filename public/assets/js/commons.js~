@@ -20,32 +20,6 @@ ready(() => {
 
 
 
-/*
- * animateOnScroll(options)
- * Smoothly animates CSS properties based on scroll position.
- * Supports numeric (min/max) and template (from/to) modes.
- * devMode shows debug lines for entry/exit markers.
- *
- * @param {{
- *   triggerElement: string|Element,
- *   element?: string|Element,
- *   elementEnterTrigger: {position:'top'|'middle'|'bottom',offset:number},
- *   elementExitTrigger:  {position:'top'|'middle'|'bottom',offset:number},
- *   enterTrigger:        {position:'top'|'middle'|'bottom',offset:number},
- *   exitTrigger:         {position:'top'|'middle'|'bottom',offset:number},
- *   animations: Array<{
- *     property: string,
- *     speed?: number,
- *     minValue?: number,
- *     maxValue?: number,
- *     unit?: string,
- *     from?: string,
- *     to?: string
- *   }>,
- *   devMode?: boolean
- * }} options
- * @returns {{ destroy: () => void }}
- */
 function animateOnScroll({
      triggerElement,
      element = triggerElement,
@@ -54,20 +28,16 @@ function animateOnScroll({
      enterTrigger,
      exitTrigger,
      animations,
-     devMode = false
+     onInit = null,
+     devMode = false,
  }) {
 
-
-    const triggerEl = typeof triggerElement === 'string'
-        ? document.querySelector(triggerElement)
-        : triggerElement;
-    if (!triggerEl || !(triggerEl instanceof Element)) {
+    const scrollEl = typeof triggerElement === 'string' ? document.querySelector(triggerElement) : triggerElement;
+    if (!scrollEl || !(scrollEl instanceof Element)) {
         console.error('animateOnScroll: invalid triggerElement', triggerElement);
         return;
     }
-    const targetEl = typeof element === 'string'
-        ? document.querySelector(element)
-        : element;
+    const targetEl = typeof element === 'string' ? document.querySelector(element) : element;
     if (!targetEl || !(targetEl instanceof Element)) {
         console.error('animateOnScroll: invalid element', element);
         return;
@@ -79,19 +49,18 @@ function animateOnScroll({
 
 
     const getScrollY = () => window.scrollY || document.documentElement.scrollTop;
-    const clamp = (v, min, max) => v < min ? min : v > max ? max : v;
-    const resolvePoint = (rect, {position, offset}) =>
-        position === 'top' ? rect.top + offset :
+    const clamp = (v, min, max) => (v < min ? min : v > max ? max : v);
+    const resolvePoint = (rect, { position, offset }) =>
+        position === 'top'    ? rect.top + offset :
             position === 'middle' ? rect.top + rect.height / 2 + offset :
                 rect.bottom + offset;
-    const viewportLine = ({position, offset}) =>
-        position === 'top' ? offset :
+    const viewportLine = ({ position, offset }) =>
+        position === 'top'    ? offset :
             position === 'middle' ? window.innerHeight / 2 + offset :
                 window.innerHeight + offset;
 
 
     const numRe = /([-+]?\d*\.?\d+)([a-z%]*)/gi;
-
     function makeInterpolator(from, to) {
         const fm = Array.from(from.matchAll(numRe));
         const tm = Array.from(to.matchAll(numRe));
@@ -99,14 +68,14 @@ function animateOnScroll({
         const tokens = fm.map((m, i) => {
             const unit = m[2];
             if (unit !== tm[i][2]) throw new Error('animateOnScroll: unit mismatch');
-            return {start: parseFloat(m[1]), end: parseFloat(tm[i][1]), unit};
+            return { start: parseFloat(m[1]), end: parseFloat(tm[i][1]), unit };
         });
         return progress => {
             let idx = 0;
             return from.replace(numRe, () => {
-                const {start, end, unit} = tokens[idx++];
-                const value = start + (end - start) * progress;
-                return value + unit;
+                const { start, end, unit } = tokens[idx++];
+                const val = start + (end - start) * progress;
+                return val + unit;
             });
         };
     }
@@ -116,98 +85,97 @@ function animateOnScroll({
         if (anim.from != null && anim.to != null) {
             return {
                 property: anim.property,
-                speed: anim.speed ?? 0.1,
+                speed:    anim.speed ?? 0.1,
                 interpolate: makeInterpolator(anim.from, anim.to),
                 progress: 0
             };
         }
-
-        const {minValue, maxValue, unit = ''} = anim;
+        const { minValue, maxValue, unit = '' } = anim;
         return {
             property: anim.property,
-            speed: anim.speed ?? 0.1,
+            speed:    anim.speed ?? 0.1,
             interpolate: p => `${minValue + (maxValue - minValue) * p}${unit}`,
             progress: 0
         };
     });
 
 
-    let bounds = {start: 0, end: 0};
+    let bounds = { start: 0, end: 0 };
     let rafId = null;
-
-
     const debugLines = {};
+
+
     if (devMode) {
-        ['enterVP', 'exitVP', 'enterEL', 'exitEL'].forEach(key => {
+        ['enterVP','exitVP','enterEL','exitEL'].forEach(key => {
             const line = document.createElement('div');
             Object.assign(line.style, {
-                position: 'fixed', left: 0, width: '100%', height: '2px',
-                pointerEvents: 'none', opacity: 0.5, zIndex: 9999,
-                background: key.includes('VP') ? 'orange' : 'green'
+                position: 'fixed', left: 0, width: '100%', height: '2px', pointerEvents: 'none', opacity: 0.5, zIndex: 9999,
+                background: key.endsWith('VP') ? 'orange' : 'green'
             });
             document.body.appendChild(line);
             debugLines[key] = line;
         });
     }
 
-
+    // Compute scroll bounds
     function updateBounds() {
-        const scrollY = getScrollY();
-        const rect = triggerEl.getBoundingClientRect();
+        const sy = getScrollY();
+        const rect = scrollEl.getBoundingClientRect();
         const vpStart = viewportLine(enterTrigger);
         const vpEnd = viewportLine(exitTrigger);
-        const elStart = scrollY + resolvePoint(rect, elementEnterTrigger);
-        const elEnd = scrollY + resolvePoint(rect, elementExitTrigger);
-        bounds = {start: elStart - vpStart, end: elEnd - vpEnd};
+        const elStart = sy + resolvePoint(rect, elementEnterTrigger);
+        const elEnd = sy + resolvePoint(rect, elementExitTrigger);
+        bounds.start = elStart - vpStart;
+        bounds.end = elEnd   - vpEnd;
         if (devMode) updateDebugLines(rect);
     }
 
-
     function updateDebugLines(rect) {
         debugLines.enterVP.style.top = viewportLine(enterTrigger) + 'px';
-        debugLines.exitVP.style.top = viewportLine(exitTrigger) + 'px';
+        debugLines.exitVP.style.top  = viewportLine(exitTrigger)  + 'px';
         debugLines.enterEL.style.top = resolvePoint(rect, elementEnterTrigger) + 'px';
-        debugLines.exitEL.style.top = resolvePoint(rect, elementExitTrigger) + 'px';
+        debugLines.exitEL.style.top  = resolvePoint(rect, elementExitTrigger)  + 'px';
     }
 
-
+    // Animation frame
     function animateFrame() {
-        const scrollY = getScrollY();
-        const raw = (scrollY - bounds.start) / (bounds.end - bounds.start);
+        const sy = getScrollY();
+        const raw = (sy - bounds.start) / (bounds.end - bounds.start);
         const prog = clamp(raw, 0, 1);
-        let running = false;
+        let keepGoing = false;
         descriptors.forEach(desc => {
             desc.progress += (prog - desc.progress) * desc.speed;
-            if (Math.abs(desc.progress - prog) > 0.01){
-                running = true;
-            }else {
-                running = false;
-                desc.progress += (prog - desc.progress);
-            }
+            if (Math.abs(desc.progress - prog) > 0.001) keepGoing = true;
             targetEl.style[desc.property] = desc.interpolate(desc.progress);
         });
-
-        rafId = running ? requestAnimationFrame(animateFrame) : null;
+        rafId = keepGoing ? requestAnimationFrame(animateFrame) : null;
     }
 
-
+    // Scroll handler
     function onScroll() {
         updateBounds();
-        if (rafId === null) {
-            const raw = (getScrollY() - bounds.start) / (bounds.end - bounds.start);
-            if (raw >= 0 && raw <= 1) rafId = requestAnimationFrame(animateFrame);
+        const sy = getScrollY();
+        const raw = (sy - bounds.start) / (bounds.end - bounds.start);
+        if (raw < 0 || raw > 1) {
+            const snap = clamp(raw, 0, 1);
+            descriptors.forEach(desc => {
+                desc.progress = snap;
+                targetEl.style[desc.property] = desc.interpolate(snap);
+            });
+            if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        } else if (!rafId) {
+            rafId = requestAnimationFrame(animateFrame);
         }
     }
 
-
+    
     function onResize() {
         updateBounds();
-        if (rafId === null) rafId = requestAnimationFrame(animateFrame);
+        if (!rafId) rafId = requestAnimationFrame(animateFrame);
     }
 
 
     updateBounds();
-
     (function init() {
         const raw0 = (getScrollY() - bounds.start) / (bounds.end - bounds.start);
         const prog0 = clamp(raw0, 0, 1);
@@ -229,7 +197,6 @@ function animateOnScroll({
             if (devMode) Object.values(debugLines).forEach(l => l.remove());
         }
     };
-
 }
 
 

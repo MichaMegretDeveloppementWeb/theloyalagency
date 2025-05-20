@@ -1,0 +1,202 @@
+#page_content.homepage section.about{
+    width: 100%;
+    padding: 5em 2em;
+    background: #1e1e1e;
+    margin: 10vh auto;
+    overflow: hidden;
+}
+
+
+#page_content.homepage section.about .section_content{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5em;
+    width: 100%;
+    max-width: 120em;
+    margin: auto;
+}
+
+
+
+
+
+
+
+#page_content.homepage section.about .section_content .img_container{
+    width: 100%;
+    align-self: stretch;
+    max-height: 40em;
+    background: white;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-10vw);
+    transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+}
+
+#page_content.homepage section.about .section_content .img_container.appear{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+
+#page_content.homepage section.about .section_content .img_container img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+#page_content.homepage section.about .section_content .text_container{
+    width: 100%;
+    max-width: 50em;
+    margin: auto;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2em;
+    color: white;
+    font-weight: 100;
+    opacity: 0;
+    transform: translateX(10vw);
+    transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+}
+
+#page_content.homepage section.about .section_content .text_container.appear{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+#page_content.homepage section.about .section_content .text_container>.title{
+    font-family: "American Favorite", sans-serif;
+    font-size: min(7em, 14vw);
+    font-weight: 100;
+    color: white;
+}
+
+
+#page_content.homepage section.about .section_content .text_container .description{
+    line-height: 1.75em;
+    font-size: 1.15em;
+    text-align: justify;
+}
+
+
+
+
+#page_content.homepage section.about .section_content .text_container .approaches_list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+    font-size: 1.15em;
+}
+
+
+#page_content.homepage section.about .section_content .text_container .approaches_list .approach{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5em;
+}
+
+
+#page_content.homepage section.about .section_content .text_container .approaches_list .approach .app_icon{
+    fill: var(--main-orange);
+    min-width: 1em;
+}
+
+
+
+
+
+#page_content.homepage section.about .section_content .text_container .pre_cta{
+    margin-top: 2em;
+    font-size: 1.15em;
+}
+
+
+
+#page_content.homepage section.about .section_content .text_container .cta{
+    padding: 1em;
+    background: var(--main-orange);
+    font-size: 1.25em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s background ease-in-out;
+}
+
+#page_content.homepage section.about .section_content .text_container .cta:hover{
+    background: transparent;
+}
+
+#page_content.homepage section.about .section_content .text_container .cta .app_icon{
+    opacity: 0;
+    margin-left: -1.25em;
+    margin-bottom: -0.2em;
+    transition: 0.25s margin-left ease-in-out, 0.25s opacity ease-in-out;
+    min-width: 1.25em;
+    fill: white;
+}
+
+
+#page_content.homepage section.about .section_content .text_container .cta:hover .app_icon{
+    opacity: 1;
+    margin-left: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+    #page_content.homepage section.about .section_content{
+        flex-direction: row;
+    }
+
+
+    #page_content.homepage section.about .section_content .img_container{
+        width: 35em;
+        max-width: 50%;
+        max-height: initial;
+        aspect-ratio: 12/16;
+    }
+
+
+    #page_content.homepage section.about .section_content .text_container{
+        width: 50em;
+        max-width: 55%;
+    }
+
+
+}

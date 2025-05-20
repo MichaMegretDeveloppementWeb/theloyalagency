@@ -27,41 +27,40 @@ ready(() => {
                 cardContainer.classList.add('show_solution');
             }
 
-            if (cardContainer.classList.contains('alt_1')) {
 
-                const imageContainerToAnimate = cardContainer.querySelector(".image_container.container_2");
-                const start = performance.now();
-                const maxR = 100;
-                const duration = 500;
 
-                function frame(now) {
+            const imageContainerToAnimate = cardContainer.querySelector(".image_container.container_2");
+            const start = performance.now();
+            const maxR = 100;
+            const duration = 500;
 
-                    const t = Math.min((now - start) / duration, 1);
-                    const r = maxR * t;
+            function frame(now) {
 
-                    imageContainerToAnimate.style.setProperty('--r', r.toFixed(2));
+                const t = Math.min((now - start) / duration, 1);
+                const r = maxR * t;
 
-                    if (t < 1) {
-                        requestAnimationFrame(frame);
+                imageContainerToAnimate.style.setProperty('--r', r.toFixed(2));
+
+                if (t < 1) {
+                    requestAnimationFrame(frame);
+                }
+                else {
+
+                    if (imageContainerToAnimate.classList.contains('reverse')) {
+                        imageContainerToAnimate.classList.remove('reverse');
                     }
                     else {
-
-                        if (imageContainerToAnimate.classList.contains('reverse')) {
-                            imageContainerToAnimate.classList.remove('reverse');
-                        }
-                        else {
-                            imageContainerToAnimate.classList.add('reverse');
-                        }
-
-                        imageContainerToAnimate.style.setProperty('--r', '0');
-
-                        cardContainer.classList.remove('to_switch');
-
+                        imageContainerToAnimate.classList.add('reverse');
                     }
-                }
 
-                requestAnimationFrame(frame);
+                    imageContainerToAnimate.style.setProperty('--r', '0');
+
+                    cardContainer.classList.remove('to_switch');
+
+                }
             }
+
+            requestAnimationFrame(frame);
 
         }
 

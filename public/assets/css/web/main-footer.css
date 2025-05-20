@@ -1,0 +1,178 @@
+.footer_container {
+    background-color: #efe5d5;
+    color: black;
+    padding: 2.5em;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+.footer__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7em 10em;
+    max-width: 120em;
+    margin: 5vh auto;
+    font-weight: 100;
+}
+
+
+
+
+
+
+.footer__grid .footer__logo-desc{
+    max-width: 40em;
+    flex-grow: 1;
+}
+
+
+.footer__grid .footer__logo-desc .logo_container{
+    width: min(25em , 70vw);
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+
+.footer__grid .footer__logo-desc img {
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+
+.footer__grid .footer__logo-desc p {
+    font-size: 1em;
+    font-weight: 100;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+
+
+
+.footer__grid .footer__links{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5em 10em;
+}
+
+
+.footer__grid .footer__links>div{
+    flex-grow: 1;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5em;
+}
+
+
+
+
+
+.footer__grid .footer__links .footer__contact address p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5em;
+    margin: 0.5em 0;
+}
+
+
+
+.footer__links h3{
+    font-size: 2em;
+    font-weight: 100;
+    color: var(--main-blue);
+}
+
+
+
+.footer__links ul li {
+    margin-bottom: 0.5em;
+}
+
+
+
+.footer__links ul li a:hover,
+.footer__social ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.footer__contact a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+.footer__social ul{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.footer__social .logo_container{
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    border-radius: 0.25em;
+}
+
+.footer__social .logo_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+
+.footer__bottom {
+    text-align: center;
+    margin-top: 1.25em;
+    padding-top: 3em;
+    font-size: 0.9em;
+    color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 700px) {
+
+    .footer__grid .footer__links>div{
+        flex-grow: initial;
+        max-width: 20em;
+    }
+
+}

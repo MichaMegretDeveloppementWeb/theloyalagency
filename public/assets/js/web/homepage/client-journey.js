@@ -1,8 +1,6 @@
-import {ready} from "../../dom-utils.js";
-
+import { ready } from "../../dom-utils.js";
 
 ready(() => {
-
 
     const section = document.querySelector('#page_content.homepage section.client_journey_container');
     const container = document.querySelector('#page_content.homepage section.client_journey_container .nine_step_container');
@@ -10,213 +8,201 @@ ready(() => {
     const path = document.querySelector('#page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg path.path_2');
     const subPath = document.querySelector('#page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg path.path_1');
     const svg = path.closest('svg');
+    const markers = Array.from(document.querySelectorAll('#page_content.homepage section.client_journey_container .nine_step_container .step_marker'));
+    const count = markers.length;
+    const fractions = Array.from({ length: count }, (_, i) => count > 1 ? i/(count-1) : 0);
+
     let pathRealLength = 0;
+    let svgDots = [];
+    let rafId = null;
+    let prevOffset = 0;
+    const EPS = 0.001;
+    let aosInstances = [];
 
 
-    function initialiseSvgPath(){
 
-        pathRealLength = getSvgPathRealLength(path);
-
-        path.style.strokeDasharray = `${pathRealLength}`;
-        path.style.strokeDashoffset = `0`;
-
-
-        svg.style.transform = `rotateX(35deg) translateY(-10%)`;
-
-    }
-
-    function getSvgPathRealLength(path, samples = 200) {
-        const svg = path.closest('svg');
-        const { width: wPx, height: hPx } = svg.getBoundingClientRect();
+    function getSvgPathRealLength(p, samples = 200) {
+        const { width: w, height: h } = svg.getBoundingClientRect();
         const vb = svg.viewBox.baseVal;
-        const ratioX = wPx / vb.width;
-        const ratioY = hPx / vb.height;
-
-        const totalLen = path.getTotalLength();
-        let lengthPx = 0;
-
-        let prev = path.getPointAtLength(0);
-        let prevPx = { x: prev.x * ratioX, y: prev.y * ratioY };
+        const rx = w/vb.width, ry = h/vb.height;
+        const total = p.getTotalLength();
+        let len = 0;
+        let prev = p.getPointAtLength(0);
+        let prevPx = { x: prev.x*rx, y: prev.y*ry };
 
         for (let i = 1; i <= samples; i++) {
-            const dist = (i / samples) * totalLen;
-            const pt = path.getPointAtLength(dist);
-            const curPx = { x: pt.x * ratioX, y: pt.y * ratioY };
-
-            const dx = curPx.x - prevPx.x;
-            const dy = curPx.y - prevPx.y;
-            lengthPx += Math.hypot(dx, dy);
-
+            const pt = p.getPointAtLength((i/samples)*total);
+            const curPx = { x: pt.x*rx, y: pt.y*ry };
+            len += Math.hypot(curPx.x - prevPx.x, curPx.y - prevPx.y);
             prevPx = curPx;
         }
 
-        return lengthPx * 1.01;
+        return len * 1.01;
     }
 
 
-    initialiseSvgPath();
 
-    window.addEventListener('resize', initialiseSvgPath);
-
-
-
-    section.style.height = container.offsetHeight * 3 + 'px';
-
-    subPath.style.strokeDasharray = `${pathRealLength/150}`;
-
+    function initialiseSvgPath() {
+        svg.style.transform = '';
+        pathRealLength = getSvgPathRealLength(path);
+        path.style.strokeDasharray = `${pathRealLength}`;
+        path.style.strokeDashoffset = `0`;
+        svg.style.transform = `rotateX(35deg) translateY(-10%)`;
+    }
 
 
 
+    function createDots() {
+        const total = path.getTotalLength();
+        svgDots = fractions.map(f => {
+            const { x, y } = path.getPointAtLength(total * f);
+            const dot = document.createElementNS(svg.namespaceURI, 'circle');
+            dot.setAttribute('cx', x);
+            dot.setAttribute('cy', y);
+            dot.setAttribute('r', 0.1);
+            dot.style.opacity = '0';
+            dot.style.fill = 'orange';
+            dot.style.pointerEvents = 'none';
+            svg.appendChild(dot);
+            return dot;
+        });
+    }
 
-
-
-
-
-    const rotateX = (window.innerWidth > 800) ? 45 : 50;
-
-
-    animateOnScroll({
-        triggerElement: section,
-        element: path,
-        elementEnterTrigger: { position: 'top', offset: 0 },
-        enterTrigger:   { position: 'top', offset: container.offsetHeight / 2 },
-        elementExitTrigger: { position: 'bottom', offset: 0 },
-        exitTrigger:    { position: 'bottom', offset: container.offsetHeight / 6 },
-        animations: [
-            {
-                property: 'strokeDashoffset',
-                unit:     '',
-                minValue: 0,
-                maxValue: pathRealLength * -1,
-                speed:    0.2
-            }
-        ],
-        devMode: false
-    });
-
-    animateOnScroll({
-        triggerElement: section,
-        element: svg,
-        elementEnterTrigger: { position: 'top', offset: 0 },
-        enterTrigger:   { position: 'top', offset: container.offsetHeight / 2 },
-        elementExitTrigger: { position: 'bottom', offset: 0 },
-        exitTrigger:    { position: 'bottom', offset: container.offsetHeight / 6 },
-        animations: [
-            {
-                property: 'transform',
-                from:     `rotateX(${rotateX}deg) translateY(25%) scale(1.5)`,
-                to: `rotateX(${rotateX}deg) translateY(-25%) scale(1)`,
-                speed:    0.2
-            }
-        ],
-        devMode: false
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    const markers = document.querySelectorAll('#page_content.homepage section.client_journey_container .nine_step_container .step_marker');
-    const count     = markers.length;
-    const fractions = Array.from({ length: count }, (_, i) =>
-        count > 1 ? i / (count - 1) : 0
-    );
-
-
-    const svgDots = fractions.map((f, i) => {
-        const totalLen = path.getTotalLength();
-        const { x, y } = path.getPointAtLength(totalLen * f);
-        const dot = document.createElementNS(svg.namespaceURI, 'circle');
-        dot.setAttribute('cx', x);
-        dot.setAttribute('cy', y);
-        dot.setAttribute('r', 0.1);
-        dot.style.opacity = '0';
-        dot.style.fill = 'orange';
-        dot.style.pointerEvents = 'none';
-        svg.appendChild(dot);
-        return dot;
-    });
 
 
     function updateMarkers() {
+        const dashArr = parseFloat(path.style.strokeDasharray);
+        const offset = parseFloat(path.style.strokeDashoffset);
+        const prog = Math.abs(offset / dashArr);
+        const rect = frameContainer.getBoundingClientRect();
 
-        const currentDasharray = parseFloat(path.style.strokeDasharray);
-        const progress = Math.abs(parseFloat(path.style.strokeDashoffset) / currentDasharray);
+        svgDots.forEach((dot,i) => {
+            const { left, top } = dot.getBoundingClientRect();
+            const m = markers[i];
+            m.style.left = `${left - rect.left}px`;
+            m.style.top = `${top - rect.top}px`;
+            if ((prog > fractions[i] || prog > 0.99) && prog > 0.01) m.classList.add('active');
+            else m.classList.remove('active');
+        });
 
-        const containerRect = frameContainer.getBoundingClientRect();
-
-        for (let i = 0; i < svgDots.length; i++) {
-
-            const dot = svgDots[i];
-            const marker = markers[i];
-
-            const rect = dot.getBoundingClientRect();
-            const ptX = rect.left;
-            const ptY = rect.top;
-
-            marker.style.left = `${ptX - containerRect.left}px`;
-            marker.style.top  = `${ptY - containerRect.top}px`;
-
-            if((progress > fractions[i] || progress > 0.99) && progress > 0.01) {
-                marker.classList.add('active');
-            }
-            else {
-                marker.classList.remove('active');
-            }
-
-        }
-
-        for (let i = 0; i < 3; i++) {
-
-            markers[i].style.transform = `translateY(-100%) scale(${1 - (progress * 0.35)})`;
-
-        }
-
-        markers[3].style.transform = `translateY(-100%) scale(${1 - (progress * 0.2)})`;
-
-        markers[4].style.transform = `translateY(-100%) scale(${1 - (progress * 0.1)})`;
-
+        markers.slice(0,3).forEach(m => m.style.transform = `translateY(-100%) scale(${1 - prog*0.35})`);
+        if (markers[3]) markers[3].style.transform = `translateY(-100%) scale(${1 - prog*0.2})`;
+        if (markers[4]) markers[4].style.transform = `translateY(-100%) scale(${1 - prog*0.1})`;
     }
 
 
-    let rafId = null;
-    let prevDashOffset = parseFloat(path.style.strokeDashoffset);
-    const EPS = 0.001;
 
     function loop() {
-
-        const currentDashOffset = parseFloat(path.style.strokeDashoffset);
-
-        if (Math.abs(currentDashOffset - prevDashOffset) > EPS) {
+        const off = parseFloat(path.style.strokeDashoffset);
+        if (Math.abs(off - prevOffset) > EPS) {
             updateMarkers();
-            prevDashOffset = currentDashOffset;
+            prevOffset = off;
             rafId = requestAnimationFrame(loop);
         } else {
             rafId = null;
         }
     }
 
+
+
     function startLoop() {
-        if (rafId === null) {
-            prevDashOffset = parseFloat(path.style.strokeDashoffset);
+        if (!rafId) {
+            prevOffset = parseFloat(path.style.strokeDashoffset);
             rafId = requestAnimationFrame(loop);
         }
     }
 
 
+
+    function clearAnimations() {
+        aosInstances.forEach(inst => {
+            if (inst && typeof inst.destroy === 'function') inst.destroy();
+        });
+        aosInstances = [];
+    }
+
+
+
+    function registerAnimations() {
+        const rotateX = window.innerWidth > 800 ? 45 : 50;
+
+        aosInstances.push(
+            animateOnScroll({
+                triggerElement: section,
+                element: path,
+                elementEnterTrigger: { position:'top', offset:0 },
+                enterTrigger: { position:'top', offset:container.offsetHeight/2 },
+                elementExitTrigger: { position:'bottom', offset:0 },
+                exitTrigger: { position:'bottom', offset:container.offsetHeight/4 },
+                animations: [{
+                    property: 'strokeDashoffset',
+                    unit: '',
+                    minValue: 0,
+                    maxValue: pathRealLength * -1,
+                    speed: 0.2
+                }],
+                devMode: false
+            })
+        );
+
+        aosInstances.push(
+            animateOnScroll({
+                triggerElement: section,
+                element: svg,
+                elementEnterTrigger: { position:'top', offset:0 },
+                enterTrigger: { position:'top', offset:container.offsetHeight/2 },
+                elementExitTrigger: { position:'bottom', offset:0 },
+                exitTrigger: { position:'bottom', offset:container.offsetHeight/4 },
+                animations: [{
+                    property: 'transform',
+                    from: `rotateX(${rotateX}deg) translateY(25%) scale(1.5) translateZ(5vh)`,
+                    to: `rotateX(${rotateX}deg) translateY(-25%) scale(1) translateZ(-2vh)`,
+                    speed: 0.2
+                }],
+                onInit: () => updateMarkers(),
+                devMode: false
+            })
+        );
+    }
+
+
+
+    function initialize() {
+        clearAnimations();
+        initialiseSvgPath();
+        subPath.style.strokeDasharray = `${pathRealLength/150}`;
+        section.style.height = (window.innerHeight * 3) + 'px';
+        const total = path.getTotalLength();
+        svgDots.forEach((dot,i) => {
+            const { x, y } = path.getPointAtLength(total * fractions[i]);
+            dot.setAttribute('cx', x);
+            dot.setAttribute('cy', y);
+        });
+        updateMarkers();
+        registerAnimations();
+    }
+
+
+
+    function debounce(fn, ms = 250) {
+        let t;
+        return (...args) => {
+            clearTimeout(t);
+            t = setTimeout(() => fn(...args), ms);
+        };
+    }
+
+
+
+    createDots();
+    initialize();
+
+
+
     window.addEventListener('scroll', startLoop);
+    window.addEventListener('resize', debounce(() => {
+        if (rafId) cancelAnimationFrame(rafId);
+        initialize();
+    }, 250));
 
-    updateMarkers();
-
-
-
-})
+});

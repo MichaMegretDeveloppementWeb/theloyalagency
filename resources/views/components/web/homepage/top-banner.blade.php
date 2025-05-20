@@ -26,7 +26,7 @@
 
         <div class="image_container">
 
-            <img src="{{ asset('assets/images/homepage/image-profil-melinda.webp') }}" alt="Image de profil de Melinda Marin, directrice chez The Loyal Agency">
+            <img src="{{ asset('assets/images/homepage/image-profil-melinda.webp') }}" alt="Image de profil de Melinda Marin, créatrice de relation client chez The Loyal Agency">
 
         </div>
 

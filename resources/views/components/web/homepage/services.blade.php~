@@ -1,0 +1,188 @@
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/services.css?v=".now()->toDateTimeString())}}">
+@endpush
+@push('scripts')
+    <script type="module" src="{{ asset("assets/js/web/homepage/services.js?v=".now()->toDateTimeString()) }}"></script>
+@endpush
+
+
+
+<section class="services">
+
+    <div class="section_content">
+
+        <div class="title_container">
+            <h2 class="title">
+                Mes offres
+            </h2>
+        </div>
+
+        <ul class="services_list">
+
+            <li class="service load_resources">
+
+                <div class="service_content">
+
+                    <div class="service_icon_container">
+                        <img src="{{ asset("assets/images/homepage/services_icon_1.webp") }}" alt="Illustration dessinée main : document et flèche téléchargement – ressources à la carte pour consultant en relation client">
+                    </div>
+
+                    <div class="service_description_container">
+
+                        <h3 class="title">
+                            Ressources
+                        </h3>
+
+                        <p class="description">
+                            Accédez immédiatement à nos guides, modèles et check-lists pour optimiser votre relation client et augmenter votre chiffre d’affaires.
+                        </p>
+
+                        <ul class="includes_list">
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    Paiement à l’unité ou abonnement mensuel
+                                </p>
+                            </li>
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    Catalogue mis à jour en continu
+                                </p>
+                            </li>
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    Thématiques : fidélisation, parcours client, upselling
+                                </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <a href="#" class="cta">
+                        Découvrir les ressources
+                        <x-icons.arrow-right/>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+            <li class="service mix_coaching">
+
+                <div class="service_content">
+
+                    <div class="service_icon_container">
+                        <img src="{{ asset("assets/images/homepage/services_icon_2.webp") }}" alt="Illustration dessinée main : document et flèche téléchargement – ressources à la carte pour consultant en relation client">
+                    </div>
+
+                    <div class="service_description_container">
+
+                        <h3 class="title">
+                            Pack Boost
+                        </h3>
+
+                        <p class="description">
+                            Bénéficiez de l’accès illimité à toutes nos ressources en abonnement mensuel, complété par des séances de coaching ponctuel pour répondre à vos besoins précis.
+                        </p>
+
+                        <ul class="includes_list">
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    1 h de coaching par mois incluse
+                                </p>
+                            </li>
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    Analyse ciblée de vos points de blocage
+                                </p>
+                            </li>
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    Plan d’action personnalisé pour renforcer votre stratégie
+                                </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <a href="#" class="cta">
+                        En savoir plus sur cette offre
+                        <x-icons.arrow-right/>
+                    </a>
+
+                </div>
+
+            </li>
+
+
+
+            <li class="service full_coaching">
+
+                <div class="service_icon_container">
+                    <img src="{{ asset("assets/images/homepage/services_icon_3.webp") }}" alt="Illustration dessinée main : document et flèche téléchargement – ressources à la carte pour consultant en relation client">
+                </div>
+
+                <div class="service_description_container">
+
+                    <h3 class="title">
+                        Pack Maîtrise
+                    </h3>
+
+                    <p class="description">
+                        Un accompagnement global pour déployer une véritable stratégie de relation client au sein de vos équipes et maximiser votre rentabilité.
+                    </p>
+
+                    <ul class="includes_list">
+
+                        <li class="include">
+                            <x-icons.check/>
+                            <p class="text">
+                                Audit complet de vos process
+                            </p>
+                        </li>
+
+                        <li class="include">
+                            <x-icons.check/>
+                            <p class="text">
+                                Formation approfondie et suivi opérationnel
+                            </p>
+                        </li>
+
+                        <li class="include">
+                            <x-icons.check/>
+                            <p class="text">
+                                Offre personnalisée et devis sur mesure
+                            </p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <a href="#" class="cta">
+                    En savoir plus sur cette offre
+                    <x-icons.arrow-right/>
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>

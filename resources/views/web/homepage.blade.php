@@ -25,6 +25,15 @@
     <x-web.homepage.client-journey/>
 
 
+    <x-web.homepage.about-me/>
+
+
+    <x-web.homepage.services/>
+
+
+    <x-web.homepage.reviews :$reviews/>
+
+
     {{--<section class="stats">
 
         <ul class="stat_list">
@@ -66,6 +75,13 @@
 
     </section>--}}
 
+
+
+    <x-slot name="footer">
+
+        <x-web.main-footer/>
+
+    </x-slot>
 
 
 </x-layouts.web>

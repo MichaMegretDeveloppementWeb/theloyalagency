@@ -43,9 +43,9 @@
 
             </main>
 
-            <footer id="main_footer">
-
-            </footer>
+            @if($footer)
+                {{ $footer }}
+            @endif
 
         </div>
 

@@ -19,7 +19,7 @@
 
         <ul class="card_list_container">
 
-            <li class="card_container card_1 alt_1">
+            <li class="card_container card_1">
 
                 <article class="card">
                     <div class="frame_container">
@@ -53,38 +53,7 @@
 
             </li>
 
-            <li class="card_container card_2 alt_1">
-                <article class="card">
-                    <div class="frame_container">
-                        <button type="button" class="switch switch_to_problem" aria-label="Afficher le problème de la notoriété" aria-pressed="true">
-                            <div class="content">
-                                Problème
-                            </div>
-                        </button>
-                        <div class="frame">
-                            <div class="image_container container_1">
-                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_2_1.webp") }}" alt="Paysage désertique et aride" loading="lazy">
-                            </div>
-                            <div class="image_container container_2">
-                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_2_2.webp") }}" alt="Paysage d'une plaine verdoyante et ensoleillé" loading="lazy">
-                            </div>
-                            <p class="card_text problem_text">
-                                Faible notoriété ou réputation fragile
-                            </p>
-                            <p class="card_text solution_text">
-                                Les clients fidèles deviennent des ambassadeurs de la marque et renforcent sa réputation.
-                            </p>
-                        </div>
-                        <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
-                            <div class="content">
-                                Solution
-                            </div>
-                        </button>
-                    </div>
-                </article>
-            </li>
-
-            <li class="card_container card_3 alt_1">
+            <li class="card_container card_2">
                 <article class="card">
                     <div class="frame_container">
                         <button type="button" class="switch switch_to_problem" aria-label="Afficher le problème des revenus instables" aria-pressed="true">
@@ -104,6 +73,37 @@
                             </p>
                             <p class="card_text solution_text">
                                 Des clients fidèles assurent une base de revenus récurrents et facilitent la planification.
+                            </p>
+                        </div>
+                        <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
+                            <div class="content">
+                                Solution
+                            </div>
+                        </button>
+                    </div>
+                </article>
+            </li>
+
+            <li class="card_container card_3">
+                <article class="card">
+                    <div class="frame_container">
+                        <button type="button" class="switch switch_to_problem" aria-label="Afficher le problème de la notoriété" aria-pressed="true">
+                            <div class="content">
+                                Problème
+                            </div>
+                        </button>
+                        <div class="frame">
+                            <div class="image_container container_1">
+                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_2_1.webp") }}" alt="Paysage désertique et aride" loading="lazy">
+                            </div>
+                            <div class="image_container container_2">
+                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_2_2.webp") }}" alt="Paysage d'une plaine verdoyante et ensoleillé" loading="lazy">
+                            </div>
+                            <p class="card_text problem_text">
+                                Faible notoriété ou réputation fragile
+                            </p>
+                            <p class="card_text solution_text">
+                                Les clients fidèles deviennent des ambassadeurs de la marque et renforcent sa réputation.
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
