@@ -3,7 +3,7 @@ TOP BANNER SECTION
 -------------------------------------------------------------------------------------------------------------------*/
 
 #page_content.homepage section.top_banner_container{
-    padding-top: 9em;
+    padding-top: 6.5em;
     background: #f7f2ea;
 }
 
@@ -245,6 +245,16 @@ TOP BANNER SECTION
 
     #page_content.homepage section.top_banner_container .top_banner .title_container .cta.contact{
         margin-top: 8em;
+    }
+
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+    #page_content.homepage section.top_banner_container{
+        padding-top: 7.5em;
     }
 
 }

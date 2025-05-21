@@ -26,7 +26,7 @@
         <nav id="main_navbar" aria-label="Navigation principale">
             <ul class="navbar_links">
                 <li class="link home">
-                    <a href="#">
+                    <a href="{{ route('homepage') }}">
                         <x-icons.home aria-label="Accueil"/>
                         Accueil</a>
                     <div class="sub_line"></div>
@@ -36,7 +36,7 @@
                     <div class="sub_line"></div>
                 </li>
                 <li class="link contact">
-                    <a href="#">Prendre rendez-vous</a>
+                    <a href="{{ route('contact') }}">Prendre rendez-vous</a>
                 </li>
             </ul>
         </nav>

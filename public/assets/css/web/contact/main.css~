@@ -1,0 +1,53 @@
+#page_content.contact{
+    padding-top: 6.5em;
+    background: #F8F7F2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+
+
+#page_content.contact .main_title_container{
+    width: 100%;
+    margin: 2em 0;
+    padding: 1em;
+}
+
+#page_content.contact .main_title_container .main_title{
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    font-size: min(5em, 10vw);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 800px){
+
+    #page_content{
+        padding-top: 7.5em;
+    }
+
+}

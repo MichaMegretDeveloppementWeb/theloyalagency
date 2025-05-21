@@ -27,10 +27,10 @@
 
                     <h3>Liens utiles</h3>
                     <ul>
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="/services">Prestations</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="{{ route('homepage') }}">Accueil</a></li>
+                        <li><a href="#">Prestations</a></li>
+                        <li><a href="{{ route('contact') }}">Contact</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
                     </ul>
 
                 </div>

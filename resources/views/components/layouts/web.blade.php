@@ -27,6 +27,9 @@
     <script src="{{ asset("assets/js/commons.js?v=".now()->toDateTimeString()) }}"></script>
     @stack('scripts')
 
+
+    @yield('livewire-styles')
+
 </head>
 
     <body>
@@ -48,6 +51,8 @@
             @endif
 
         </div>
+
+        @yield('livewire-scripts')
 
     </body>
 

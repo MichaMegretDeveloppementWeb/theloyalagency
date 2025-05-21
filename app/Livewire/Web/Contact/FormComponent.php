@@ -1,0 +1,79 @@
+<?php
+
+namespace App\Livewire\Web\Contact;
+
+use App\Actions\SendContactFormAction;
+use Livewire\Component;
+use Illuminate\Support\Facades\Mail;
+
+class FormComponent extends Component
+{
+    public $name = '';
+    public $email = '';
+    public $message = '';
+    public $phone = '';
+
+
+
+
+
+
+
+    public function __construct(
+        protected SendContactFormAction $sendContactFormAction = new SendContactFormAction()
+    )
+    {}
+
+
+    public function render()
+    {
+        return view('livewire.web.contact.form-component');
+    }
+
+
+
+
+    public function rules(){
+
+        return [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255'],
+            'phone' => ['required', 'regex:/^[0-9\+\-\s\(\)]{8,20}$/', 'max:20'],
+            'message' => ['required', 'string', 'max:2000'],
+        ];
+
+    }
+
+    public function messages(){
+
+        return [
+          'required' => 'Le champs est requis',
+          'email' => 'Format invalide',
+          'max' => 'Le champs ne doit pas contenir plus de :max caractères',
+          'string' => 'Format invalide'
+        ];
+
+    }
+
+
+
+
+    public function updated($propertyName)
+    {
+        session()->forget('success');
+    }
+
+
+
+
+
+    public function submit()
+    {
+        $validated = $this->validate();
+
+        $this->sendContactFormAction->execute($validated);
+
+        $this->reset(['name', 'email', 'message', 'phone']);
+        session()->flash('success', 'Votre message a bien été envoyé.');
+    }
+}

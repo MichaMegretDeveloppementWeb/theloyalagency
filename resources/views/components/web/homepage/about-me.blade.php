@@ -29,19 +29,16 @@
             <ul class="approaches_list">
 
                 <li class="approach">
-                    {{--<x-icons.check/>--}}
                     <x-icons.chevron-right/>
                     <span class="text"><b>Audit relation client</b> pour identifier vos leviers de croissance</span>
                 </li>
 
                 <li class="approach">
-                    {{--<x-icons.check/>--}}
                     <x-icons.chevron-right/>
                     <span class="text"><b>Conception de parcours client sur-mesure</b>, du premier contact à la fidélisation</span>
                 </li>
 
                 <li class="approach">
-                    {{--<x-icons.check/>--}}
                     <x-icons.chevron-right/>
                     <span class="text"><b>Formation et coaching</b> de vos équipes pour délivrer un service mémorable</span>
                 </li>
@@ -52,7 +49,7 @@
                 Prêt à transformer chaque interaction en opportunité de revenu et de satisfaction ?
             </p>
 
-            <a href="#" class="cta">
+            <a href="{{ route('contact') }}" class="cta">
                 Contactez-moi
                 <x-icons.chevron-right/>
             </a>

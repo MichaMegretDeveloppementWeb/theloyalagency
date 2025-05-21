@@ -1,0 +1,79 @@
+#page_content.contact section.direct_contact{
+    width: 100%;
+    max-width: 120em;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+#page_content.contact section.direct_contact .contact_methods_container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3em 5em;
+    padding: 2em;
+    width: 100%;
+    max-width: 70em;
+}
+
+
+#page_content.contact section.direct_contact .contact_methods_container .contact_method{
+    flex-grow: 1;
+    max-width: 30em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+
+#page_content.contact section.direct_contact .contact_methods_container .contact_method .icon_container{
+    width: 4em;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 0.25em;
+}
+
+
+#page_content.contact section.direct_contact .contact_methods_container .contact_method .icon_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+
+
+
+#page_content.contact section.direct_contact .contact_methods_container .contact_method .contact_title{
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+#page_content.contact section.direct_contact .contact_methods_container .contact_method .contact_content{
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.15em;
+    padding: 0.25em 0;
+    width: max-content;
+    border-bottom: 1px solid var(--main-blue);
+}

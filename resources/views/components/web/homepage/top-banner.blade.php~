@@ -17,7 +17,7 @@
 
             </div>
 
-            <a class="cta contact" href="{{ route('contact') }}">
+            <a class="cta contact" href="{{ round('contact') }}">
                 Contactez-moi
                 <x-icons.arrow-right/>
             </a>

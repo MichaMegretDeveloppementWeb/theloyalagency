@@ -27,10 +27,10 @@
 
                     <h3>Liens utiles</h3>
                     <ul>
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="/services">Prestations</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+                        <li><a href="{{ round('homepage') }}">Accueil</a></li>
+                        <li><a href="#">Prestations</a></li>
+                        <li><a href="{{ round('contact') }}">Contact</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
                     </ul>
 
                 </div>
@@ -41,7 +41,7 @@
                         <p>The Loyal Agency</p>
                         <p>123 Rue Exemple, 75001 Paris, France</p>
                         <p>Tél : <a href="tel:+33123456789">01 23 45 67 89</a></p>
-                        <p>Email : <a href="mailto:contact@theloyalagency.fr">contact@theloyalagency.fr</a></p>
+                        <p>Email : <a href="mailto:contact@theloyalagency.fr">contact@theloyalagency.com</a></p>
                     </address>
                 </div>
 

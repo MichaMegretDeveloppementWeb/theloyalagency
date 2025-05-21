@@ -1,0 +1,239 @@
+#page_content.contact section.form_component{
+    width: 100%;
+    max-width: 120em;
+    margin: 0 auto 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#page_content.contact section.form_component .contact_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em;
+}
+
+
+
+
+#page_content.contact section.form_component .contact_form .alert_success{
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 3em;
+    color: green;
+    fill: green;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    animation: animateSuccessMessage 0.5s ease-in-out forwards;
+}
+
+@keyframes animateSuccessMessage {
+    from{
+        opacity: 0;
+        transform: translateX(-20vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#page_content.contact section.form_component .contact_form .alert_success .app_icon{
+    min-width: 1.5em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: green;
+    fill: white;
+    padding: 0.35em
+    7px
+;
+}
+
+
+
+
+
+
+#page_content.contact section.form_component .contact_form .data_container label{
+    color: #8f8f8f;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+
+#page_content.contact section.form_component .contact_form .error{
+    font-size: 0.9em;
+    color: #cf0e0e8a;
+    margin-top: 0.25em;
+}
+
+
+
+
+
+
+
+#page_content.contact section.form_component .contact_form .data_container{
+    width: 100%;
+    max-width: 80em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em 2em;
+}
+
+
+
+
+
+#page_content.contact section.form_component .contact_form .data_container .contact_info_container{
+    flex-grow: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5em;
+    align-self: stretch;
+}
+
+
+#page_content.contact section.form_component .contact_form .data_container .contact_info_container .form_group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    width: 100%;
+}
+
+#page_content.contact section.form_component .contact_form .data_container .contact_info_container .form_group input{
+    padding: 1em;
+    border: none;
+    background: white;
+    border-radius: 0.5em;
+    font-size: 1em;
+    width: 100%;
+    min-width: 20em;
+    box-shadow: 0 3px 7px -4px silver;
+}
+
+
+
+
+
+
+
+
+#page_content.contact section.form_component .contact_form .data_container .message_container{
+    flex-grow: 6;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+#page_content.contact section.form_component .contact_form .data_container .message_container textarea{
+    width: 100%;
+    max-width: 100%;
+    min-width: 25em;
+    flex-grow: 1;
+    min-height: 15em;
+    background: white;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    box-shadow: 0 3px 7px -4px silver;
+    font-size: 1em;
+}
+
+
+
+
+
+
+#page_content.contact section.form_component .contact_form .btn_submit{
+    width: 100%;
+    background: var(--main-blue);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    margin-top: 3em;
+    border-radius: 0.25em;
+    font-size: 1em;
+    box-shadow: 0 2px 5px -2px #434343;
+}
+
+
+#page_content.contact section.form_component .contact_form .btn_submit:hover{
+    background: #0a44af;
+}
+
+
+#page_content.contact section.form_component .contact_form .btn_submit .loader{
+    width: 1.5em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 0.2em solid white;
+    background: transparent;
+    clip-path: polygon(0 0, 10% 0, 50% 50%, 90% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    animation: animateButtonLoader 1s linear infinite;
+}
+
+@keyframes animateButtonLoader {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 900px){
+
+    #page_content.contact section.form_component .contact_form .data_container{
+        flex-direction: row;
+    }
+
+
+    #page_content.contact section.form_component .contact_form .btn_submit{
+        width: 15em;
+    }
+
+}
