@@ -1,9 +1,9 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/main.css?v=".now()->toDateTimeString()) }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/main.css") . "?v=".now()->toDateTimeString() }}">
 @endpush
 
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/homepage/main.js?v=".now()->toDateTimeString()) }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/homepage/main.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 <x-layouts.web class="homepage">
@@ -13,7 +13,6 @@
         <x-web.main-header/>
 
     </x-slot>
-
 
 
     <x-web.homepage.top-banner/>
@@ -26,6 +25,9 @@
 
 
     <x-web.homepage.services/>
+
+
+    <x-web.homepage.satisfied-or-refunded/>
 
 
     <x-web.homepage.about-me/>
@@ -74,7 +76,6 @@
         </ul>
 
     </section>--}}
-
 
 
     <x-slot name="footer">

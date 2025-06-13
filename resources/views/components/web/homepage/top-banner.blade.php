@@ -1,5 +1,8 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/web/homepage/top-banner.css?v='.now()->toDateTimeString()) }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/web/homepage/top-banner.css') . '?v=' . now()->toDateTimeString() }}">
+@endpush
+@push('scripts')
+    <script type="module" src="{{ asset("assets/js/web/homepage/top-banner.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 <section class="top_banner_container">
@@ -12,8 +15,25 @@
 
             <div class="morph_sub_title_container">
 
-                <div class="variant variant_1">Treat &nbsp; them Royal</div>
-                <div class="variant variant_2">Make &nbsp;them Loyal</div>
+                <span class="morph_word first">
+                    <div class="word variant variant_1">
+                        <span class="content">Treat</span>
+                    </div>
+                    <div class="word variant variant_2">
+                        <span class="content">Make</span>
+                    </div>
+                </span>
+
+                <span class="word content fixed_word">them</span>
+
+                <span class="morph_word last">
+                    <div class="word variant variant_1">
+                        <span class="content">Royal</span>
+                    </div>
+                    <div class="word variant variant_2">
+                        <span class="content">Loyal</span>
+                    </div>
+                </span>
 
             </div>
 

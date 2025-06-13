@@ -1,0 +1,60 @@
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/my-story/header.css") . "?v=".now()->toDateTimeString() }}">
+@endpush
+
+<section id="my_story_header">
+
+    <div class="main_image_container">
+
+        <div class="title_container">
+            <h1 class="title">
+                Mon Histoire
+            </h1>
+            <div aria-hidden="true" class="corner_rounded top_left"></div>
+            <div aria-hidden="true" class="corner_rounded bottom_right"></div>
+        </div>
+
+        <div class="image_container">
+
+            <img src="{{ asset("assets/images/my-story/my-story-main-image.webp") }}" alt="Portrait de Melinda Marin, fondatrice de The Loyal Agency et experte en fidélisation client" role="presentation"  aria-hidden="true">
+
+            <div aria-hidden="true" class="shape_cut_elmt">
+                <div class="corner_rounded top_left"></div>
+                <div class="corner_rounded bottom_right"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="my_philosophy_container">
+
+        <div class="image_container">
+
+            <img src="{{ asset("assets/images/my-story/my-philosophy.webp") }}" alt="" role="presentation"  aria-hidden="true">
+
+            <div aria-hidden="true" class="shape_cut_elmt">
+                <div class="corner_rounded top_left"></div>
+                <div class="corner_rounded bottom_right"></div>
+            </div>
+
+        </div>
+
+        <div class="text_container">
+
+            <div class="title_container">
+                <h2 class="title">Ma philosophie</h2>
+                <div aria-hidden="true" class="corner_rounded top_left"></div>
+                <div aria-hidden="true" class="corner_rounded bottom_right"></div>
+            </div>
+
+            <p class="content">
+                J'ai grandi à Saint‑Martin, la «Friendly Island», où le tourisme rythme la vie et la résilience se cultive dès le plus jeune âge.
+                Confrontée aux cyclones et à la fragilité d’un écosystème insulaire, j'y ai développé mon sens de l’entraide, la valeur d’un sourire sincère et, surtout, l’importance du client pour assurer la pérennité d’une activité — fondements essentiels de ma vision de la fidélisation client.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>

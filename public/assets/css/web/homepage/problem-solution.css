@@ -80,8 +80,7 @@ CARD DESIGN DEFAULT
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .card{
     width: 100%;
     aspect-ratio: 9/12;
-    border-radius: 1em;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 
@@ -90,6 +89,7 @@ CARD DESIGN DEFAULT
     height: 100%;
     position: relative;
     overflow: hidden;
+    /*border-radius: 1em;*/
 }
 
 

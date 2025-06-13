@@ -1,0 +1,75 @@
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/services/header.css") . "?v=".now()->toDateTimeString() }}">
+@endpush
+
+<section id="services_header">
+
+    <div class="title_container">
+        <h1 class="title">
+            Mes services
+        </h1>
+    </div>
+
+
+    <p class="intro">
+        Parce que chaque entreprise a ses propres défis en matière de relation client, je propose trois formules d’accompagnement exclusives, chacune ajustée en fonction de vos besoins spécifiques.
+        Choisissez l’offre qui vous correspond et commençons à travailler ensemble.
+    </p>
+
+
+    <div class="main_image_container">
+
+        <div class="sub_title_container">
+
+            <h2 class="sub_title">
+                Valorisez vos clients
+            </h2>
+
+            <div class="corner_rounded top_left"></div>
+            <div class="corner_rounded top_right"></div>
+
+        </div>
+
+
+        <nav class="services_nav">
+
+            <ul class="services_list">
+
+                <li class="item">
+                    <a href="#ressources">
+                        Ressources
+                    </a>
+                </li>
+
+                <li class="item">
+                    <a href="#pack-boost">
+                        Pack boost
+                    </a>
+                </li>
+
+                <li class="item">
+                    <a href="#pack-maitrise">
+                        Pack maîtrise
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="cta_container">
+
+            <a href="{{ route('contact') }}" class="cta">
+                Commencer
+                <x-icons.arrow-right/>
+            </a>
+
+            <div class="corner_rounded bottom_left"></div>
+            <div class="corner_rounded bottom_right"></div>
+
+        </div>
+
+    </div>
+
+</section>

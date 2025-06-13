@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background: #f7f2ea;
+    background: var(--sub-cream-background);
 }
 
 
@@ -112,7 +112,7 @@
 }
 
 #page_content.homepage section.client_journey_container .nine_step_container svg.nine_steps_svg path.path_2{
-    stroke: #f7f2ea;
+    stroke: var(--sub-cream-background);
     opacity: 1;
     z-index: 2;
     position: relative;
@@ -255,7 +255,7 @@
 }
 
 #page_content.homepage section.client_journey_container .nine_step_container .step_marker.active:hover .label{
-    background: rgba(248, 247, 242, 0.85);
+    background: rgba(247, 242, 234, 0.73);
     backdrop-filter: blur(3px);
 }
 

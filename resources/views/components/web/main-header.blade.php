@@ -1,8 +1,8 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/main-header.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/main-header.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/main-header.js") }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/main-header.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 <header id="main_header" class="appear">
@@ -28,11 +28,16 @@
                 <li class="link home">
                     <a href="{{ route('homepage') }}">
                         <x-icons.home aria-label="Accueil"/>
-                        Accueil</a>
+                        Accueil
+                    </a>
                     <div class="sub_line"></div>
                 </li>
                 <li class="link services">
-                    <a href="#">Prestations</a>
+                    <a href="{{ route('about') }}">Mon histoire</a>
+                    <div class="sub_line"></div>
+                </li>
+                <li class="link services">
+                    <a href="{{ route('services') }}">Mes services</a>
                     <div class="sub_line"></div>
                 </li>
                 <li class="link contact">

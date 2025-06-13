@@ -1,8 +1,8 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/about.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/about.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/homepage/about.js?v=".now()->toDateTimeString()) }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/homepage/about.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 
@@ -20,37 +20,20 @@
             <h2 class="title">&Agrave; propos de moi</h2>
 
             <p class="description">
-                Consultante en relation client, j’accompagne les marques dans l’optimisation de leur service pour augmenter leur chiffre d’affaires, améliorer leur rentabilité et fidéliser durablement leurs clients.
-                Forte de 15 ans en hôtellerie de luxe et d’une expérience de cliente mystère pour la maison Chanel, j’allie stratégie de commercialisation et approche centrée sur l’humain.
-                <br><br>
-                <u>Mon approche :</u>
+                Au fil des années, je me suis spécialisée dans la stratégie de rétention client, combinant approche data‑driven, psychologie comportementale et CRM sur‑mesure.
+                Je conçois des parcours client personnalisés, des campagnes de réengagement et des tactiques d’upsell qui réduisent le churn, renforcent l’engagement et maximisent le ROI.
             </p>
 
-            <ul class="approaches_list">
-
-                <li class="approach">
-                    <x-icons.chevron-right/>
-                    <span class="text"><b>Audit relation client</b> pour identifier vos leviers de croissance</span>
-                </li>
-
-                <li class="approach">
-                    <x-icons.chevron-right/>
-                    <span class="text"><b>Conception de parcours client sur-mesure</b>, du premier contact à la fidélisation</span>
-                </li>
-
-                <li class="approach">
-                    <x-icons.chevron-right/>
-                    <span class="text"><b>Formation et coaching</b> de vos équipes pour délivrer un service mémorable</span>
-                </li>
-
-            </ul>
+            <p class="description">
+                J'accompagne dirigeants, équipes commerciales et entrepreneurs pour booster leurs revenus, optimiser leur rentabilité et bâtir des communautés de clients fidèles et engagés. Ma conviction ? Une relation client authentique et bien pensée génère une valeur à long terme supérieure à n’importe quelle campagne d’acquisition.
+            </p>
 
             <p class="pre_cta">
-                Prêt à transformer chaque interaction en opportunité de revenu et de satisfaction ?
+                Prêt à travailler avec un partenaire dévoué ?
             </p>
 
-            <a href="{{ route('contact') }}" class="cta">
-                Contactez-moi
+            <a href="{{ route('about') }}" class="cta">
+                En savoir plus
                 <x-icons.chevron-right/>
             </a>
 

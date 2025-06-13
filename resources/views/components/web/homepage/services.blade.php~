@@ -1,8 +1,8 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/services.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/services.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/homepage/services.js?v=".now()->toDateTimeString()) }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/homepage/services.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 
@@ -64,7 +64,7 @@
 
                     </div>
 
-                    <a href="#" class="cta">
+                    <a href="{{ route('services') }}#ressources" class="cta">
                         Découvrir les ressources
                         <x-icons.arrow-right/>
                     </a>
@@ -120,7 +120,7 @@
 
                     </div>
 
-                    <a href="#" class="cta">
+                    <a href="{{ route('services') }}#pack-boost" class="cta">
                         En savoir plus sur cette offre
                         <x-icons.arrow-right/>
                     </a>
@@ -133,51 +133,55 @@
 
             <li class="service full_coaching">
 
-                <div class="service_icon_container">
-                    <img src="{{ asset("assets/images/homepage/services_icon_3.webp") }}" alt="Illustration dessinée main : document et flèche téléchargement – ressources à la carte pour consultant en relation client">
+                <div class="service_content">
+
+                    <div class="service_icon_container">
+                        <img src="{{ asset("assets/images/homepage/services_icon_3.webp") }}" alt="Illustration dessinée main : document et flèche téléchargement – ressources à la carte pour consultant en relation client">
+                    </div>
+
+                    <div class="service_description_container">
+
+                        <h3 class="title">
+                            Pack Maîtrise
+                        </h3>
+
+                        <p class="description">
+                            Un accompagnement global pour déployer une véritable stratégie de relation client au sein de vos équipes et maximiser votre rentabilité.
+                        </p>
+
+                        <ul class="includes_list">
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    Audit complet de vos process
+                                </p>
+                            </li>
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    Formation approfondie et suivi opérationnel
+                                </p>
+                            </li>
+
+                            <li class="include">
+                                <x-icons.check/>
+                                <p class="text">
+                                    Offre personnalisée et devis sur mesure
+                                </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <a href="#" class="cta">
+                        En savoir plus sur cette offre
+                        <x-icons.arrow-right/>
+                    </a>
+
                 </div>
-
-                <div class="service_description_container">
-
-                    <h3 class="title">
-                        Pack Maîtrise
-                    </h3>
-
-                    <p class="description">
-                        Un accompagnement global pour déployer une véritable stratégie de relation client au sein de vos équipes et maximiser votre rentabilité.
-                    </p>
-
-                    <ul class="includes_list">
-
-                        <li class="include">
-                            <x-icons.check/>
-                            <p class="text">
-                                Audit complet de vos process
-                            </p>
-                        </li>
-
-                        <li class="include">
-                            <x-icons.check/>
-                            <p class="text">
-                                Formation approfondie et suivi opérationnel
-                            </p>
-                        </li>
-
-                        <li class="include">
-                            <x-icons.check/>
-                            <p class="text">
-                                Offre personnalisée et devis sur mesure
-                            </p>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <a href="#" class="cta">
-                    En savoir plus sur cette offre
-                    <x-icons.arrow-right/>
-                </a>
 
             </li>
 

@@ -1,0 +1,112 @@
+#value_proposition{
+    width: 100%;
+    max-width: 130em;
+    margin: auto;
+    padding: 5vh 2em 10vh;
+}
+
+
+
+#value_proposition .list_values{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5vh 5vw;
+}
+
+
+
+
+#value_proposition .list_values .value_card{
+    align-self: stretch;
+    width: 30em;
+    max-width: 100%;
+    border-radius: 1em;
+    padding: 1em 2em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+    position: relative;
+    background: white;
+    /*border: 1px solid silver;*/
+    box-shadow: 0 10px 10px -10px silver;
+}
+
+
+
+#value_proposition .list_values .value_card .shape_cut_elmt{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: calc(3em + 1px);
+    height: calc(3em + 1px);
+    background: var(--main-cream-background);
+    border-radius: 0 0 0 1em;
+    /*border-left: 1px solid silver;
+    border-bottom: 1px solid silver;*/
+}
+
+
+
+#value_proposition .list_values .value_card .shape_cut_elmt .corner_rounded{
+    width: 2em;
+    height: 2em;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+
+#value_proposition .list_values .value_card .shape_cut_elmt .corner_rounded.top_left{
+    top: 0;
+    right: 100%;
+    box-shadow: 1em -1em 0 var(--main-cream-background);
+}
+
+#value_proposition .list_values .value_card .shape_cut_elmt .corner_rounded.bottom_right{
+    top: 100%;
+    right: 0;
+    box-shadow: 1em -1em 0 var(--main-cream-background);
+}
+
+
+
+#value_proposition .list_values .value_card .shape_cut_elmt .decorative_point{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.75em;
+    height: 1.75em;
+    background: var(--main-blue);
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+#value_proposition .list_values .value_card .title{
+    font-size: 2.5em;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+}
+
+
+
+#value_proposition .list_values .value_card .content{
+    text-align: left;
+    line-height: 2em;
+    font-size: min(1.1em, 4vw);
+    color: #3a3a3a;
+    font-weight: 300;
+}

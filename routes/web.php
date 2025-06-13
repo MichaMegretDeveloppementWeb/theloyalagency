@@ -1,9 +1,21 @@
 <?php
 
+use App\Http\Controllers\Web\LegalPagesController;
+use App\Http\Controllers\Web\MyStoryController;
 use App\Http\Controllers\Web\ContactController;
 use App\Http\Controllers\Web\HomeController;
+use App\Http\Controllers\Web\ServicesController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
+Route::get('/services', [ServicesController::class, 'index'])->name('services');
+
+Route::get('/mon-histoire', [MyStoryController::class, 'index'])->name('about');
+
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+
+
+Route::get('/politique-de-confidentialite', [LegalPagesController::class, 'privacyPolicy'])->name('legal.privacy-policy');
+
+Route::get('/mentions-legales', [LegalPagesController::class, 'legalNotice'])->name('legal.legal-notice');

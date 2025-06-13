@@ -1,8 +1,8 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/client-journey.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/client-journey.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/homepage/client-journey.js?v=".now()->toDateTimeString()) }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/homepage/client-journey.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 

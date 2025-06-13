@@ -1,7 +1,7 @@
 #page_content.homepage section.about{
     width: 100%;
     padding: 10vh 2em;
-    background: #f7f2ea;
+    background: var(--sub-cream-background);
     overflow: hidden;
     color: black;
 }

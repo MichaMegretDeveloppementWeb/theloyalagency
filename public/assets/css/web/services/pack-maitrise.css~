@@ -1,0 +1,167 @@
+#pack-maitrise{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10vh 5vw;
+    background: var(--main-cream-background);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+#pack-maitrise .section_content{
+    width: 100%;
+    max-width: 120em;
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vh 5vw;
+}
+
+
+
+
+
+#pack-maitrise .text_container{
+    flex-grow: 1;
+    max-width: 50em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#pack-maitrise .text_container .content_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2em;
+    opacity: 0;
+    transform: translateX(10em);
+    transition: 0.5s opacity ease-in-out, 0.5s transform ease-in-out;
+}
+
+#pack-maitrise .text_container.appear .content_container{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+#pack-maitrise .text_container .content_container>.title{
+    font-size: min(5em, 10vw);
+    font-weight: 100;
+}
+
+#pack-maitrise .text_container .content_container .content{
+    font-size: min(1.15em, 3.75vw);
+    line-height: 1.75em;
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+#pack-maitrise .text_container .content_container .list_advantage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+#pack-maitrise .text_container .content_container .list_advantage .item{
+    font-size: min(1.1em, 3.75vw);
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+
+#pack-maitrise .text_container .content_container .list_advantage .item .app_icon{
+    min-width: 1.25em;
+    fill: var(--main-blue);
+}
+
+
+
+
+
+#pack-maitrise .text_container .cta{
+    font-size: min(1.15em, 3.75vw);
+    margin-top: 1em;
+}
+
+
+#pack-maitrise .text_container .cta:hover{
+    color: black;
+}
+
+#pack-maitrise .text_container .cta:hover .app_icon{
+    fill: black;
+}
+
+
+
+
+
+
+
+
+
+
+#pack-maitrise .image_container{
+    flex-grow: 1;
+    max-width: 50em;
+    min-width: 35vw;
+}
+
+
+#pack-maitrise .image_container img{
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(10em);
+    transition: 0.5s opacity ease-in-out, 0.5s transform ease-in-out;
+}
+
+
+#pack-maitrise .image_container.appear img{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px){
+
+    #pack-maitrise .section_content{
+        flex-direction: row;
+    }
+
+}

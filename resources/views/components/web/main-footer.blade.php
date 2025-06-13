@@ -1,8 +1,8 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/main-footer.css?v=".now()->toDateTimeString()) }}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/main-footer.css") . "?v=".now()->toDateTimeString() }}">
 @endpush
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/main-footer.js?v=".now()->toDateTimeString()) }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/main-footer.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 <footer id="main_footer">
@@ -28,9 +28,11 @@
                     <h3>Liens utiles</h3>
                     <ul>
                         <li><a href="{{ route('homepage') }}">Accueil</a></li>
-                        <li><a href="#">Prestations</a></li>
+                        <li><a href="{{ route('about') }}">Mon histoire</a></li>
+                        <li><a href="{{ route('services') }}">Mes services</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="{{ route('legal.privacy-policy') }}">Politique de confidentialité</a></li>
+                        <li><a href="{{ route('legal.legal-notice') }}">Mention légales</a></li>
                     </ul>
 
                 </div>
@@ -39,7 +41,7 @@
                     <h3>Contactez-moi</h3>
                     <address>
                         <p>The Loyal Agency</p>
-                        <p>123 Rue Exemple, 75001 Paris, France</p>
+                        <p>Route cantonale 5, 1898 St-Gingolph, Suisse</p>
                         <p>Tél : <a href="tel:+33123456789">01 23 45 67 89</a></p>
                         <p>Email : <a href="mailto:contact@theloyalagency.fr">contact@theloyalagency.com</a></p>
                     </address>

@@ -1,5 +1,5 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/contact/form-component.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/contact/form-component.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 
 

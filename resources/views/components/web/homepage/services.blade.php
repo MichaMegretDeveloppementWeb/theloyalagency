@@ -1,8 +1,8 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/services.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/services.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/homepage/services.js?v=".now()->toDateTimeString()) }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/homepage/services.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 
@@ -64,7 +64,7 @@
 
                     </div>
 
-                    <a href="#" class="cta">
+                    <a href="{{ route('services') }}#ressources" class="cta">
                         Découvrir les ressources
                         <x-icons.arrow-right/>
                     </a>
@@ -120,7 +120,7 @@
 
                     </div>
 
-                    <a href="#" class="cta">
+                    <a href="{{ route('services') }}#pack-boost" class="cta">
                         En savoir plus sur cette offre
                         <x-icons.arrow-right/>
                     </a>
@@ -176,7 +176,7 @@
 
                     </div>
 
-                    <a href="#" class="cta">
+                    <a href="{{ route('services') }}#pack-maitrise" class="cta">
                         En savoir plus sur cette offre
                         <x-icons.arrow-right/>
                     </a>

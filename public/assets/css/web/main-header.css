@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: #f7f2ea;
+    background: var(--sub-cream-background);
 
     position: fixed;
     top: 0;

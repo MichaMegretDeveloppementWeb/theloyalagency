@@ -1,0 +1,99 @@
+#comparison{
+    width: 100%;
+    padding: 10vh 5vw;
+    background: var(--sub-cream-background);
+}
+
+
+
+#comparison .section_content{
+    width: 100%;
+    max-width: 120em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#comparison .section_content>.title_container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8vh;
+}
+
+
+#comparison .section_content>.title_container .title{
+    font-size: min(5em, 10vw);
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: 0.07em;
+}
+
+
+
+
+
+
+
+
+
+#comparison .section_content .comparison_container{
+    width: 100%;
+    max-width: 70em;
+    margin: auto;
+    overflow: auto;
+}
+
+
+#comparison .section_content .comparison_table{
+    width: 100%;
+    min-width: max-content;
+}
+
+
+
+#comparison .section_content .comparison_table thead th{
+    padding: 1em;
+    font-size: min(1.5em, 4vw);
+    text-align: center;
+    font-weight: 200;
+    min-width: max-content;
+}
+
+
+
+#comparison .section_content .comparison_table tbody tr:nth-of-type(odd) td{
+    background: var(--main-cream-background);
+}
+
+
+#comparison .section_content .comparison_table tbody td{
+    padding: 2em 1em;
+    font-size: min(1.5em, 4vw);
+    text-align: center;
+    min-width: max-content;
+}
+
+
+#comparison .section_content .comparison_table tbody td:nth-of-type(1){
+    font-weight: 100;
+}
+
+#comparison .section_content .comparison_table tbody td:not(:nth-of-type(1)):not(:nth-of-type(4)){
+    border-right: 1px solid #e3e3e3;
+}
+
+
+#comparison .section_content .comparison_table tbody td .app_icon.check{
+    fill: var(--main-blue);
+}
+
+#comparison .section_content .comparison_table tbody td .app_icon.cross{
+    fill: red;
+}

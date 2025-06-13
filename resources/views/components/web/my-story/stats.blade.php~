@@ -1,0 +1,29 @@
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/my-story/stats.css") . "?v=".now()->toDateTimeString() }}">
+@endpush
+
+<section id="stats">
+
+    <ul class="stats_container">
+
+        <li class="stat years_experience">
+            <span class="data">
+                10 +
+            </span>
+            <span class="label">
+                Années d'expérience
+            </span>
+        </li>
+
+        <li class="stat years_experience">
+            <span class="data">
+                100 +
+            </span>
+            <span class="label">
+                Audits client
+            </span>
+        </li>
+
+    </ul>
+
+</section>

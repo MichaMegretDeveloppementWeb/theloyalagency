@@ -1,0 +1,98 @@
+@section('title') Politique de confidentialité – The Loyal Agency @endsection
+
+@section('description') Politique de confidentialité de The Loyal Agency : collecte, traitement et protection de vos données personnelles (RGPD). Contactez-nous pour exercer vos droits. @endsection
+
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/legal-pages/main.css") . "?v=".now()->toDateTimeString() }}">
+@endpush
+
+
+<x-layouts.web class="legal_page privacy-policy">
+
+    <x-slot name="header">
+
+        <x-web.main-header/>
+
+    </x-slot>
+
+
+    <section class="legal_content">
+
+        <h1>Politique de confidentialité</h1>
+
+        <nav class="breadcrumb">
+            <div>
+                <a href="{{ route('homepage') }}" class="item">Accueil</a>
+            </div>
+            /
+            <div>
+            <span class="item current">
+                Politique de confidentialité
+            </span>
+            </div>
+        </nav>
+
+        <p>La présente politique de confidentialité décrit comment le site The Loyal Agency collecte, utilise et protège les données personnelles des utilisateurs, conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+
+        <h2>Responsable du traitement</h2>
+        <p><strong>The Loyal Agency</strong><br>
+            Route cantonale 5, 1898 St‑Gingolph, Suisse<br>
+            SIRET : aucun<br>
+            TVA intracommunautaire : aucun<br>
+            Délégué à la protection des données : Melinda Marin (<a href="mailto:melinda@theloyalagency.com">melinda@theloyalagency.com</a>)</p>
+
+        <h2>Données collectées</h2>
+        <p>Nous collectons uniquement les données strictement nécessaires au traitement de vos demandes via le formulaire de contact :</p>
+        <ul>
+            <li><strong>Données de formulaire</strong> : nom, prénom, e‑mail, téléphone, message (conservées 2 ans)</li>
+            <li><strong>Données de session</strong> : adresse IP (conservée 2 heures)</li>
+            <li><strong>Cookies</strong> : seuls les cookies strictement nécessaires au fonctionnement du site</li>
+        </ul>
+
+        <h2>Finalités du traitement</h2>
+        <ul>
+            <li>Traitement de vos demandes clients (préparation de devis, réponses à vos questions).</li>
+        </ul>
+
+        <h2>Base légale</h2>
+        <p>Le traitement des données est fondé sur l’exécution de mesures précontractuelles (article 6.1.b du RGPD).</p>
+
+        <h2>Stockage des données</h2>
+        <p>
+            Les données collectées sur le site sont à destination unique des serveurs d'Hostinger situés en Europe. Aucun autre transfert ou sous‑traitant, et aucun transfert hors Union européenne.
+        </p>
+
+
+        <h2>Durée de conservation</h2>
+        <ul>
+            <li>Données de formulaire : 2 ans à compter de la dernière interaction.</li>
+            <li>Données de session : 2 heures.</li>
+        </ul>
+
+        <h2>Sécurité</h2>
+        <p>Vos données sont stockées sur des serveurs sécurisés et protégées par des mesures techniques et organisationnelles appropriées pour prévenir toute perte, accès non autorisé, altération ou divulgation.</p>
+
+        <h2>Cookies et traceurs</h2>
+        <p>Seuls les cookies strictement nécessaires au fonctionnement du site sont utilisés. Aucune solution d’analytics ou de marketing n’est déployée.</p>
+
+        <h2>Droits des utilisateurs</h2>
+        <p>Conformément au RGPD, vous disposez des droits suivants : accès, rectification, effacement, limitation, opposition et portabilité de vos données.
+            Pour exercer ces droits, écrivez à : <a href="mailto:contact@theloyalagency.com">contact@theloyalagency.com</a>.
+            Nous vous répondrons dans un délai d’un mois.</p>
+
+        <h2>Réclamation</h2>
+        <p>En cas de litige, vous pouvez introduire une réclamation auprès de la CNIL : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+
+        <h2>Entrée en vigueur et modifications</h2>
+        <p>Cette politique est applicable à compter du 13 juin 2025. Elle peut être modifiée à tout moment et sans préavis (révision libre) ; la date de la version en vigueur sera mise à jour ci‑dessus.</p>
+
+    </section>
+
+
+    <x-slot name="footer">
+
+        <x-web.main-footer/>
+
+    </x-slot>
+
+</x-layouts.web>

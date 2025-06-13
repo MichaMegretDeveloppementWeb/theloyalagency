@@ -4,7 +4,7 @@ TOP BANNER SECTION
 
 #page_content.homepage section.top_banner_container{
     padding-top: 6.5em;
-    background: #f7f2ea;
+    background: var(--sub-cream-background);
 }
 
 
@@ -12,7 +12,7 @@ TOP BANNER SECTION
     width: 100%;
     max-width: 120em;
     height: 55em;
-    background: #f7f2ea;
+    background: var(--sub-cream-background);
     position: relative;
     margin: auto auto;
 }
@@ -20,11 +20,6 @@ TOP BANNER SECTION
 
 
 
-
-
-#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .variant{
-    font-size: 3.5em;
-}
 
 
 
@@ -54,10 +49,21 @@ TOP BANNER SECTION
     line-height: 1em;
 }
 
+
+
+
+
+
+
 #page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container{
     perspective: 200px;
-    width: 23em;
-    height: 5em;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
 }
 
 #page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container *{
@@ -65,85 +71,284 @@ TOP BANNER SECTION
 }
 
 
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .word{
+    position: relative;
+    height: 100%;
+}
 
-
-
-
-#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .variant{
-    transform-origin: center center;
-    backface-visibility: visible;
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .word .content{
+    font-size: 3.5em;
     position: absolute;
+    left: 50%;
     top: 0;
+    transform: translateX(-50%);
+}
+
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word.first .content{
+    padding-right: 0.5em;
+}
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word.last .content{
+    padding-right: 0.2em;
+}
+
+
+
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .fixed_word{
+    margin: 0 1rem 0 1rem;
+    font-size: 3.5em;
+}
+
+
+
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word{
+    position: relative;
+    height: 100%;
+}
+
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word.first{
+    width: 8em;
+}
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word.last{
+    width: 8em;
+}
+
+
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word .variant{
+    width: 100%;
+    max-width: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
     left: 0;
-    width: max-content;
+    transform: translateY(-50%);
 }
 
-#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .variant_1{
-    transform: rotateX(0deg) translateZ(0px);
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word .variant.variant_1{
+    max-width: 100%;
+    right: 0;
+    left: initial;
+    animation: animeFirstVariant 4s 1s ease-in-out infinite;
+}
+
+
+@keyframes animeFirstVariant {
+    0%{
+        max-width: 100%;
+        opacity: 1;
+        right: 0;
+        left: initial;
+    }
+    19.5%{
+        max-width: 0;
+        opacity: 0;
+        right: 0;
+        left: initial;
+    }
+    20%{
+        max-width: 0;
+        opacity: 0;
+        right: initial;
+        left: 0;
+    }
+    50%{
+        max-width: 0;
+        opacity: 0;
+        right: initial;
+        left: 0;
+    }
+    69.5%{
+        max-width: 100%;
+        opacity: 1;
+        right: initial;
+        left: 0;
+    }
+    70%{
+        max-width: 100%;
+        opacity: 1;
+        right: 0;
+        left: initial;
+    }
+    100%{
+        max-width: 100%;
+        opacity: 1;
+        right: 0;
+        left: initial;
+    }
+}
+
+
+
+
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word .variant.variant_2{
+    max-width: 0;
+    right: initial;
+    left: 0;
+    animation: animeLastVariant 4s 1s ease-in-out infinite;
+}
+
+
+@keyframes animeLastVariant {
+    0%{
+        max-width: 0;
+        opacity: 0;
+        right: initial;
+        left: 0;
+    }
+    19.5%{
+        max-width: 100%;
+        opacity: 1;
+        right: initial;
+        left: 0;
+    }
+    20%{
+        max-width: 100%;
+        opacity: 1;
+        right: 0;
+        left: initial;
+    }
+    50%{
+        max-width: 100%;
+        opacity: 1;
+        right: 0;
+        left: initial;
+    }
+    69.5%{
+        max-width: 0;
+        opacity: 0;
+        right: 0;
+        left: initial;
+    }
+    70%{
+        max-width: 0;
+        opacity: 0;
+        right: initial;
+        left: 0;
+    }
+    100%{
+        max-width: 0;
+        opacity: 0;
+        right: initial;
+        left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word .variant{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word .variant.variant_1{
+    transform: translateY(-50%) translateX(0);
     opacity: 1;
-    animation: 3s animateMorphSubTitleFirstPart_1 ease-in-out infinite;
+    animation: animeFirstVariant 4s 1s linear infinite;
 }
 
-#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .variant_2{
-    transform: rotateX(-180deg) translateZ(70px);
+
+@keyframes animeFirstVariant {
+    0%{
+        transform: translateY(-50%) translateX(0);
+        opacity: 1;
+    }
+    20%{
+        transform: translateY(-50%) translateX(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-50%) translateX(-100%);
+        opacity: 0;
+    }
+    70%{
+        transform: translateY(-50%) translateX(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-50%) translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .morph_word .variant.variant_2{
+    transform: translateY(-50%) translateX(-100%);
     opacity: 0;
-    animation: 3s animateMorphSubTitleFirstPart_2 ease-in-out infinite;
+    animation: animeLastVariant 4s 1s ease-in-out infinite;
 }
 
-@keyframes animateMorphSubTitleFirstPart_1 {
+
+@keyframes animeLastVariant {
     0%{
-        transform: rotateX(0)  translateZ(0px);
-        opacity: 1;
+        transform: translateY(-50%) translateX(-100%);
+        opacity: 0;
     }
-    25%{
-        transform: rotateX(0)  translateZ(0px);
+    20%{
+        transform: translateY(-50%) translateX(0);
         opacity: 1;
     }
     50%{
-        transform: rotateX(-180deg)  translateZ(70px);
-        opacity: 0;
+        transform: translateY(-50%) translateX(0);
+        opacity: 1;
     }
-    75%{
-        transform: rotateX(-180deg)  translateZ(70px);
+    70%{
+        transform: translateY(-50%) translateX(100%);
         opacity: 0;
     }
     100%{
-        transform: rotateX(-360deg)  translateZ(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes animateMorphSubTitleFirstPart_2 {
-    0%{
-        transform: rotateX(180deg)  translateZ(70px);
+        transform: translateY(-50%) translateX(-100%);
         opacity: 0;
     }
-    25%{
-        transform: rotateX(180deg)  translateZ(70px);
-        opacity: 0;
-    }
-    50%{
-        transform: rotateX(0deg)  translateZ(0px);
-        opacity: 1;
-    }
-    75%{
-        transform: rotateX(0deg)  translateZ(0px);
-        opacity: 1;
-    }
-    100%{
-        transform: rotateX(-180deg)  translateZ(70px);
-        z-index: 0;
-    }
-}
+}*/
 
 
 
 
 
-#page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .middle_part{
-    margin-left: 0.95em;
-    margin-right: 0.2em;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

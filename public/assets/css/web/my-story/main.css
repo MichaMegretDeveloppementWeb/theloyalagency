@@ -1,0 +1,22 @@
+#page_content.my-story{
+    background: var(--main-cream-background);
+    padding-top: 6.5em;
+}
+
+
+#page_content.my-story .breadcrumb{
+    background: var(--sub-cream-background);
+    margin: auto;
+    padding: 2em 0;
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+
+    #page_content.my-story{
+        padding-top: 7.5em;
+    }
+
+}

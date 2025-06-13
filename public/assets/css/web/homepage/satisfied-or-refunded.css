@@ -1,0 +1,103 @@
+#satisfied_or_refunded{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh auto 15vh;
+}
+
+
+#satisfied_or_refunded>.title_container{
+    position: relative;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#satisfied_or_refunded>.title_container::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15em;
+    height: 2px;
+    background: var(--main-blue);
+}
+
+
+
+#satisfied_or_refunded>.title_container .title{
+    width: max-content;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: min(5em, 12vw);
+    font-weight: 100;
+}
+
+
+
+
+
+#satisfied_or_refunded .content_container{
+    width: 100%;
+    max-width: 100em;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 3em 7em;
+    padding: 2em;
+}
+
+
+
+#satisfied_or_refunded .content_container .text_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+
+
+
+#satisfied_or_refunded .content_container .text_content>.title{
+    font-size: min(2.5em, 7vw);
+    font-weight: 400;
+    color: #bebebe;
+    font-family: 'Lagu', serif;
+}
+
+
+#satisfied_or_refunded .content_container .text_content .content{
+    line-height: 2em;
+    width: 100%;
+    max-width: 50em;
+    font-weight: 300;
+    font-size: min(1.15em, 4.5vw);
+    text-align: justify;
+}
+
+
+
+
+
+
+
+#satisfied_or_refunded .content_container .image_content{
+    width: 15em;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+
+#satisfied_or_refunded .content_container .image_content img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

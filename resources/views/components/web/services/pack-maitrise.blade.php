@@ -1,0 +1,62 @@
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/services/pack-maitrise.css") . "?v=".now()->toDateTimeString() }}">
+@endpush
+
+@push('scripts')
+    <script type="module" src="{{ asset("assets/js/web/services/pack-maitrise.js") . "?v=".now()->toDateTimeString() }}"></script>
+@endpush
+
+<section id="pack-maitrise">
+
+    <div class="section_content">
+
+        <div class="image_container">
+
+            <img src="{{ asset("assets/images/services/pack-maitrise.webp") }}" alt="" role="presentation"  aria-hidden="true">
+
+        </div>
+
+        <div class="text_container">
+
+            <div class="content_container">
+
+                <h2 class="title">
+                    Pack maîtrise
+                </h2>
+
+
+                <p class="content">
+                    Je vous accompagne de A à Z pour déployer une stratégie de relation client performante et durable au sein de vos équipes, tout en maximisant votre rentabilité et votre ROI.
+                </p>
+
+                <ul class="list_advantage">
+                    <li class="item">
+                        <x-icons.chevron-right/>
+                        <p><strong>Audit complet de vos process</strong> : analyse fine de chaque étape de votre parcours client pour repérer les points de friction et opportunités d’engagement.</p>
+                    </li>
+                    <li class="item">
+                        <x-icons.chevron-right/>
+                        <p><strong>Formation approfondie & suivi opérationnel</strong> : ateliers dédiés pour vos équipes et sessions de coaching terrain afin de garantir la montée en compétences et l’optimisation continue.</p>
+                    </li>
+                    <li class="item">
+                        <x-icons.chevron-right/>
+                        <p><strong>Offre personnalisée & devis sur mesure</strong> : solutions taillées à votre structure, avec un accompagnement sur-mesure et un plan d’action chiffré pour augmenter vos revenus et fidéliser efficacement.</p>
+                    </li>
+                </ul>
+
+                {{--<p class="content">
+                    Avec le Pack Maîtrise, vous disposez d’un véritable partenariat expert pour transformer la fidélisation client en levier de croissance pérenne.
+                </p>--}}
+
+                <a href="{{ route('contact') }}" class="cta animated_hover">
+                    Souscrire à l'offre
+                    <x-icons.chevron-right/>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

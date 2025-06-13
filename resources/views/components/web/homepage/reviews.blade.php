@@ -1,9 +1,9 @@
 @php use Carbon\Carbon; @endphp
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/reviews.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/reviews.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/homepage/reviews.js?v=".now()->toDateTimeString()) }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/homepage/reviews.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 

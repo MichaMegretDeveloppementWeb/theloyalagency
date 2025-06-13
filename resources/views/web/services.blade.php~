@@ -1,0 +1,53 @@
+@section('title') Services fidélisation client – boostez votre rentabilité @endsection
+
+@section('description') J’accompagne votre entreprise avec des services de fidélisation client, optimisation relationnelle et stratégies data‑driven pour booster vos revenus, augmenter votre rentabilité et créer des communautés durables. @endsection
+
+
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/services/main.css") . "?v=".now()->toDateTimeString() }}">
+@endpush
+
+@push('scripts')
+    <script type="module" src="{{ asset("assets/js/web/services/main.js") . "?v=".now()->toDateTimeString() }}"></script>
+@endpush
+
+<x-layouts.web class="services">
+
+    <x-slot name="header">
+
+        <x-web.main-header/>
+
+    </x-slot>
+
+
+    <x-web.services.header/>
+
+    <nav class="breadcrumb">
+        <div>
+            <a href="{{ route('homepage') }}" class="item">Accueil</a>
+        </div>
+        /
+        <div>
+            <span class="item current">
+                Mon Histoire
+            </span>
+        </div>
+    </nav>
+
+    <x-web.services.resources-service/>
+
+    <x-web.services.pack-boost/>
+
+    <x-web.services.pack-maitrise/>
+
+    <x-web.services.comparison-services :$serviceComparison/>
+
+
+    <x-slot name="footer">
+
+        <x-web.main-footer/>
+
+    </x-slot>
+
+
+</x-layouts.web>

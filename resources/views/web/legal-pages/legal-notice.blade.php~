@@ -1,0 +1,105 @@
+@section('title') Mentions légales – The Loyal Agency @endsection
+
+@section('description') Mentions légales du site The Loyal Agency : éditeur, hébergeur, propriété intellectuelle, conditions d’utilisation, responsabilité et droit applicable. @endsection
+
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/legal-pages/main.css") . "?v=".now()->toDateTimeString() }}">
+@endpush
+
+
+<x-layouts.web class="legal_page privacy-policy">
+
+    <x-slot name="header">
+
+        <x-web.main-header/>
+
+    </x-slot>
+
+
+    <section class="legal_content">
+
+        <h1>Mentions légales</h1>
+
+        <nav class="breadcrumb">
+            <div>
+                <a href="{{ route('homepage') }}" class="item">Accueil</a>
+            </div>
+            /
+            <div>
+            <span class="item current">
+                Mes services
+            </span>
+            </div>
+        </nav>
+
+        <h2>Éditeur du site</h2>
+        <p>
+            <strong>The Loyal Agency</strong><br>
+            Route cantonale 5<br>
+            1898 St‑Gingolph, Suisse<br>
+            Représentée par Melinda Marin<br>
+            Email : <a href="mailto:contact@theloyalagency.com">contact@theloyalagency.com</a>
+        </p>
+
+        <h2>Directrice de la publication</h2>
+        <p>Madame Melinda Marin</p>
+
+        <h2>Hébergement</h2>
+        <p>
+            <strong>Hostinger International Ltd</strong><br>
+            61 Lordou Vironos Street<br>
+            6023 Larnaca, Chypre
+        </p>
+
+        <h2>Développeur du site</h2>
+        <p>
+            <strong>Micha Megret Développement Web</strong><br>
+            261 rue des Tattes<br>
+            74500 Publier, FRANCE <br>
+            <a href="tel:+33687934647">+33 6 87 93 46 47</a>
+        </p>
+
+
+        <h2>Conditions d’utilisation</h2>
+        <p>
+            L’accès et l’utilisation de ce site sont soumis aux présentes mentions légales.
+            Vous vous engagez à ne pas porter atteinte à sa sécurité, à son intégrité ou à son bon fonctionnement, ni à en perturber le contenu ou l’exploitation.
+        </p>
+
+        <h2>Propriété intellectuelle</h2>
+        <p>
+            Tous les contenus présents sur ce site (textes, images, vidéos, logos, icônes, etc.) sont la propriété exclusive de The Loyal Agency ou de ses partenaires, et sont protégés par le droit de la propriété intellectuelle.
+            Toute reproduction, représentation, modification, publication ou adaptation, partielle ou totale, de ces éléments est strictement interdite sans autorisation écrite préalable de The Loyal Agency.
+        </p>
+
+        <h2>Responsabilité</h2>
+        <p>
+            The Loyal Agency met en œuvre tous les moyens raisonnables pour garantir la fiabilité et l’exactitude des informations diffusées sur ce site.
+            Toutefois, The Loyal Agency ne peut être tenue responsable des dommages directs ou indirects résultant de l’accès ou de l’utilisation de ce site.
+        </p>
+
+        <h2>Données personnelles</h2>
+        <p>
+            Pour tout renseignement sur la collecte et l’utilisation de vos données personnelles, veuillez consulter notre <a href="/politique-confidentialite.html">Politique de confidentialité</a>.
+        </p>
+
+        <h2>Droit applicable</h2>
+        <p>
+            Le présent site est soumis au droit suisse. En cas de litige, seuls les tribunaux compétents du canton de Genève seront compétents, sauf disposition impérative contraire.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            Pour toute question ou réclamation, contactez-nous à : <a href="mailto:contact@theloyalagency.com">contact@theloyalagency.com</a>.
+        </p>
+
+    </section>
+
+
+    <x-slot name="footer">
+
+        <x-web.main-footer/>
+
+    </x-slot>
+
+</x-layouts.web>

@@ -1,0 +1,37 @@
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/satisfied-or-refunded.css") . "?v=".now()->toDateTimeString()}}">
+@endpush
+
+<section id="satisfied_or_refunded">
+
+    <div class="title_container">
+        <h2 class="title">
+            Satisfaction garantie
+        </h2>
+    </div>
+
+    <div class="content_container">
+
+        <div class="text_content">
+
+            <h3 class="title">
+                La fidélisation sans risque
+            </h3>
+
+            <p class="content">
+                Je suis convaincue que mes solutions d’optimisation client et de fidélisation vont booster votre chiffre d’affaires... sinon, je vous rembourse !
+                Avec ma garantie <i><b><strong>Satisfait ou remboursé sous 30 jours</strong></b></i>, vous pouvez tester toutes les stratégies de réengagement et d’upsell sans prise de tête.
+                Si vous n'êtes pas pleinement satisfait, je vous offre un remboursement intégral, sans conditions cachées.
+                <br>
+                Prêt à franchir le cap ? Lancez-vous l'esprit tranquille !
+            </p>
+
+        </div>
+
+        <div class="image_content">
+            <img loading="lazy" src="{{ asset("assets/images/homepage/macaron-30-jours.webp") }}" alt="Badge Satisfait ou remboursé sous 30 jours">
+        </div>
+
+    </div>
+
+</section>
