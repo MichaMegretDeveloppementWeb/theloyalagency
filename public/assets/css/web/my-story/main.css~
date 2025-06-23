@@ -1,21 +1,21 @@
-#page_content.services{
+#page_content.my-story{
     background: var(--main-cream-background);
     padding-top: 6.5em;
 }
 
 
-
-#page_content.services .breadcrumb{
+#page_content.my-story .breadcrumb{
     background: var(--sub-cream-background);
-    margin: auto;
-    padding-bottom: 2em 0;
+    margin: 0 auto 2em;
+    padding: 0;
 }
+
 
 
 
 @media screen and (min-width: 800px) {
 
-    #page_content.services{
+    #page_content.my-story{
         padding-top: 7.5em;
     }
 

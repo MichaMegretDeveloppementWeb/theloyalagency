@@ -10,6 +10,7 @@
     width: 100%;
     max-width: 130em;
     margin: auto;
+    padding: 1em;
 }
 
 
@@ -22,7 +23,7 @@
 
 
 #page_content.homepage section.reviews .section_content .title_container>.title{
-    font-size: min(4.5em, 9vw);
+    font-size: min(4.5em, 8vw);
     font-weight: 100;
     margin: auto;
     text-align: center;

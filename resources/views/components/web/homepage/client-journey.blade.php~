@@ -1,8 +1,8 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/client-journey.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/client-journey.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 @push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/homepage/client-journey.js?v=".now()->toDateTimeString()) }}"></script>
+    <script type="module" src="{{ asset("assets/js/web/homepage/client-journey.js") . "?v=".now()->toDateTimeString() }}"></script>
 @endpush
 
 
@@ -28,7 +28,7 @@
                         <div class="label">
                             <h3 class="title">Évaluer</h3>
                             <p class="content">
-                                Questionnaires, Mystery-Shoppers, collecte de data
+                                Écoutez vos clients, fixez un cap de progression clair.
                             </p>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <div class="label">
                             <h3 class="title">Organiser</h3>
                             <p class="content">
-                                Segmenter les clients Agenda + Calendrier
+                                Structurez votre base clients et clarifiez votre CRM interne.
                             </p>
                         </div>
                     </div>
@@ -52,9 +52,9 @@
 
                     <div class="marker_content">
                         <div class="label">
-                            <h3 class="title">Surpasser</h3>
+                            <h3 class="title">Écouter</h3>
                             <p class="content">
-                                Overdeliver, éléments de surprise, effet wow, bonus, mots manuscrits
+                                Transformez chaque retour client en opportunité d'amélioration concrète.
                             </p>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         <div class="label">
                             <h3 class="title">Renforcer</h3>
                             <p class="content">
-                                Message de bienvenue parès signature, Call & Lunch post préstation
+                                Recréez du lien, réactivez les anciens, reconquérez les perdus.
                             </p>
                         </div>
                     </div>
@@ -78,9 +78,9 @@
 
                     <div class="marker_content">
                         <div class="label">
-                            <h3 class="title">Écouter</h3>
+                            <h3 class="title">Surpasser</h3>
                             <p class="content">
-                                Tenir compte et informer le client des changements apportés suite à ses commentaires
+                                Créez l’effet waouh et dépassez toutes les attentes clients.
                             </p>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                         <div class="label">
                             <h3 class="title">Regrouper</h3>
                             <p class="content">
-                                Créer une communauté / Club de membres. Générer des ambassadeurs
+                                Fédérez autour de votre marque, bâtissez une vraie communauté.
                             </p>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
                         <div class="label">
                             <h3 class="title">Jouer</h3>
                             <p class="content">
-                                Programme de fidélité, Gamification, défis collaboratifs, Awrards et Rewards, parrainage
+                                Rendez la fidélité ludique, engageante et valorisante pour tous.
                             </p>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                         <div class="label">
                             <h3 class="title">Privilégier</h3>
                             <p class="content">
-                                Ventes réservées aux clients fidèles, events privilèges
+                                Offrez plus à vos meilleurs clients, créez des ambassadeurs engagés.
                             </p>
                         </div>
                     </div>

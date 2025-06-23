@@ -20,6 +20,18 @@
 
         <h1>Politique de confidentialité</h1>
 
+        <nav class="breadcrumb">
+            <div>
+                <a href="{{ route('homepage') }}" class="item">Accueil</a>
+            </div>
+            /
+            <div>
+            <span class="item current">
+                Politique de confidentialité
+            </span>
+            </div>
+        </nav>
+
         <p>La présente politique de confidentialité décrit comment le site The Loyal Agency collecte, utilise et protège les données personnelles des utilisateurs, conformément au Règlement Général sur la Protection des Données (RGPD).</p>
 
         <h2>Responsable du traitement</h2>

@@ -4,48 +4,44 @@
 
 <section id="my_story_header">
 
+    <div class="title_container">
+        <h1 class="title">
+            Mon Histoire
+        </h1>
+    </div>
+
+    <nav class="breadcrumb">
+        <div>
+            <a href="{{ route('homepage') }}" class="item">Accueil</a>
+        </div>
+        /
+        <div>
+            <span class="item current">
+                Mon Histoire
+            </span>
+        </div>
+    </nav>
+
+
     <div class="main_image_container">
 
-        <div class="title_container">
-            <h1 class="title">
-                Mon Histoire
-            </h1>
-            <div aria-hidden="true" class="corner_rounded top_left"></div>
-            <div aria-hidden="true" class="corner_rounded bottom_right"></div>
-        </div>
+        <div class="text_container">
 
-        <div class="image_container">
-
-            <img src="{{ asset("assets/images/my-story/my-story-main-image.webp") }}" alt="Portrait de Melinda Marin, fondatrice de The Loyal Agency et experte en fidélisation client" role="presentation"  aria-hidden="true">
-
-            <div aria-hidden="true" class="shape_cut_elmt">
-                <div class="corner_rounded top_left"></div>
-                <div class="corner_rounded bottom_right"></div>
-            </div>
+            <p class="text">
+                Fidéliser, c'est entreprendre dans le temps et investir dans l'avenir.
+            </p>
 
         </div>
 
     </div>
 
+
     <div class="my_philosophy_container">
-
-        <div class="image_container">
-
-            <img src="{{ asset("assets/images/my-story/my-philosophy.webp") }}" alt="" role="presentation"  aria-hidden="true">
-
-            <div aria-hidden="true" class="shape_cut_elmt">
-                <div class="corner_rounded top_left"></div>
-                <div class="corner_rounded bottom_right"></div>
-            </div>
-
-        </div>
 
         <div class="text_container">
 
             <div class="title_container">
                 <h2 class="title">Ma philosophie</h2>
-                <div aria-hidden="true" class="corner_rounded top_left"></div>
-                <div aria-hidden="true" class="corner_rounded bottom_right"></div>
             </div>
 
             <p class="content">

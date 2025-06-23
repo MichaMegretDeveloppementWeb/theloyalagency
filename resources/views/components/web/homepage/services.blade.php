@@ -13,7 +13,7 @@
 
         <div class="title_container">
             <h2 class="title">
-                Mes offres
+                Les offres
             </h2>
         </div>
 
@@ -30,7 +30,7 @@
                     <div class="service_description_container">
 
                         <h3 class="title">
-                            Ressources
+                            MEMBERSHIP – LA LOYAL ACADEMY
                         </h3>
 
                         <p class="description">
@@ -42,21 +42,21 @@
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    Paiement à l’unité ou abonnement mensuel
+                                    50+ ressources activables
                                 </p>
                             </li>
 
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    Catalogue mis à jour en continu
+                                    1 défi mensuel pour s’entraîner
                                 </p>
                             </li>
 
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    Thématiques : fidélisation, parcours client, upselling
+                                    1h de coaching par mois
                                 </p>
                             </li>
 
@@ -65,7 +65,7 @@
                     </div>
 
                     <a href="{{ route('services') }}#ressources" class="cta">
-                        Découvrir les ressources
+                        En savoir plus sur cette offre
                         <x-icons.arrow-right/>
                     </a>
 
@@ -86,11 +86,11 @@
                     <div class="service_description_container">
 
                         <h3 class="title">
-                            Pack Boost
+                            LEARNING – LE LOYAL LAB’
                         </h3>
 
                         <p class="description">
-                            Bénéficiez de l’accès illimité à toutes nos ressources en abonnement mensuel, complété par des séances de coaching ponctuel pour répondre à vos besoins précis.
+                            Formations et ateliers pratiques pour rendre vos clients fidèles, rentables… et fans de votre marque.
                         </p>
 
                         <ul class="includes_list">
@@ -98,21 +98,21 @@
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    1 h de coaching par mois incluse
+                                    Minimum 10h de formation
                                 </p>
                             </li>
 
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    Analyse ciblée de vos points de blocage
+                                    Des outils directement intégrables à votre société
                                 </p>
                             </li>
 
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    Plan d’action personnalisé pour renforcer votre stratégie
+                                    Des cas pratiques adaptés à votre réalité
                                 </p>
                             </li>
 
@@ -142,11 +142,11 @@
                     <div class="service_description_container">
 
                         <h3 class="title">
-                            Pack Maîtrise
+                            CONSULTING – LE LOYALTY MASTERY
                         </h3>
 
                         <p class="description">
-                            Un accompagnement global pour déployer une véritable stratégie de relation client au sein de vos équipes et maximiser votre rentabilité.
+                            Un accompagnement global et sur-mesure pour déployer une véritable stratégie de fidélisation et relation client au sein de3 votre entreprise et maximiser votre rentabilité.
                         </p>
 
                         <ul class="includes_list">
@@ -154,21 +154,21 @@
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    Audit complet de vos process
+                                    Audit complet
                                 </p>
                             </li>
 
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    Formation approfondie et suivi opérationnel
+                                    Intégration d’une méthodologie adaptée
                                 </p>
                             </li>
 
                             <li class="include">
                                 <x-icons.check/>
                                 <p class="text">
-                                    Offre personnalisée et devis sur mesure
+                                    Accompagnement pas à pas
                                 </p>
                             </li>
 

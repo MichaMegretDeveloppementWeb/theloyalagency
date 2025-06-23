@@ -22,25 +22,13 @@
 
     <x-web.services.header/>
 
-    <nav class="breadcrumb">
-        <div>
-            <a href="{{ route('homepage') }}" class="item">Accueil</a>
-        </div>
-        /
-        <div>
-            <span class="item current">
-                Mes services
-            </span>
-        </div>
-    </nav>
-
     <x-web.services.resources-service/>
 
     <x-web.services.pack-boost/>
 
     <x-web.services.pack-maitrise/>
 
-    <x-web.services.comparison-services :$serviceComparison/>
+    {{--<x-web.services.comparison-services :$serviceComparison/>--}}
 
 
     <x-slot name="footer">

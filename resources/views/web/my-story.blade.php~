@@ -20,7 +20,7 @@
     </x-slot>
 
     <x-web.my-story.header/>
-
+    
 
     <x-web.my-story.about-me/>
 

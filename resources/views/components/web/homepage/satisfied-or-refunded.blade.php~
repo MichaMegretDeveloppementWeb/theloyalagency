@@ -1,5 +1,5 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/satisfied-or-refunded.css?v=".now()->toDateTimeString())}}">
+    <link rel="stylesheet" href="{{ asset("assets/css/web/homepage/satisfied-or-refunded.css") . "?v=".now()->toDateTimeString()}}">
 @endpush
 
 <section id="satisfied_or_refunded">

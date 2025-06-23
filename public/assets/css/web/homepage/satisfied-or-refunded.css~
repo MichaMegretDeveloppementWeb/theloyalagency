@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5vh auto 15vh;
+    padding: 0 0 15vh;
 }
 
 
@@ -48,9 +48,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     gap: 3em 7em;
-    padding: 2em;
+    padding: 1em;
 }
 
 
@@ -67,9 +67,9 @@
 
 
 #satisfied_or_refunded .content_container .text_content>.title{
-    font-size: min(2.5em, 7vw);
+    font-size: min(2em, 7vw);
     font-weight: 400;
-    color: #a6a6a6;
+    color: #bebebe;
     font-family: 'Lagu', serif;
 }
 
@@ -79,8 +79,8 @@
     width: 100%;
     max-width: 50em;
     font-weight: 300;
-    font-size: min(1.15em, 4.5vw);
-    text-align: justify;
+    font-size: min(1em, 3.25vw);
+    text-align: left;
 }
 
 
@@ -90,7 +90,7 @@
 
 
 #satisfied_or_refunded .content_container .image_content{
-    width: 15em;
+    width: 10em;
     aspect-ratio: 1/1;
     overflow: hidden;
 }

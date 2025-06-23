@@ -37,10 +37,10 @@
                             </div>
 
                             <p class="card_text problem_text">
-                                Coûts élevés d'acquisition de nouveaux clients
+                                Vos réservations font le yo-yo chaque saison ?
                             </p>
                             <p class="card_text solution_text">
-                                La fidélisation permet de maximiser la valeur de vos clients existants et reduis le besoin de prospection.
+                                Un client fidèle dépense jusqu’à 67 fois plus qu’un nouveau. Fidélisez, lissez et stabilisez.
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
@@ -69,10 +69,10 @@
                                 <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_3_1.webp") }}" alt="Îles paradisiaques sous un beau soleil vues du ciel" loading="lazy">
                             </div>
                             <p class="card_text problem_text">
-                                Revenus instables ou imprévisibles
+                                Marre de donner 20% de commission aux OTA (alors que c’est vous qui faites tout le travail) ?
                             </p>
                             <p class="card_text solution_text">
-                                Des clients fidèles assurent une base de revenus récurrents et facilitent la planification.
+                                Fidélisez en direct et diminuez votre dépendance aux intermédiaires.
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
@@ -100,10 +100,10 @@
                                 <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_2_2.webp") }}" alt="Paysage d'une plaine verdoyante et ensoleillé" loading="lazy">
                             </div>
                             <p class="card_text problem_text">
-                                Faible notoriété ou réputation fragile
+                                Ils viennent un fois et puis s’en vont ?
                             </p>
                             <p class="card_text solution_text">
-                                Les clients fidèles deviennent des ambassadeurs de la marque et renforcent sa réputation.
+                                Augmenter votre rétention de 5% peut booster les profits de 25 % jusqu’à 95%
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">

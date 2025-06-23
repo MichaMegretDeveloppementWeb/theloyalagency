@@ -22,18 +22,6 @@
 
     <x-web.services.header/>
 
-    <nav class="breadcrumb">
-        <div>
-            <a href="{{ route('homepage') }}" class="item">Accueil</a>
-        </div>
-        /
-        <div>
-            <span class="item current">
-                Mon Histoire
-            </span>
-        </div>
-    </nav>
-
     <x-web.services.resources-service/>
 
     <x-web.services.pack-boost/>

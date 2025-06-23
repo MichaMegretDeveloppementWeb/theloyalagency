@@ -4,11 +4,11 @@
 
 <section id="satisfied_or_refunded">
 
-    <div class="title_container">
+    {{--<div class="title_container">
         <h2 class="title">
             Satisfaction garantie
         </h2>
-    </div>
+    </div>--}}
 
     <div class="content_container">
 

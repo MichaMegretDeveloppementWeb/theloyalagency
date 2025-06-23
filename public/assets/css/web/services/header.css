@@ -16,7 +16,6 @@
 
 #services_header>.title_container{
     width: 100%;
-    margin-bottom: 2em;
 }
 
 #services_header>.title_container .title{
@@ -31,26 +30,13 @@
 
 
 
-#services_header .intro{
-    text-align: center;
-    font-size: min(1.15em, 3.5vw);
-    max-width: 50em;
-    margin-bottom: 5vh;
-    font-weight: 200;
-    color: #333333;
-    line-height: 1.75em;
-}
-
-
-
-
 
 
 
 #services_header .main_image_container{
     width: 100%;
     max-width: 100em;
-    margin: auto;
+    margin: 2em auto 0;
     position: relative;
     aspect-ratio: 15/7;
     min-height: 40vh;
@@ -58,60 +44,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 1em;
 }
 
-
-
-#services_header .main_image_container .sub_title_container{
-    position: absolute;
-    top: max(-1.5em, -1.5vh);
-    left: 0;
-    border-radius: 0 0 1em 0;
-    background: var(--sub-cream-background);
-    width: max-content;
-    max-width: 76%;
-}
-
-
-
-#services_header .main_image_container .sub_title_container .corner_rounded{
-    width: 2em;
-    height: 2em;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-}
-
-
-#services_header .main_image_container .sub_title_container .corner_rounded.top_left{
-    top: 100%;
-    left: 0;
-    box-shadow: -1em -1em 0 var(--sub-cream-background);
-}
-
-#services_header .main_image_container .sub_title_container .corner_rounded.top_right{
-    top: min(1.5em, 1.5vh);
-    left: 100%;
-    box-shadow: -1em -1em 0 var(--sub-cream-background);
-}
-
-
-
-
-#services_header .main_image_container .sub_title_container .sub_title{
-    /*font-family: 'Lagu', serif;*/
-    font-size: min(4em, 7vw);
-    font-weight: 100;
-    text-align: center;
-    padding: 0 min(2rem, 4vw) 1rem;
-    min(2rem, 4vw);
-    color: #534b45;
-    border-radius: 0.75rem;
-    position: relative;
-    z-index: 2;
-}
 
 
 
@@ -157,82 +91,4 @@
 
 #services_header .main_image_container .services_nav .services_list .item a:hover{
     background: #8f8f8f3d;
-}
-
-
-
-
-
-
-
-
-
-
-
-#services_header .main_image_container .cta_container{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.75em 0.75em 0.15em;
-    background: var(--sub-cream-background);
-    border-radius: 1em 1em 0 0;
-}
-
-
-
-#services_header .main_image_container .cta_container .corner_rounded{
-    width: 2em;
-    height: 2em;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-}
-
-
-#services_header .main_image_container .cta_container .corner_rounded.bottom_left{
-    bottom: 0;
-    right: 100%;
-    box-shadow: 1em 1em 0 var(--sub-cream-background);
-}
-
-#services_header .main_image_container .cta_container .corner_rounded.bottom_right{
-    bottom: 0;
-    left: 100%;
-    box-shadow: -1em 1em 0 var(--sub-cream-background);
-}
-
-
-
-#services_header .main_image_container .cta_container .cta{
-    position: relative;
-    z-index: 3;
-    padding: 0.75em 1.5em;
-    font-size: min(1.2em, 4vw);
-    border-radius: 0.5rem;
-    background: var(--main-blue);
-    color: white;
-    font-weight: 200;
-    text-align: center;
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-}
-
-
-
-#services_header .main_image_container .cta_container .cta .app_icon{
-    min-width: 1.5em;
-    fill: white;
-    margin-bottom: -0.1em;
-}
-
-
-
-#services_header .main_image_container .cta_container .cta:hover{
-    background: #063d9d;
 }

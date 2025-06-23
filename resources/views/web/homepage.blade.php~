@@ -33,7 +33,7 @@
     <x-web.homepage.reviews :$reviews/>
 
 
-    {{--<x-web.homepage.satisfied-or-refunded/>--}}
+    <x-web.homepage.satisfied-or-refunded/>
 
 
     {{--<section class="stats">

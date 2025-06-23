@@ -3,7 +3,7 @@
     color: black;
     padding: 2.5em;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: min(1.15em, 5vw);
+    font-size: min(1.15em, 4vw);
 }
 
 

@@ -6,29 +6,14 @@
 
     <div class="apply_container">
 
-        <div aria-hidden="true" class="shape_cut_elmt">
-            <div class="corner_rounded top_left"></div>
-            <div class="corner_rounded bottom_right"></div>
-        </div>
-
-        <div class="title_container">
-            <h2 class="title">
-                Candidater
-            </h2>
-            <div aria-hidden="true" class="corner_rounded top_left"></div>
-            <div aria-hidden="true" class="corner_rounded bottom_right"></div>
-        </div>
-
-
-
         <div class="content_container">
 
             <div class="text_container">
 
-                <p class="content">
+                <h2 class="content">
                     Prêt à travailler avec <br>
                     un partenaire dévoué ?
-                </p>
+                </h2>
 
                 <div class="cta_container">
                     <a href="{{ route('contact') }}" class="cta animated_hover">

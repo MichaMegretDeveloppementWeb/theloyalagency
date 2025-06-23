@@ -37,8 +37,6 @@
         <h2>Responsable du traitement</h2>
         <p><strong>The Loyal Agency</strong><br>
             Route cantonale 5, 1898 St‑Gingolph, Suisse<br>
-            SIRET : aucun<br>
-            TVA intracommunautaire : aucun<br>
             Délégué à la protection des données : Melinda Marin (<a href="mailto:melinda@theloyalagency.com">melinda@theloyalagency.com</a>)</p>
 
         <h2>Données collectées</h2>
