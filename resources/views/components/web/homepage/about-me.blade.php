@@ -20,16 +20,28 @@
             <h2 class="title">&Agrave; propos de moi</h2>
 
             <p class="description">
-                Au fil des années, je me suis spécialisée dans la stratégie de rétention client, combinant approche data‑driven, psychologie comportementale et CRM sur‑mesure.
-                Je conçois des parcours client personnalisés, des campagnes de réengagement et des tactiques d’upsell qui réduisent le churn, renforcent l’engagement et maximisent le ROI.
+                Melinda a grandi à St‑Martin, « Friendly Island », paradis fragile où le sourire et la résilience soutiennent un tourisme vital, souvent balayé par les cyclones.
+                Là, elle comprend qu’un client heureux fait vivre tout un écosystème.
             </p>
 
             <p class="description">
-                J'accompagne dirigeants, équipes commerciales et entrepreneurs pour booster leurs revenus, optimiser leur rentabilité et bâtir des communautés de clients fidèles et engagés. Ma conviction ? Une relation client authentique et bien pensée génère une valeur à long terme supérieure à n’importe quelle campagne d’acquisition.
+                Très tôt fascinée par l’hôtellerie de luxe, elle découvre qu’un séjour minutieusement orchestré peut devenir un refuge mémorable. Elle s’y plonge avec passion, résolue à en maîtriser chaque détail.
             </p>
 
-            <p class="pre_cta">
-                Prêt à travailler avec un partenaire dévoué ?
+            <p class="description">
+                En Europe, la réalité se durcit : précarité, harcèlement, dettes. Pourtant, l’hôtellerie reste son port d’attache, exigeant mais fidèle, où elle puise sa force.
+            </p>
+
+            <p class="description">
+                Au fil des années, elle cultive un art : dépasser la simple transaction, anticiper les attentes, offrir l’attention juste au bon moment. Pour elle, une relation solide rapporte plus et plus longtemps que n’importe quelle campagne d’acquisition.
+            </p>
+
+            <p class="description">
+                De cette conviction naît The Loyal Agency, qui aide les entreprises à replacer le client au cœur de leur stratégie grâce à des méthodes concrètes et une intelligence relationnelle affinée sur le terrain.
+            </p>
+
+            <p class="description">
+                Aujourd’hui, Melinda accompagne équipes commerciales, dirigeant·e·s et entrepreneur·e·s avec exigence, clarté et humanité, pour bâtir des liens sincères et des résultats durables.
             </p>
 
             <a href="{{ route('about') }}" class="cta">

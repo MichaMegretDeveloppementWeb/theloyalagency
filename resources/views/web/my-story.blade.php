@@ -30,6 +30,8 @@
 
     <x-web.my-story.apply/>
 
+    <x-web.homepage.reviews :$reviews/>
+
     <x-slot name="footer">
 
         <x-web.main-footer/>

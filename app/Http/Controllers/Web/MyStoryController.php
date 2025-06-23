@@ -10,7 +10,37 @@ class MyStoryController extends Controller
 
     public function index(Request $request){
 
-        return view('web.my-story');
+        $reviews = collect([
+            collect([
+                'name' => 'John Travolta',
+                'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cum dolore, illo incidunt maxime optio placeat quae quaerat rem rerum sapiente ut, veniam. Aspernatur enim iure porro temporibus velit. Iusto.',
+                'date' => '2025-01-17'
+            ]),
+            collect([
+                'name' => 'Jessica Blade',
+                'content' => 'ed auctor congue velit nec gravida. Nulla suscipit magna eu tellus cursus, eu porttitor est iaculis. Nullam mattis cursus sem, id tempor neque lobortis id',
+                'date' => '2023-02-27'
+            ]),
+            collect([
+                'name' => 'Unkwonn Walter',
+                'content' => 'Nulla at purus ullamcorper, facilisis enim id, sollicitudin est. Cras in elementum dui, quis ullamcorper libero. Integer sollicitudin fermentum nulla, ut venenatis nisl faucibus rutrum.',
+                'date' => '2022-04-18'
+            ]),
+            collect([
+                'name' => 'DJ Khaled',
+                'content' => 'Vivamus tortor lacus, dapibus et sem nec, pharetra mattis risus. Donec in gravida velit, quis condimentum mi. In convallis leo accumsan.',
+                'date' => '2022-01-01'
+            ]),
+            collect([
+                'name' => 'Joey Star',
+                'content' => 'Dans ma benz benz benz mes fadas.',
+                'date' => '2022-01-01'
+            ])
+        ])->map(function ($review) {
+            return (object) $review->toArray();
+        });
+
+        return view('web.my-story', compact('reviews'));
 
     }
 

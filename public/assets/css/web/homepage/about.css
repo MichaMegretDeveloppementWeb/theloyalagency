@@ -1,6 +1,6 @@
 #page_content.homepage section.about{
     width: 100%;
-    padding: 10vh 2em;
+    padding: 5vh 2em;
     background: var(--sub-cream-background);
     overflow: hidden;
     color: black;
@@ -80,7 +80,7 @@
 
 #page_content.homepage section.about .section_content .text_container>.title{
     font-family: "American Favorite", sans-serif;
-    font-size: min(7em, 14vw);
+    font-size: min(6em, 14vw);
     font-weight: 100;
     color: var(--main-blue);
 }
@@ -88,7 +88,7 @@
 
 #page_content.homepage section.about .section_content .text_container .description{
     line-height: 1.75em;
-    font-size: 1.15em;
+    font-size: 1.05em;
     text-align: justify;
 }
 
@@ -142,6 +142,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.25s background ease-in-out, 0.25s color ease-in-out;
+    margin-top: 1em;
 }
 
 #page_content.homepage section.about .section_content .text_container .cta:hover{

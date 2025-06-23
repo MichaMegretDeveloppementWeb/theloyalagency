@@ -69,9 +69,9 @@ class ReviewCarousel {
 ready(() => {
 
     new ReviewCarousel(
-        "#page_content.homepage section.reviews .section_content .reviews_list",
-        "#page_content.homepage section.reviews .section_content .reviews_list_container .nav.prev",
-        "#page_content.homepage section.reviews .section_content .reviews_list_container .nav.next"
+        "#page_content section.reviews .section_content .reviews_list",
+        "#page_content section.reviews .section_content .reviews_list_container .nav.prev",
+        "#page_content section.reviews .section_content .reviews_list_container .nav.next"
     )
 
 });

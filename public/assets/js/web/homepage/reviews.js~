@@ -14,7 +14,6 @@ class ReviewCarousel {
 
         const container = document.querySelector(containerSelector);
         container.addEventListener('transitionend', () => {
-
             this.isRotating = false;
             this.prevBtn.disabled = false;
             this.nextBtn.disabled = false;
