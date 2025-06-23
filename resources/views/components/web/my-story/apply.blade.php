@@ -11,8 +11,7 @@
             <div class="text_container">
 
                 <h2 class="content">
-                    Prêt à travailler avec <br>
-                    un partenaire dévoué ?
+                    Prêt à travailler avec un partenaire dévoué ?
                 </h2>
 
                 <div class="cta_container">
