@@ -130,7 +130,19 @@ CARD DESIGN DEFAULT
     background: #ffffff2b;
     backdrop-filter: blur(3px);
     padding: 1em;
+    animation: animateSwitchToSolution 1s ease-in-out infinite;
 }
+
+
+@keyframes animateSwitchToSolution {
+    0%{
+        box-shadow: 0 0 0 0 #FFFFFF3F;
+    }
+    100%{
+        box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+    }
+}
+
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch.switch_to_problem{
     top: initial;
