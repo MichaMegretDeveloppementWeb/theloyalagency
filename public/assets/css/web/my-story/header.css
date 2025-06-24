@@ -74,7 +74,8 @@
 
 
 #my_story_header .main_image_container .text_container .text{
-    font-size: min(2.25em, 5vw);
+    font-family: "American Favorite", sans-serif;
+    font-size: min(4.5em, 10vw);
     color: white;
     text-align: center;
     font-weight: 300;

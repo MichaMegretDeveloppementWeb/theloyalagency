@@ -40,7 +40,7 @@ class MyStoryController extends Controller
             return (object) $review->toArray();
         });
 
-        return view('web.my-story');
+        return view('web.my-story', compact('reviews'));
 
     }
 

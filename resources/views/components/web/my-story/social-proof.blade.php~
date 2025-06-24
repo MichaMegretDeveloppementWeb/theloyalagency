@@ -1,0 +1,57 @@
+<section id="social_proof">
+
+    <div class="title_container">
+        <h2 class="title">
+            Ils m'ont fait confiance
+        </h2>
+    </div>
+
+    <div class="partner_list">
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/barmes-ours.webp") }}" alt="Logo de l'entreprise Les Barmes de l'ours, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/boscolo.webp") }}" alt="Logo de l'entreprise Boscolo, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/cap-est.webp") }}" alt="Logo de l'entreprise Les Cap Est, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/definitely-different.webp") }}" alt="Logo de l'entreprise Definitely Different, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/dream-castle.webp") }}" alt="Logo de l'entreprise Les Dream Castle, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/helene-darroze.webp") }}" alt="Logo de l'entreprise Les Helene Darroze, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/magic-circus.webp") }}" alt="Logo de l'hotel Magic Circus, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/peanut-hotel.webp") }}" alt="Logo de l'hotel Peanut Hotel', partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/pont-royal.webp") }}" alt="Logo de l'entreprise Pont Royal, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/vienna-international.webp") }}" alt="Logo de l'entreprise Vienna International, partenaire de l'entreprise The loyal agency">
+        </div>
+
+        <div class="partner">
+            <img src="{{ asset("assets/images/my-story/social-proof/whitepod.webp") }}" alt="Logo de l'entreprise Whitepod, partenaire de l'entreprise The loyal agency">
+        </div>
+
+    </div>
+
+</section>

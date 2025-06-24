@@ -12,6 +12,12 @@
 
 
 
+#page_content.my-story>section:not(#profile_image_container){
+    position: relative;
+    z-index: 2;
+}
+
+
 
 @media screen and (min-width: 800px) {
 

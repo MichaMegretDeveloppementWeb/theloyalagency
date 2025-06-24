@@ -1,0 +1,9 @@
+@push('styles')
+    <link rel="stylesheet" href="{{ asset("assets/css/web/my-story/profile-image.css") . "?v=".now()->toDateTimeString() }}">
+@endpush
+
+<div id="profile_image_container">
+
+    <img src="{{ asset("assets/images/my-story/my-story-main-image.webp") }}" alt="Photo de profil de Melinda Marin, créatrice de The loyal agency, spécialisée dans l'optimisation de la relation client">
+
+</div>

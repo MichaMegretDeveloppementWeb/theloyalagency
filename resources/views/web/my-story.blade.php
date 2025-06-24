@@ -21,6 +21,7 @@
 
     <x-web.my-story.header/>
 
+    <x-web.my-story.profile-image/>
 
     <x-web.my-story.about-me/>
 
@@ -30,7 +31,7 @@
 
     <x-web.my-story.apply/>
 
-    <x-web.homepage.reviews :$reviews/>
+    <x-web.my-story.social-proof/>
 
     <x-slot name="footer">
 

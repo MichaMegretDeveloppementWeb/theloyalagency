@@ -132,7 +132,7 @@ ready(() => {
                 triggerElement: section,
                 element: path,
                 elementEnterTrigger: { position:'top', offset:0 },
-                enterTrigger: { position:'top', offset:container.offsetHeight/2 },
+                enterTrigger: { position:'top', offset:container.offsetHeight/4 },
                 elementExitTrigger: { position:'bottom', offset:0 },
                 exitTrigger: { position:'bottom', offset:container.offsetHeight/4 },
                 animations: [{
@@ -151,7 +151,7 @@ ready(() => {
                 triggerElement: section,
                 element: svg,
                 elementEnterTrigger: { position:'top', offset:0 },
-                enterTrigger: { position:'top', offset:container.offsetHeight/2 },
+                enterTrigger: { position:'top', offset:container.offsetHeight/4 },
                 elementExitTrigger: { position:'bottom', offset:0 },
                 exitTrigger: { position:'bottom', offset:container.offsetHeight/4 },
                 animations: [{

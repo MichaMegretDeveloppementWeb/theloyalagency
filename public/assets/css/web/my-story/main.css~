@@ -6,7 +6,7 @@
 
 #page_content.my-story .breadcrumb{
     background: var(--sub-cream-background);
-    margin: 0 auto 2em;
+    margin: 0 auto;
     padding: 0;
 }
 
