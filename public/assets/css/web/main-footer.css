@@ -1,7 +1,7 @@
 .footer_container {
     background-color: #efe5d5;
     color: black;
-    padding: 2.5em;
+    padding: 1.5em;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: min(1.15em, 5vw);
 }
@@ -25,11 +25,15 @@
 .footer__grid .footer__logo-desc{
     max-width: 40em;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .footer__grid .footer__logo-desc .logo_container{
-    width: min(25em , 70vw);
+    width: min(13em , 30vw);
     overflow: hidden;
     margin-bottom: 1em;
 }
@@ -47,6 +51,7 @@
     font-weight: 100;
     line-height: 1.6;
     margin: 0;
+    text-align: center;
 }
 
 

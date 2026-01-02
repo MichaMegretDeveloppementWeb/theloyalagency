@@ -12,7 +12,7 @@
         <div class="header_logo-name">
             <div class="logo_container">
                 <a href="/" aria-label="Retour à l'accueil">
-                    <img src="{{ asset('assets/images/commons/main-logo-desktop.webp') }}" alt="Logo de l'entreprise The Loyal Agency" loading="lazy">
+                    <img src="{{ asset('assets/images/commons/main-logo-desktop.png') }}" alt="Logo de l'entreprise The Loyal Agency" loading="lazy">
                 </a>
             </div>
         </div>
@@ -37,7 +37,7 @@
                     <div class="sub_line"></div>
                 </li>
                 <li class="link services">
-                    <a href="{{ route('services') }}">Mes services</a>
+                    <a href="{{ route('services') }}">Mon offre</a>
                     <div class="sub_line"></div>
                 </li>
                 <li class="link contact">

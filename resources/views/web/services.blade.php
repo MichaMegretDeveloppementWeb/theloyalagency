@@ -1,15 +1,12 @@
-@section('title') Services fidélisation client – boostez votre rentabilité @endsection
+@section('title') Coaching Fidélisation – accompagnement sur-mesure | The Loyal Agency @endsection
 
-@section('description') J’accompagne votre entreprise avec des services de fidélisation client, optimisation relationnelle et stratégies data‑driven pour booster vos revenus, augmenter votre rentabilité et créer des communautés durables. @endsection
+@section('description') Découvrez mon offre de coaching en fidélisation client. Un accompagnement personnalisé pour construire une stratégie de rétention efficace, augmenter votre rentabilité et transformer vos clients en partenaires durables. @endsection
 
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset("assets/css/web/services/main.css") . "?v=".now()->toDateTimeString() }}">
 @endpush
 
-@push('scripts')
-    <script type="module" src="{{ asset("assets/js/web/services/main.js") . "?v=".now()->toDateTimeString() }}"></script>
-@endpush
 
 <x-layouts.web class="services">
 
@@ -22,13 +19,7 @@
 
     <x-web.services.header/>
 
-    <x-web.services.resources-service/>
-
-    <x-web.services.pack-boost/>
-
-    <x-web.services.pack-maitrise/>
-
-    {{--<x-web.services.comparison-services :$serviceComparison/>--}}
+    <x-web.services.coaching-offer/>
 
 
     <x-slot name="footer">

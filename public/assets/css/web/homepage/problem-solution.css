@@ -19,11 +19,12 @@
     width: 95%;
     padding: 0 1em;
     text-align: center;
+    margin-bottom: 5em;
 }
 
 
 #page_content.homepage section.problem_solution_container .title_container>.title{
-    font-size: min(5.5em, 11vw);
+    font-size: min(5em, 9vw);
     font-weight: 200;
     margin: auto;
 }
@@ -32,23 +33,30 @@
 #page_content.homepage section.problem_solution_container main{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#page_content.homepage section.problem_solution_container .card_list_container{
-    width: max-content;
-    max-width: 100%;
+#page_content.homepage section.problem_solution_container .carousel_wrapper{
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 2em;
-    margin-top: 5em;
+    overflow: hidden;
+}
+
+#page_content.homepage section.problem_solution_container .card_list_container{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3.25em;
     padding: 0 1em;
-    padding-bottom: 5em;
+    scroll-behavior: smooth;
 }
 
 
@@ -64,14 +72,12 @@ CARD DESIGN DEFAULT
 ---------------------------------------------------------------------------------------------------------------------*/
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container{
-    padding: 1.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 80vw;
-    max-width: 30em;
-    min-width: 23em;
+    width: min(26em, 80vw);
+    min-width: min(26em, 80vw);
     position: sticky;
     top: 1em;
 }
@@ -130,18 +136,9 @@ CARD DESIGN DEFAULT
     background: #ffffff2b;
     backdrop-filter: blur(3px);
     padding: 1em;
-    animation: animateSwitchToSolution 1s ease-in-out infinite;
 }
 
 
-@keyframes animateSwitchToSolution {
-    0%{
-        box-shadow: 0 0 0 0 #FFFFFF3F;
-    }
-    100%{
-        box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
-    }
-}
 
 
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch.switch_to_problem{
@@ -167,6 +164,11 @@ CARD DESIGN DEFAULT
     transform: translate(-50%, 50%) scale(1);
 }
 
+#page_content.homepage section.problem_solution_container .card_list_container .card_container.show_solution .frame_container .switch.switch_to_solution .hand_pointer_icon{
+    animation: none;
+    opacity: 0;
+}
+
 
 
 
@@ -187,6 +189,41 @@ CARD DESIGN DEFAULT
     -webkit-tap-highlight-color: transparent;
     outline: none;
     background: transparent;
+}
+
+
+#page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .switch.switch_to_solution .hand_pointer_icon{
+    position: absolute;
+    bottom: 4em;
+    left: 4em;
+    transform: translate(-50%, 50%);
+    width: 1.75em;
+    height: 1.75em;
+    fill: white;
+    pointer-events: none;
+    animation: handPointerAnimation 1.5s ease-in-out infinite;
+}
+
+@keyframes handPointerAnimation {
+    0% {
+        transform: translate(-200%, 200%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    60% {
+        transform: translate(-50%, 100%);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
 }
 
 
@@ -322,26 +359,120 @@ CARD DESIGN DEFAULT
 
 
 
+/*---------------------------------------------------------------------------------------------------------------------
+CAROUSEL CONTROLS (Navigation + Pagination unifiés)
+---------------------------------------------------------------------------------------------------------------------*/
+
+#page_content.homepage section.problem_solution_container .carousel_controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 3em;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s opacity ease-in-out;
+}
+
+#page_content.homepage section.problem_solution_container.carousel_active .carousel_controls{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#page_content.homepage section.problem_solution_container .carousel_nav{
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.4;
+    pointer-events: none;
+    transition: 0.3s opacity ease-in-out, 0.3s transform ease-in-out;
+    border-radius: 50%;
+}
+
+#page_content.homepage section.problem_solution_container .carousel_nav:hover{
+    transform: scale(1.15);
+}
+
+#page_content.homepage section.problem_solution_container .carousel_nav .app_icon{
+    width: 1.75em;
+    height: 1.75em;
+    fill: var(--main-blue);
+}
+
+/* Visibilité conditionnelle des boutons */
+#page_content.homepage section.problem_solution_container.carousel_active.can_go_left .carousel_nav.carousel_nav_left{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#page_content.homepage section.problem_solution_container.carousel_active.can_go_left .carousel_nav.carousel_nav_left:hover{
+    opacity: 1;
+}
+
+#page_content.homepage section.problem_solution_container.carousel_active.can_go_right .carousel_nav.carousel_nav_right{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#page_content.homepage section.problem_solution_container.carousel_active.can_go_right .carousel_nav.carousel_nav_right:hover{
+    opacity: 1;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------
+CAROUSEL PAGINATION
+---------------------------------------------------------------------------------------------------------------------*/
+
+#page_content.homepage section.problem_solution_container .carousel_pagination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+#page_content.homepage section.problem_solution_container .carousel_pagination .pagination_dot{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.25em;
+    background: color-mix(in srgb, var(--main-blue) 40%, transparent);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s width ease-in-out, 0.3s background ease-in-out;
+}
+
+#page_content.homepage section.problem_solution_container .carousel_pagination .pagination_dot:hover{
+    background: color-mix(in srgb, var(--main-blue) 60%, transparent);
+}
+
+#page_content.homepage section.problem_solution_container .carousel_pagination .pagination_dot.active{
+    width: 1.5em;
+    background: var(--main-blue);
+}
+
+
+
+
 @media screen and (min-width: 800px) {
 
+    #page_content.homepage section.problem_solution_container .title_container{
+        margin-bottom: 10em;
+    }
+
     #page_content.homepage section.problem_solution_container .card_list_container{
-        gap: 3vw;
         position: relative;
-        margin-top: 10em;
     }
 
     #page_content.homepage section.problem_solution_container .card_list_container .card_container{
-        width: 40vw;
-        min-width: 26em;
         position: relative;
         top: initial;
     }
-
-    #page_content.homepage section.problem_solution_container .card_list_container .card_container .card{
-        aspect-ratio: 9/10;
-    }
-
-
 
 }
 
@@ -351,10 +482,8 @@ CARD DESIGN DEFAULT
 
 @media screen and (min-width: 1200px) {
 
-
     #page_content.homepage section.problem_solution_container .card_list_container{
-        margin-top: 10em;
-        gap: 3vw;
+        margin-bottom: 10em;
     }
 
 
@@ -364,8 +493,6 @@ CARD DESIGN DEFAULT
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 30vw;
-        max-width: 32em;
         min-width: initial;
         box-shadow: 0 4em 2em -3em #00000085;
         border-radius: 1em;
@@ -377,7 +504,6 @@ CARD DESIGN DEFAULT
 
     #page_content.homepage section.problem_solution_container .card_list_container .card_container .card{
         max-width: 100%;
-        aspect-ratio: 9/12;
     }
 
 }

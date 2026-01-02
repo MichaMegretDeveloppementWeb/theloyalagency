@@ -3,10 +3,10 @@ import {ready} from "../../dom-utils.js";
 ready(() => {
 
     const serviceTitle = document.querySelector('#page_content.homepage section.services .section_content .title_container');
-    const serviceList = document.querySelector('#page_content.homepage section.services .section_content .services_list');
+    const offerContent = document.querySelector('#page_content.homepage section.services .offer_content');
 
     function appearServiceTitle() {
-
+        if (!serviceTitle) return;
 
         if ((window.innerHeight / 1.5) >= serviceTitle.getBoundingClientRect().top){
             serviceTitle.classList.add('appear');
@@ -14,30 +14,24 @@ ready(() => {
         else {
             serviceTitle.classList.remove('appear');
         }
-
     }
 
-    function appearServiceItems() {
+    function appearOfferContent() {
+        if (!offerContent) return;
 
-        serviceList.querySelectorAll(".service").forEach((service) => {
-
-            if ((window.innerHeight / 1.5) >= service.getBoundingClientRect().top){
-                service.querySelector('.service_content').classList.add('appear');
-            }
-            else {
-                service.querySelector('.service_content').classList.remove('appear');
-            }
-
-        })
-
+        if ((window.innerHeight / 1.4) >= offerContent.getBoundingClientRect().top){
+            offerContent.classList.add('appear');
+        }
+        else {
+            offerContent.classList.remove('appear');
+        }
     }
-
 
 
     appearServiceTitle();
-    appearServiceItems();
+    appearOfferContent();
 
     window.addEventListener('scroll', appearServiceTitle);
-    window.addEventListener('scroll', appearServiceItems);
+    window.addEventListener('scroll', appearOfferContent);
 
 });

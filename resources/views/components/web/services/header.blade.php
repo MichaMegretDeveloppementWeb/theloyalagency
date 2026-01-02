@@ -6,7 +6,7 @@
 
     <div class="title_container">
         <h1 class="title">
-            Mes services
+            Coaching Fidélisation
         </h1>
     </div>
 
@@ -18,40 +18,9 @@
         /
         <div>
             <span class="item current">
-                Mes services
+                Mon offre
             </span>
         </div>
     </nav>
-
-
-    <div class="main_image_container">
-
-        <nav class="services_nav">
-
-            <ul class="services_list">
-
-                <li class="item">
-                    <a href="#ressources">
-                        Ressources
-                    </a>
-                </li>
-
-                <li class="item">
-                    <a href="#pack-boost">
-                        Pack boost
-                    </a>
-                </li>
-
-                <li class="item">
-                    <a href="#pack-maitrise">
-                        Pack maîtrise
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </div>
 
 </section>

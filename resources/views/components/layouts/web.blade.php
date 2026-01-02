@@ -11,7 +11,13 @@
 
     <meta name="description" content="@yield('description', "The Loyal Agency, spécialisée dans la fidélisation client, vous aide à maximiser la valeur de vos relations commerciales et à améliorer votre rentabilité en transformant vos clients en partenaires de croissance.")">
 
-    <link rel="icon" href="{{ asset('assets/images/commons/browser-crown-icon.webp') }}" />
+    <!--Favicons-->
+    <link rel="icon" href="{{ asset('assets/favicon/favicon.ico') }}" sizes="48x48">
+    <link rel="icon" href="{{ asset('assets/favicon/favicon.svg') }}" type="image/svg+xml">
+    <link rel="icon" href="{{ asset('assets/favicon/favicon-96x96.png') }}" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="{{ asset('assets/favicon/apple-touch-icon.png') }}" sizes="180x180">
+    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
+    <meta name="theme-color" content="#1E58BE">
 
     <link rel="canonical" href="@yield('canonical-url', config('app.url'))" />
 

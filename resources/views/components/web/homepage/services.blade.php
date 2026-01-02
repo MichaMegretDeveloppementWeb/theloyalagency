@@ -13,179 +13,72 @@
 
         <div class="title_container">
             <h2 class="title">
-                Les offres
+                Mon offre
             </h2>
         </div>
 
-        <ul class="services_list">
+        <div class="offer_container">
 
-            <li class="service load_resources">
+            <div class="offer_content">
 
-                <div class="service_content">
-
-                    <div class="service_icon_container">
-                        <img src="{{ asset("assets/images/homepage/services_icon_1.webp") }}" alt="Illustration dessinée main : document et flèche téléchargement – ressources à la carte pour consultant en relation client">
-                    </div>
-
-                    <div class="service_description_container">
-
-                        <h3 class="title">
-                            MEMBERSHIP – LA LOYAL ACADEMY
-                        </h3>
-
-                        <p class="description">
-                            Accédez immédiatement à nos guides, modèles et check-lists pour optimiser votre relation client et augmenter votre chiffre d’affaires.
-                        </p>
-
-                        <ul class="includes_list">
-
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    50+ ressources activables
-                                </p>
-                            </li>
-
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    1 défi mensuel pour s’entraîner
-                                </p>
-                            </li>
-
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    1h de coaching par mois
-                                </p>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <a href="{{ route('services') }}#ressources" class="cta">
-                        En savoir plus sur cette offre
-                        <x-icons.arrow-right/>
-                    </a>
-
+                <div class="offer_header">
+                    <h3 class="offer_title">
+                        Coaching Fidélisation
+                    </h3>
+                    <p class="offer_tagline">
+                        Un accompagnement personnalisé pour transformer vos clients en partenaires durables
+                    </p>
                 </div>
 
-            </li>
+                <p class="offer_description">
+                    Chaque entreprise est unique. C'est pourquoi je vous propose un coaching sur-mesure, adapté à votre réalité et à vos objectifs. Ensemble, nous construisons une stratégie de fidélisation client qui génère des résultats concrets et durables.
+                </p>
 
+                <ul class="offer_benefits">
 
-
-            <li class="service mix_coaching">
-
-                <div class="service_content">
-
-                    <div class="service_icon_container">
-                        <img src="{{ asset("assets/images/homepage/services_icon_2.webp") }}" alt="Illustration dessinée main : document et flèche téléchargement – ressources à la carte pour consultant en relation client">
-                    </div>
-
-                    <div class="service_description_container">
-
-                        <h3 class="title">
-                            LEARNING – LE LOYAL LAB’
-                        </h3>
-
-                        <p class="description">
-                            Formations et ateliers pratiques pour rendre vos clients fidèles, rentables… et fans de votre marque.
+                    <li class="benefit">
+                        <x-icons.check/>
+                        <p class="text">
+                            Diagnostic approfondi de votre situation actuelle
                         </p>
+                    </li>
 
-                        <ul class="includes_list">
+                    <li class="benefit">
+                        <x-icons.check/>
+                        <p class="text">
+                            Sessions de coaching individuelles et personnalisées
+                        </p>
+                    </li>
 
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    Minimum 10h de formation
-                                </p>
-                            </li>
+                    <li class="benefit">
+                        <x-icons.check/>
+                        <p class="text">
+                            Plan d'action concret adapté à vos enjeux
+                        </p>
+                    </li>
 
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    Des outils directement intégrables à votre société
-                                </p>
-                            </li>
+                    <li class="benefit">
+                        <x-icons.check/>
+                        <p class="text">
+                            Suivi et ajustements pour des résultats durables
+                        </p>
+                    </li>
 
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    Des cas pratiques adaptés à votre réalité
-                                </p>
-                            </li>
+                </ul>
 
-                        </ul>
-
-                    </div>
-
-                    <a href="{{ route('services') }}#pack-boost" class="cta">
-                        En savoir plus sur cette offre
+                <div class="offer_cta_container">
+                    <a href="{{ route('contact') }}" class="cta cta_primary">
+                        Discuter de mon projet
+                    </a>
+                    <a href="{{ route('services') }}" class="cta cta_secondary">
+                        Plus de détails
                         <x-icons.arrow-right/>
                     </a>
-
                 </div>
 
-            </li>
+            </div>
 
-
-
-            <li class="service full_coaching">
-
-                <div class="service_content">
-
-                    <div class="service_icon_container">
-                        <img src="{{ asset("assets/images/homepage/services_icon_3.webp") }}" alt="Illustration dessinée main : document et flèche téléchargement – ressources à la carte pour consultant en relation client">
-                    </div>
-
-                    <div class="service_description_container">
-
-                        <h3 class="title">
-                            CONSULTING – LE LOYALTY MASTERY
-                        </h3>
-
-                        <p class="description">
-                            Un accompagnement global et sur-mesure pour déployer une véritable stratégie de fidélisation et relation client au sein de3 votre entreprise et maximiser votre rentabilité.
-                        </p>
-
-                        <ul class="includes_list">
-
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    Audit complet
-                                </p>
-                            </li>
-
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    Intégration d’une méthodologie adaptée
-                                </p>
-                            </li>
-
-                            <li class="include">
-                                <x-icons.check/>
-                                <p class="text">
-                                    Accompagnement pas à pas
-                                </p>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <a href="{{ route('services') }}#pack-maitrise" class="cta">
-                        En savoir plus sur cette offre
-                        <x-icons.arrow-right/>
-                    </a>
-
-                </div>
-
-            </li>
-
-        </ul>
+        </div>
 
     </div>
 

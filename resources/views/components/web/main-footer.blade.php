@@ -14,7 +14,7 @@
             <div class="footer__logo-desc">
 
                 <a href="/" aria-label="Retour à l'accueil" class="logo_container">
-                    <img src="{{ asset('assets/images/commons/main-logo-desktop.webp') }}" alt="Logo The Loyal Agency" loading="lazy">
+                    <img src="{{ asset('assets/images/commons/main-logo-mobile.png') }}" alt="Logo The Loyal Agency" loading="lazy">
                 </a>
 
                 <p>The Loyal Agency, spécialiste en fidélisation et en relation client depuis 2010. Faites confiance à mon savoir-faire pour booster votre rentabilité.</p>
@@ -29,7 +29,7 @@
                     <ul>
                         <li><a href="{{ route('homepage') }}">Accueil</a></li>
                         <li><a href="{{ route('about') }}">Mon histoire</a></li>
-                        <li><a href="{{ route('services') }}">Mes services</a></li>
+                        <li><a href="{{ route('services') }}">Mon offre</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
                         <li><a href="{{ route('legal.privacy-policy') }}">Politique de confidentialité</a></li>
                         <li><a href="{{ route('legal.legal-notice') }}">Mention légales</a></li>

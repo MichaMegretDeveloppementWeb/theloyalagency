@@ -7,7 +7,7 @@
 
 #page_content.homepage section.services .section_content{
     width: 100%;
-    max-width: 130em;
+    max-width: 80em;
     margin: auto;
 }
 
@@ -16,20 +16,20 @@
 
 #page_content.homepage section.services .section_content .title_container{
     width: 100%;
-    margin-bottom: 5em;
+    margin-bottom: 4em;
     opacity: 0;
-    transform: translateX(10em);
+    transform: translateY(2em);
     transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
 }
 
 #page_content.homepage section.services .section_content .title_container.appear{
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 
 #page_content.homepage section.services .section_content .title_container>.title{
-    font-size: min(6.5em, 12vw);
+    font-size: min(5em, 10vw);
     font-weight: 100;
     margin: auto;
     text-align: center;
@@ -38,202 +38,203 @@
 
 
 
+/*---------------------------------------------------------------------------------------------------------------------
+OFFER CONTAINER
+---------------------------------------------------------------------------------------------------------------------*/
 
-
-#page_content.homepage section.services .section_content .services_list{
+#page_content.homepage section.services .offer_container{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 2em;
 }
 
 
-#page_content.homepage section.services .section_content .services_list .service{
+#page_content.homepage section.services .offer_content{
     width: 100%;
-    align-self: stretch;
-    min-height: 40em;
-}
-
-#page_content.homepage section.services .section_content .services_list .service .service_content{
-    width: 100%;
-    height: 100%;
+    max-width: 60em;
     padding: 3em;
-    padding-bottom: 1em;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1em;
-    border: 1px solid #457fe1;
-    opacity: 0;
-    border-radius: 1em;
-    transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-    background: white;
-}
-
-
-
-#page_content.homepage section.services .section_content .services_list .service:is(:nth-child(1), :nth-child(3)) .service_content{
-    transform: translateY(-20vh);
-}
-
-#page_content.homepage section.services .section_content .services_list .service:is(:nth-child(1), :nth-child(3)) .service_content.appear{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-
-#page_content.homepage section.services .section_content .services_list .service:nth-child(2) .service_content{
-    transform: translateY(20em);
-}
-
-#page_content.homepage section.services .section_content .services_list .service:nth-child(2) .service_content.appear{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-
-
-
-
-
-
-#page_content.homepage section.services .section_content .services_list .service .service_icon_container{
-    width: min(8em, 8vh);
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    margin-bottom: 2em;
-}
-
-#page_content.homepage section.services .section_content .services_list .service .service_icon_container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.7;
-}
-
-
-
-
-
-
-#page_content.homepage section.services .section_content .services_list .service .service_description_container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-grow: 1;
-    gap: 1em;
-    width: 100%;
-    margin-bottom: 3em;
-}
-
-
-
-#page_content.homepage section.services .section_content .services_list .service .service_description_container>.title{
-    font-size: min(3em, 10vw);
-    font-weight: 100;
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px solid var(--main-blue);
-}
-
-
-
-#page_content.homepage section.services .section_content .services_list .service .service_description_container .description{
-    text-align: left;
-    font-size: min(1.05em, 3vw);
-    font-weight: 100;
-    margin-bottom: 2em;
-}
-
-
-
-#page_content.homepage section.services .section_content .services_list .service .service_description_container .includes_list{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1em;
-    font-size: min(1.05em, 3vw);
-    font-weight: 100;
-    margin-top: auto;
-}
-
-
-#page_content.homepage section.services .section_content .services_list .service .service_description_container .includes_list .include{
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    gap: 2.5em;
+    border: 1px solid var(--main-blue);
+    border-radius: 1em;
+    background: white;
+    opacity: 0;
+    transform: translateY(3em);
+    transition: 0.6s transform ease-in-out, 0.6s opacity ease-in-out;
+}
+
+#page_content.homepage section.services .offer_content.appear{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------
+OFFER HEADER
+---------------------------------------------------------------------------------------------------------------------*/
+
+#page_content.homepage section.services .offer_header{
+    text-align: center;
+}
+
+#page_content.homepage section.services .offer_title{
+    font-size: min(2.5em, 7vw);
+    font-weight: 200;
+    color: var(--main-blue);
+    margin-bottom: 0.5em;
+}
+
+#page_content.homepage section.services .offer_tagline{
+    font-size: min(1.15em, 4vw);
+    font-weight: 300;
+    color: #555;
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------
+OFFER DESCRIPTION
+---------------------------------------------------------------------------------------------------------------------*/
+
+#page_content.homepage section.services .offer_description{
+    font-size: min(1.1em, 3.5vw);
+    font-weight: 300;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 50em;
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------
+OFFER BENEFITS
+---------------------------------------------------------------------------------------------------------------------*/
+
+#page_content.homepage section.services .offer_benefits{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+    width: 100%;
+    max-width: 35em;
+}
+
+#page_content.homepage section.services .offer_benefits .benefit{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 1em;
 }
 
-
-#page_content.homepage section.services .section_content .services_list .service .service_description_container .includes_list .include .app_icon{
+#page_content.homepage section.services .offer_benefits .benefit .app_icon{
     min-width: 1.25em;
+    width: 1.25em;
+    height: 1.25em;
     fill: var(--main-blue);
+    margin-top: 0.15em;
+}
+
+#page_content.homepage section.services .offer_benefits .benefit .text{
+    font-size: min(1.05em, 3.5vw);
+    font-weight: 300;
+    line-height: 1.5;
 }
 
 
 
 
+/*---------------------------------------------------------------------------------------------------------------------
+OFFER CTA
+---------------------------------------------------------------------------------------------------------------------*/
 
-
-
-
-#page_content.homepage section.services .section_content .services_list .service .cta{
-    font-size: min(1.05em, 3vw);
-    margin-top: auto;
+#page_content.homepage section.services .offer_cta_container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+    width: 100%;
+}
+
+#page_content.homepage section.services .offer_cta_container .cta{
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5em;
-    padding: 0.5em;
+    padding: 1em 2em;
+    font-size: min(1em, 3.5vw);
+    font-weight: 400;
+    border-radius: 0.5em;
+    transition: 0.25s background ease-in-out, 0.25s transform ease-in-out, 0.25s box-shadow ease-in-out;
+}
+
+#page_content.homepage section.services .offer_cta_container .cta_primary{
+    background: var(--main-blue);
+    color: white;
+    min-width: 15em;
+}
+
+#page_content.homepage section.services .offer_cta_container .cta_primary:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 88, 190, 0.3);
+}
+
+#page_content.homepage section.services .offer_cta_container .cta_secondary{
     color: var(--main-blue);
     fill: var(--main-blue);
+    background: transparent;
 }
 
-#page_content.homepage section.services .section_content .services_list .service .cta .app_icon{
-    min-width: 1.75em;
-    margin-bottom: -0.2em;
-    margin-left: 0;
-    transition: margin-left 0.25s ease-in-out;
+#page_content.homepage section.services .offer_cta_container .cta_secondary .app_icon{
+    width: 1.25em;
+    height: 1.25em;
+    transition: 0.25s margin-left ease-in-out;
 }
 
-#page_content.homepage section.services .section_content .services_list .service .cta:hover .app_icon{
+#page_content.homepage section.services .offer_cta_container .cta_secondary:hover .app_icon{
     margin-left: 0.5em;
 }
 
 
 
 
+/*---------------------------------------------------------------------------------------------------------------------
+RESPONSIVE
+---------------------------------------------------------------------------------------------------------------------*/
 
+@media screen and (min-width: 600px){
 
-
-
-
-
-
-
-
-@media screen and (min-width: 1000px){
-
-    #page_content.homepage section.services .section_content .services_list{
+    #page_content.homepage section.services .offer_cta_container{
         flex-direction: row;
-        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em;
     }
 
+}
 
-    #page_content.homepage section.services .section_content .services_list .service{
-        width: 30%;
-        min-width: 30em;
-        max-width: 35em;
-        flex-grow: 1;
+
+@media screen and (min-width: 800px){
+
+    #page_content.homepage section.services .offer_content{
+        padding: 4em 5em;
+    }
+
+    #page_content.homepage section.services .offer_benefits{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em 3em;
+        max-width: 100%;
+    }
+
+    #page_content.homepage section.services .offer_benefits .benefit{
+        width: calc(50% - 1.5em);
+        max-width: 22em;
     }
 
 }

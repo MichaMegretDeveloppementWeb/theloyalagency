@@ -17,7 +17,9 @@
 
     <main>
 
-        <ul class="card_list_container">
+        <div class="carousel_wrapper">
+
+            <ul class="card_list_container">
 
             <li class="card_container card_1">
 
@@ -69,7 +71,7 @@
                                 <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_3_1.webp") }}" alt="Îles paradisiaques sous un beau soleil vues du ciel" loading="lazy">
                             </div>
                             <p class="card_text problem_text">
-                                Marre de donner 20% de commission aux OTA (alors que c’est vous qui faites tout le travail) ?
+                                Marre de donner 20% de commission aux OTA (alors que c'est vous qui faites tout le travail) ?
                             </p>
                             <p class="card_text solution_text">
                                 Fidélisez en direct et diminuez votre dépendance aux intermédiaires.
@@ -79,6 +81,7 @@
                             <div class="content">
                                 Solution
                             </div>
+                            <x-bi-hand-index-thumb class="hand_pointer_icon" />
                         </button>
                     </div>
                 </article>
@@ -100,10 +103,10 @@
                                 <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_2_2.webp") }}" alt="Paysage d'une plaine verdoyante et ensoleillé" loading="lazy">
                             </div>
                             <p class="card_text problem_text">
-                                Ils viennent un fois et puis s’en vont ?
+                                Ils viennent un fois et puis s'en vont ?
                             </p>
                             <p class="card_text solution_text">
-                                Augmenter votre rétention de 5% peut booster les profits de 25 % jusqu’à 95%
+                                Augmenter votre rétention de 5% peut booster les profits de 25 % jusqu'à 95%
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
@@ -116,6 +119,24 @@
             </li>
 
         </ul>
+
+        </div>
+
+        <div class="carousel_controls">
+            <button type="button" class="carousel_nav carousel_nav_left" aria-label="Voir la carte précédente">
+                <x-icons.arrow-left />
+            </button>
+
+            <div class="carousel_pagination">
+                <button type="button" class="pagination_dot" data-index="0" aria-label="Aller à la carte 1"></button>
+                <button type="button" class="pagination_dot active" data-index="1" aria-label="Aller à la carte 2"></button>
+                <button type="button" class="pagination_dot" data-index="2" aria-label="Aller à la carte 3"></button>
+            </div>
+
+            <button type="button" class="carousel_nav carousel_nav_right" aria-label="Voir la carte suivante">
+                <x-icons.arrow-right />
+            </button>
+        </div>
 
     </main>
 

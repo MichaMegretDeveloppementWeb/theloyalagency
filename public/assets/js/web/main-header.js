@@ -76,13 +76,13 @@ ready(() => {
 
         if (window.innerWidth < 800){
 
-            const nouveauSrc = logoSrc.replace('main-logo-desktop', 'main-logo-mobil');
+            const nouveauSrc = logoSrc.replace('main-logo-desktop', 'main-logo-mobile');
 
             logo.setAttribute('src', nouveauSrc);
         }
         else {
 
-            const nouveauSrc = logoSrc.replace('main-logo-mobil', 'main-logo-desktop');
+            const nouveauSrc = logoSrc.replace('main-logo-mobile', 'main-logo-desktop');
 
             logo.setAttribute('src', nouveauSrc);
 
