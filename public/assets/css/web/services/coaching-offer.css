@@ -647,8 +647,6 @@ RESPONSIVE - DESKTOP (1000px+)
     }
 
     #coaching-cta .cta_container{
-        flex-direction: row;
-        justify-content: space-between;
         text-align: left;
         padding: 4em 5em;
         gap: 3em;
