@@ -326,7 +326,7 @@ SECTION 5 : BÉNÉFICES - Design épuré
 
 #coaching-benefits .benefit_item{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     gap: 1.25em;
     padding: 1.5em;
