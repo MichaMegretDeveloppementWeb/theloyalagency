@@ -13,7 +13,8 @@
 
         <header>
             <div class="title_container">
-                <h2 class="title">Les 9 étapes de la fidélisation client</h2>
+                <h2 class="title">Transformez vos clients en partenaires à vie.</h2>
+                <p class="sub_title">Offrez à vos clients une vraie raison de rester avec les 9 étapes de la fidélisation</p>
             </div>
         </header>
 
@@ -52,9 +53,9 @@
 
                     <div class="marker_content">
                         <div class="label">
-                            <h3 class="title">Écouter</h3>
+                            <h3 class="title">Connaître</h3>
                             <p class="content">
-                                Transformez chaque retour client en opportunité d'amélioration concrète.
+                                Apprenez à en savoir plus sur vos clients pour renforcer votre relation.
                             </p>
                         </div>
                     </div>
@@ -166,6 +167,15 @@
 
         </div>
 
+        <div class="cta_container">
+            <a href="{{ route('services') }}" class="cta">
+                En savoir plus
+                <x-icons.chevron-right/>
+            </a>
+        </div>
+
     </div>
+
+
 
 </section>

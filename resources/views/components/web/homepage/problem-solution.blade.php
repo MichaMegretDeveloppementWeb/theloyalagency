@@ -11,7 +11,7 @@
 
     <header>
         <div class="title_container">
-            <h2 class="title">Pourquoi fidéliser vos clients?</h2>
+            <h2 class="title">Ils ont disparu&nbsp;? <br> Faites-les revenir.</h2>
         </div>
     </header>
 
@@ -32,17 +32,17 @@
                         </button>
                         <div class="frame">
                             <div class="image_container container_1">
-                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_1_1.webp") }}" alt="Paysage pluvieux montrant un arbre sans feuille." loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/solution.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <div class="image_container container_2">
-                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_1_2.webp") }}" alt="Paysage ensoleillé montrant un arbre verdoyant." loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/problem.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
 
                             <p class="card_text problem_text">
-                                Vos réservations font le yo-yo chaque saison ?
+                                <b>Client perdu ?</b> <br> Parti sans explication...
                             </p>
                             <p class="card_text solution_text">
-                                Un client fidèle dépense jusqu’à 67 fois plus qu’un nouveau. Fidélisez, lissez et stabilisez.
+                                Quelques étapes suffisent rétablir la relation client.
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
@@ -65,16 +65,16 @@
                         </button>
                         <div class="frame">
                             <div class="image_container container_1">
-                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_3_2.webp") }}" alt="Îles paradisiaques sous la pluie vues du ciel" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/solution.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <div class="image_container container_2">
-                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_3_1.webp") }}" alt="Îles paradisiaques sous un beau soleil vues du ciel" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/problem.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <p class="card_text problem_text">
-                                Marre de donner 20% de commission aux OTA (alors que c'est vous qui faites tout le travail) ?
+                                <b>Client silencieux ?</b> <br> Il ne dit rien&nbsp;... mais il pense beaucoup.
                             </p>
                             <p class="card_text solution_text">
-                                Fidélisez en direct et diminuez votre dépendance aux intermédiaires.
+                                Rien n'est figé. Un simple geste peut relancer le dialogue.
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
@@ -97,16 +97,16 @@
                         </button>
                         <div class="frame">
                             <div class="image_container container_1">
-                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_2_1.webp") }}" alt="Paysage désertique et aride" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/solution.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <div class="image_container container_2">
-                                <img src="{{ asset("assets/images/homepage/sad-landscape-switch-to-happy_2_2.webp") }}" alt="Paysage d'une plaine verdoyante et ensoleillé" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/problem.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <p class="card_text problem_text">
-                                Ils viennent un fois et puis s'en vont ?
+                                <b>Client oublié ?</b> <br> Il s'est fondu dans la masse jusqu'à disparaître.
                             </p>
                             <p class="card_text solution_text">
-                                Augmenter votre rétention de 5% peut booster les profits de 25 % jusqu'à 95%
+                                Recréer le lien est possible. A vous de faire le premier pas.
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
@@ -138,6 +138,15 @@
             </button>
         </div>
 
+        <div class="cta_container">
+            <a href="{{ route('services') }}" class="cta">
+                En savoir plus
+                <x-icons.chevron-right/>
+            </a>
+        </div>
+
     </main>
+
+
 
 </section>

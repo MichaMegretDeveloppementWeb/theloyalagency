@@ -11,7 +11,7 @@
 
         <div class="title_container">
 
-            <h1 class="main_title">Boostez votre rentabilité</h1>
+            <h1 class="main_title">Devenez la marque que vos clients ne quitteront jamais</h1>
 
             <div class="morph_sub_title_container">
 

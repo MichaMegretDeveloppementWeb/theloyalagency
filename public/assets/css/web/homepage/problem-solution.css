@@ -19,6 +19,7 @@
     width: 95%;
     padding: 0 1em;
     text-align: center;
+    margin: auto;
     margin-bottom: 5em;
 }
 
@@ -304,7 +305,7 @@ CARD DESIGN DEFAULT
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .card_text.problem_text{
     bottom: 0;
     top: initial;
-    background: linear-gradient(0deg, #0000009e 20%, transparent);
+    background: linear-gradient(0deg, #000000b5 60%, transparent);
     opacity: 1;
     text-align: left;
 }
@@ -312,7 +313,7 @@ CARD DESIGN DEFAULT
 #page_content.homepage section.problem_solution_container .card_list_container .card_container .frame_container .frame .card_text.solution_text{
     bottom: initial;
     top: 0;
-    background: linear-gradient(180deg, #0000009e 20%, transparent);
+    background: linear-gradient(180deg, #000000b5 60%, transparent);
     opacity: 0;
     text-align: left;
 }
@@ -364,19 +365,17 @@ CAROUSEL CONTROLS (Navigation + Pagination unifiés)
 ---------------------------------------------------------------------------------------------------------------------*/
 
 #page_content.homepage section.problem_solution_container .carousel_controls{
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1.5em;
     margin-top: 3em;
-    opacity: 0;
     pointer-events: none;
-    transition: 0.3s opacity ease-in-out;
 }
 
 #page_content.homepage section.problem_solution_container.carousel_active .carousel_controls{
-    opacity: 1;
+    display: flex;
     pointer-events: auto;
 }
 
@@ -459,6 +458,46 @@ CAROUSEL PAGINATION
 
 
 
+/*---------------------------------------------------------------------------------------------------------------------
+CTA
+---------------------------------------------------------------------------------------------------------------------*/
+
+#page_content.homepage section.problem_solution_container .cta_container{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#page_content.homepage section.problem_solution_container .cta_container .cta{
+    padding: 1em 1.5em;
+    background: transparent;
+    color: var(--main-blue);
+    fill: var(--main-blue);
+    font-size: 1.5em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s background ease-in-out, 0.25s color ease-in-out;
+}
+
+#page_content.homepage section.problem_solution_container .cta_container .cta .app_icon{
+    margin-left: 0.5em;
+    margin-bottom: -0.2em;
+    transition: 0.25s margin-left ease-in-out, 0.25s opacity ease-in-out;
+    min-width: 1em;
+}
+
+#page_content.homepage section.problem_solution_container .cta_container .cta:hover .app_icon{
+    margin-left: 0.75em;
+}
+
+
+
+
 @media screen and (min-width: 800px) {
 
     #page_content.homepage section.problem_solution_container .title_container{
@@ -483,7 +522,7 @@ CAROUSEL PAGINATION
 @media screen and (min-width: 1200px) {
 
     #page_content.homepage section.problem_solution_container .card_list_container{
-        margin-bottom: 10em;
+        margin-bottom: 5em;
     }
 
 

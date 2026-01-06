@@ -10,8 +10,8 @@ TOP BANNER SECTION
 
 #page_content.homepage section.top_banner_container .top_banner{
     width: 100%;
-    max-width: 110em;
-    height: 55em;
+    max-width: 100em;
+    height: 50em;
     background: var(--sub-cream-background);
     position: relative;
     margin: auto auto;
@@ -33,7 +33,7 @@ TOP BANNER SECTION
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 2em;
+    padding: 1em;
     width: max-content;
     max-width: calc(100% - 3vw);
     position: absolute;
@@ -44,7 +44,7 @@ TOP BANNER SECTION
 #page_content.homepage section.top_banner_container .top_banner .title_container .main_title{
     font-family: "TT Nooks", sans-serif;
     font-weight: 200;
-    font-size: max(min(4.5em, 13vw), 3.5em);
+    font-size: max(min(2.5em, 10vw), 2.5em);
     max-width: 10em;
     line-height: 1em;
 }
@@ -393,11 +393,13 @@ TOP BANNER SECTION
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 60vw;
-    max-width: 55em;
+    width: 100%;
     min-width: 40em;
     max-height: 55%;
     overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 #page_content.homepage section.top_banner_container .top_banner .image_container img{
@@ -435,6 +437,8 @@ TOP BANNER SECTION
 
 
     #page_content.homepage section.top_banner_container .top_banner .image_container{
+        width: 60vw;
+        max-width: 55em;
         max-height: 70%;
     }
 
@@ -452,6 +456,16 @@ TOP BANNER SECTION
 
 
 
+@media screen and (min-width: 500px) {
+
+    #page_content.homepage section.top_banner_container .top_banner .title_container .main_title{
+        font-size: 3em;
+    }
+
+}
+
+
+
 
 
 
@@ -465,6 +479,7 @@ TOP BANNER SECTION
 
     #page_content.homepage section.top_banner_container .top_banner .title_container{
         top: 2em;
+        padding: 2em;
     }
 
     #page_content.homepage section.top_banner_container .top_banner .title_container .morph_sub_title_container .first_part .variant,
@@ -476,7 +491,7 @@ TOP BANNER SECTION
 
 
     #page_content.homepage section.top_banner_container .top_banner .title_container .main_title{
-        font-size: 5.5em;
+        font-size: 4em;
     }
 
 
@@ -522,7 +537,7 @@ TOP BANNER SECTION
 
 
     #page_content.homepage section.top_banner_container .top_banner .title_container .main_title{
-        font-size: 7em;
+        font-size: 5em;
     }
 
 
