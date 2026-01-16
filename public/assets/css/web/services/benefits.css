@@ -63,10 +63,6 @@
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-#benefits .benefit_item:hover{
-    padding-left: 1em;
-    background: linear-gradient(90deg, rgba(30, 88, 190, 0.03) 0%, transparent 100%);
-}
 
 
 
@@ -124,9 +120,6 @@
     transition: all 0.3s ease;
 }
 
-#benefits .benefit_item:hover .benefit_icon{
-    transform: scale(1.1);
-}
 
 #benefits .benefit_icon svg{
     width: 1.2em;
@@ -227,10 +220,6 @@
     #benefits .benefit_item:first-child,
     #benefits .benefit_item:nth-child(2){
         border-top: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    #benefits .benefit_item:hover{
-        padding-left: 0.8em;
     }
 
     #benefits .benefit_number{
