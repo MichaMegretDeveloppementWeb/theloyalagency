@@ -21,7 +21,7 @@
 
     {{--<x-web.services.coaching-offer/>--}}
 
-    <x-web.services.customer-recovery class="bg-cream"/>
+    <x-web.services.customer-recovery class="bg-white"/>
 
     <x-web.services.method class="bg-white"/>
 
