@@ -1,0 +1,263 @@
+#collaboration_process{
+    width: 100%;
+}
+
+
+#collaboration_process .process_container{
+    width: 100%;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 12vh 1.5em 15vh;
+}
+
+
+
+
+/* =============================================
+   HEADER
+============================================= */
+
+#collaboration_process .process_header{
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
+#collaboration_process .process_header .title{
+    font-family: "Literata", Georgia, serif;
+    font-size: min(2.5em, 8vw);
+    font-weight: 300;
+    color: #333;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5em;
+}
+
+#collaboration_process .process_header .title em{
+    font-style: italic;
+    color: var(--main-blue);
+}
+
+#collaboration_process .process_header .subtitle{
+    font-size: 1.05em;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+
+/* =============================================
+   TIMELINE
+============================================= */
+
+#collaboration_process .timeline{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+
+
+
+/* =============================================
+   TIMELINE ITEM
+============================================= */
+
+#collaboration_process .timeline_item{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#collaboration_process .timeline_item.revealed{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#collaboration_process .timeline_item.no-animation{
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+}
+
+
+
+
+/* =============================================
+   TIMELINE MARKER
+============================================= */
+
+#collaboration_process .timeline_marker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 3em;
+}
+
+#collaboration_process .marker_number{
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Literata", Georgia, serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--main-blue);
+    border: 1px solid var(--main-blue);
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+#collaboration_process .timeline_item:hover .marker_number{
+    background: var(--main-blue);
+    color: white;
+}
+
+#collaboration_process .marker_line{
+    flex: 1;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--main-blue) 0%, rgba(30, 88, 190, 0.1) 100%);
+    min-height: 2em;
+}
+
+#collaboration_process .timeline_item:last-child .marker_line{
+    display: none;
+}
+
+
+
+
+/* =============================================
+   TIMELINE CONTENT
+============================================= */
+
+#collaboration_process .timeline_content{
+    flex: 1;
+    padding-bottom: 3em;
+}
+
+#collaboration_process .timeline_item:last-child .timeline_content{
+    padding-bottom: 0;
+}
+
+#collaboration_process .step_title{
+    font-family: "Literata", Georgia, serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.01em;
+}
+
+#collaboration_process .step_description{
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+
+
+/* =============================================
+   RESPONSIVE - TABLET
+============================================= */
+
+@media screen and (min-width: 600px){
+
+    #collaboration_process .process_container{
+        padding: 15vh 2em 18vh;
+    }
+
+    #collaboration_process .process_header{
+        margin-bottom: 10vh;
+    }
+
+    #collaboration_process .process_header .title{
+        font-size: 2.8em;
+    }
+
+    #collaboration_process .process_header .subtitle{
+        font-size: 1.1em;
+    }
+
+    #collaboration_process .timeline_item{
+        gap: 2em;
+    }
+
+    #collaboration_process .timeline_marker{
+        width: 4em;
+    }
+
+    #collaboration_process .marker_number{
+        width: 4em;
+        height: 4em;
+        font-size: 1.1em;
+    }
+
+    #collaboration_process .timeline_content{
+        padding-top: 0.8em;
+        padding-bottom: 4em;
+    }
+
+    #collaboration_process .step_title{
+        font-size: 1.5em;
+    }
+
+    #collaboration_process .step_description{
+        font-size: 1.05em;
+    }
+
+}
+
+
+
+
+/* =============================================
+   RESPONSIVE - DESKTOP
+============================================= */
+
+@media screen and (min-width: 900px){
+
+    #collaboration_process .process_container{
+        max-width: 55em;
+    }
+
+    #collaboration_process .timeline_item{
+        gap: 2.5em;
+    }
+
+    #collaboration_process .timeline_marker{
+        width: 4.5em;
+    }
+
+    #collaboration_process .marker_number{
+        width: 4.5em;
+        height: 4.5em;
+        font-size: 1.15em;
+    }
+
+    #collaboration_process .timeline_content{
+        padding-bottom: 5em;
+    }
+
+    #collaboration_process .step_title{
+        font-size: 1.6em;
+    }
+
+    #collaboration_process .step_description{
+        font-size: 1.1em;
+        max-width: 90%;
+    }
+
+}

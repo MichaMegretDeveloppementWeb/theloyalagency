@@ -1,0 +1,81 @@
+#philosophy{
+    width: 100%;
+}
+
+
+#philosophy .philosophy_container{
+    width: 100%;
+    max-width: 55em;
+    margin: 0 auto;
+    padding: 12vh 1.5em;
+    text-align: center;
+}
+
+
+
+
+/* =============================================
+   QUOTE
+============================================= */
+
+#philosophy .quote_container{
+    margin-bottom: 2em;
+    position: relative;
+}
+
+#philosophy .quote_icon{
+    width: 2.5em;
+    height: 2.5em;
+    fill: var(--main-blue);
+    opacity: 0.2;
+    margin-bottom: 1em;
+}
+
+#philosophy .quote_text{
+    font-family: "American Favorite", serif;
+    font-size: min(4.5em, 11vw);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--main-blue);
+    line-height: 1.4;
+}
+
+
+
+
+/* =============================================
+   PHILOSOPHY TEXT
+============================================= */
+
+#philosophy .philosophy_text{
+    font-size: min(1.15em, 3.8vw);
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+    max-width: 40em;
+    margin: auto;
+}
+
+
+
+
+/* =============================================
+   RESPONSIVE - DESKTOP
+============================================= */
+
+@media screen and (min-width: 1000px){
+
+    #philosophy .philosophy_container{
+        padding: 15vh 2em;
+    }
+
+    #philosophy .quote_icon{
+        width: 3em;
+        height: 3em;
+    }
+
+    #philosophy .philosophy_text{
+        font-size: 1.25em;
+    }
+
+}

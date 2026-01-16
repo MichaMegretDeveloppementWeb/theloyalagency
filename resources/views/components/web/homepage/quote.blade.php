@@ -14,10 +14,7 @@
             <x-icons.quote class="quote_icon"/>
             <blockquote class="quote_text">
                 Une entreprise ne maîtrise jamais ce que ses clients diront d'elle...
-                <br>
                 Pourtant elle est entièrement responsable des mots - des maux - qu'elle leur laisse.
-                <br>
-                Vous avez le pouvoir de métamorphoser votre relation client.
             </blockquote>
             <p class="quote_author">— Melinda Marin</p>
         </div>

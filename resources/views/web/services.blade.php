@@ -19,7 +19,27 @@
 
     <x-web.services.header/>
 
-    <x-web.services.coaching-offer/>
+    {{--<x-web.services.coaching-offer/>--}}
+
+    <x-web.services.customer-recovery class="bg-cream"/>
+
+    <x-web.services.method class="bg-white"/>
+
+    <x-web.services.recovery-conclusion-cta class="bg-cream"/>
+
+    <x-web.services.philosophy class="bg-cream"/>
+
+    <x-web.services.customer-loyalty class="bg-white"/>
+
+    <x-web.services.loyalty-steps class="bg-white"/>
+
+    <x-web.services.loyalty-conclusion-cta class="bg-cream"/>
+
+    <x-web.services.benefits class="bg-cream"/>
+
+    <x-web.services.final-cta/>
+
+    <x-web.services.collaboration-process class="bg-white"/>
 
 
     <x-slot name="footer">

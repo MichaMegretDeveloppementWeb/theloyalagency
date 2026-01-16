@@ -1,0 +1,209 @@
+#loyalty_steps{
+    width: 100%;
+}
+
+
+#loyalty_steps .steps_container{
+    width: 100%;
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 10vh 1.5em;
+}
+
+
+
+
+/* =============================================
+   HEADER
+============================================= */
+
+#loyalty_steps .steps_header{
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
+#loyalty_steps .steps_header .title{
+    font-family: "Literata", Georgia, serif;
+    font-size: min(2.5em, 9vw);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: #333;
+    font-style: italic;
+}
+
+
+
+
+/* =============================================
+   STEPS GRID
+============================================= */
+
+#loyalty_steps .steps_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+}
+
+
+#loyalty_steps .step_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3em 2em;
+    position: relative;
+    transition: background 0.4s ease;
+}
+
+#loyalty_steps .step_item:hover{
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+
+
+/* =============================================
+   STEP NUMBER
+============================================= */
+
+#loyalty_steps .step_number{
+    position: absolute;
+    top: 0.5em;
+    right: 0.6em;
+    font-family: "Literata", Georgia, serif;
+    font-size: 5em;
+    font-weight: 300;
+    color: var(--main-blue);
+    opacity: 0.15;
+    letter-spacing: 0.05em;
+}
+
+
+
+
+/* =============================================
+   STEP ICON
+============================================= */
+
+#loyalty_steps .step_icon{
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#loyalty_steps .step_item:hover .step_icon{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+#loyalty_steps .step_icon svg{
+    width: 1.8em;
+    height: 1.8em;
+    stroke: var(--main-blue);
+    stroke-width: 1;
+    opacity: 0.5;
+}
+
+
+
+
+/* =============================================
+   STEP CONTENT
+============================================= */
+
+#loyalty_steps .step_title{
+    font-family: "Literata", Georgia, serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 0.6em;
+    letter-spacing: 0.02em;
+}
+
+#loyalty_steps .step_description{
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #666;
+    max-width: 18em;
+}
+
+
+
+
+/* =============================================
+   RESPONSIVE - TABLET
+============================================= */
+
+@media screen and (min-width: 550px){
+
+    #loyalty_steps .steps_grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #loyalty_steps .step_item{
+        padding: 3.5em 2em;
+    }
+
+}
+
+
+
+
+/* =============================================
+   RESPONSIVE - DESKTOP
+============================================= */
+
+@media screen and (min-width: 900px){
+
+    #loyalty_steps .steps_container{
+        padding: 10vh 2em 18vh;
+    }
+
+    #loyalty_steps .steps_header{
+        margin-bottom: 10vh;
+    }
+
+    #loyalty_steps .steps_header .title{
+        font-size: 2.5em;
+    }
+
+    #loyalty_steps .steps_grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #loyalty_steps .step_item{
+        padding: 4em 2.5em;
+    }
+
+    #loyalty_steps .step_number{
+        font-size: 5em;
+    }
+
+    #loyalty_steps .step_icon{
+        width: 4.5em;
+        height: 4.5em;
+        margin-bottom: 1.8em;
+    }
+
+    #loyalty_steps .step_icon svg{
+        width: 2em;
+        height: 2em;
+    }
+
+    #loyalty_steps .step_title{
+        font-size: 1.5em;
+    }
+
+    #loyalty_steps .step_description{
+        font-size: 1.1em;
+    }
+
+}

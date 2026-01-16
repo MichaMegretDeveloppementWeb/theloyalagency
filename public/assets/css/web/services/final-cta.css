@@ -1,0 +1,188 @@
+#final_cta{
+    width: 100%;
+    padding: 12vh 2em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/*#final_cta::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: radial-gradient(#00000045 35%, transparent);
+}*/
+
+
+
+
+/* =============================================
+   IMAGE DE FOND
+============================================= */
+
+#final_cta .background_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+
+
+
+/* =============================================
+   CONTENU
+============================================= */
+
+#final_cta .section_content{
+    max-width: 50em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(2em);
+    transition: 0.8s opacity ease-out, 0.8s transform ease-out;
+}
+
+#final_cta .section_content.revealed{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#final_cta .section_content.no-animation{
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+}
+
+
+
+
+/* =============================================
+   TITRE
+============================================= */
+
+#final_cta .cta_title{
+    font-size: min(3.5em, 12vw);
+    font-weight: 200;
+    color: var(--main-blue);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+
+
+
+/* =============================================
+   TEXTE
+============================================= */
+
+#final_cta .cta_text{
+    font-size: min(1.1em, 4vw);
+    font-weight: 300;
+    color: black;
+    line-height: 1.8;
+    max-width: 32em;
+}
+
+
+
+
+/* =============================================
+   BOUTON
+============================================= */
+
+#final_cta .cta_button{
+    margin-top: 1em;
+    padding: 1em 2.5em;
+    background: var(--main-blue);
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    transition: 0.3s background ease-out, 0.3s color ease-out, 0.3s transform ease-out;
+}
+
+#final_cta .cta_button:hover{
+    background: transparent;
+    color: var(--main-blue);
+    transform: scale(1.02);
+    box-shadow: inset 0 0 0 2px var(--main-blue);
+}
+
+#final_cta .cta_button svg{
+    width: 1.2em;
+    height: 1.2em;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    transition: 0.3s transform ease-out;
+}
+
+#final_cta .cta_button:hover svg{
+    transform: translateX(5px);
+}
+
+
+
+
+/* =============================================
+   RESPONSIVE - TABLET
+============================================= */
+
+@media screen and (min-width: 800px){
+
+    #final_cta{
+        padding: 15vh 2em;
+    }
+
+    #final_cta .cta_title{
+        font-size: 3.5em;
+    }
+
+    #final_cta .cta_text{
+        font-size: 1.2em;
+    }
+
+    #final_cta .cta_button{
+        font-size: 1.1em;
+        padding: 1.2em 3em;
+    }
+
+}
+
+
+
+
+/* =============================================
+   RESPONSIVE - DESKTOP
+============================================= */
+
+@media screen and (min-width: 1200px){
+
+    #final_cta{
+        padding: 18vh 2em;
+    }
+
+    #final_cta .cta_title{
+        font-size: 4em;
+    }
+
+}

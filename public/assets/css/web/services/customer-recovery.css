@@ -1,0 +1,213 @@
+#customer_recovery{
+    width: 100%;
+}
+
+
+
+
+/* =============================================
+   SECTION HEADER
+============================================= */
+
+#customer_recovery .section_header{
+    width: 100%;
+    padding: 10vh 1.5em 0;
+    text-align: center;
+}
+
+#customer_recovery .section_title{
+    font-size: min(3.5em, 10vw);
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    color: var(--main-blue);
+    margin-bottom: 2em;
+}
+
+
+
+
+/* =============================================
+   KEY STAT SECTION
+============================================= */
+
+#customer_recovery .key_stat{
+    width: 100%;
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 8vh 1.5em 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}
+
+
+#customer_recovery .key_stat .stat_number,
+#customer_recovery .key_stat .stat_separator,
+#customer_recovery .key_stat .stat_content{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#customer_recovery .key_stat.revealed .stat_number,
+#customer_recovery .key_stat.revealed .stat_separator,
+#customer_recovery .key_stat.revealed .stat_content{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#customer_recovery .key_stat.no-animation .stat_number,
+#customer_recovery .key_stat.no-animation .stat_separator,
+#customer_recovery .key_stat.no-animation .stat_content{
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+}
+
+
+#customer_recovery .key_stat .stat_number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#customer_recovery .key_stat .stat_number span{
+    font-size: min(7em, 22vw);
+    font-weight: 300;
+    color: var(--main-blue);
+    letter-spacing: -0.02em;
+}
+
+
+#customer_recovery .key_stat .stat_separator{
+    display: none;
+}
+
+
+#customer_recovery .key_stat .stat_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    text-align: center;
+    position: relative;
+    max-width: 28em;
+}
+
+#customer_recovery .key_stat .stat_content .quote_mark{
+    position: absolute;
+    top: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Literata", Georgia, serif;
+    font-size: 8em;
+    color: var(--main-blue);
+    opacity: 0.07;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#customer_recovery .key_stat .stat_text{
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.9em;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+#customer_recovery .key_stat .stat_text strong{
+    font-weight: 600;
+    font-style: italic;
+    color: #444;
+}
+
+#customer_recovery .key_stat .stat_source{
+    font-size: 0.85em;
+    color: #a08c7a;
+    font-style: normal;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding-top: 1em;
+    position: relative;
+}
+
+#customer_recovery .key_stat .stat_source::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5em;
+    height: 1px;
+    background: #ccc;
+}
+
+
+
+
+/* =============================================
+   RESPONSIVE - DESKTOP
+============================================= */
+
+@media screen and (min-width: 900px){
+
+    #customer_recovery .section_header{
+        padding: 12vh 2em 0;
+    }
+
+    #customer_recovery .section_title{
+        font-size: 3em;
+    }
+
+    #customer_recovery .key_stat{
+        flex-direction: row;
+        padding: 10vh 3em 18vh;
+        gap: 0;
+    }
+
+    #customer_recovery .key_stat .stat_number{
+        flex-shrink: 0;
+        padding-right: 3em;
+    }
+
+    #customer_recovery .key_stat .stat_number span{
+        font-size: 9em;
+    }
+
+    #customer_recovery .key_stat .stat_separator{
+        display: block;
+        width: 1px;
+        height: 12em;
+        background: linear-gradient(to bottom, transparent, #ddd 20%, #ddd 80%, transparent);
+        flex-shrink: 0;
+    }
+
+    #customer_recovery .key_stat .stat_content{
+        align-items: flex-start;
+        text-align: left;
+        padding-left: 3em;
+        max-width: 30em;
+    }
+
+    #customer_recovery .key_stat .stat_content .quote_mark{
+        left: 0.2em;
+        top: -0.6em;
+        transform: none;
+        font-size: 10em;
+    }
+
+    #customer_recovery .key_stat .stat_source{
+        align-self: flex-start;
+        margin-top: 0.5em;
+    }
+
+    #customer_recovery .key_stat .stat_source::before{
+        left: 0;
+        transform: none;
+    }
+
+}

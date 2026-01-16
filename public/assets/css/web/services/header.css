@@ -1,7 +1,8 @@
 #services_header{
     width: 100%;
     margin: auto;
-    padding: 2vh min(2em, 3vw) 3vh;
+    padding: 1em;
+    padding-bottom: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,10 +48,116 @@
 }
 
 
+
+
+#services_header .main_image_container{
+    background-image: url("../../../images/services/services-header-image.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    max-width: 100em;
+    margin: 2em auto 0;
+    position: relative;
+    aspect-ratio: 15 / 7;
+    min-height: 40vh;
+}
+
+#services_header .main_image_container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.46);
+}
+
+
+#services_header .main_image_container .text_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    max-width: 90%;
+}
+
+
+
+#services_header .main_image_container .text_container .text{
+    font-family: "American Favorite", sans-serif;
+    font-size: min(4.5em, 10vw);
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+
+
+#services_header .intro_container{
+    width: 100%;
+    max-width: 70em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+
+
+#services_header .intro_container .text_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+
+
+#services_header .intro_container .text_container>.title_container{
+    padding-right: 1em;
+    padding-top: 0.5em;
+    background: var(--sub-cream-background);
+    border-radius: 0 1em 0 0;
+    margin-bottom: 1em;
+    height: min(4.15em, 12vw);
+    position: relative;
+}
+
+#services_header .intro_container .text_container>.title_container .title{
+    font-size: min(3em, 7.5vw);
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+#services_header .intro_container .text_container .content{
+    width: 100%;
+    line-height: 1.75em;
+    text-align: center;
+    font-size: 1.1em;
+    color: #595959;
+}
+
+
+
+
 @media screen and (min-width: 1000px){
 
     #services_header{
-        padding: 3vh 2em 4vh;
+        padding: 3vh 2em 10vh;
     }
 
     #services_header .title_container .title{

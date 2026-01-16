@@ -32,17 +32,17 @@
                         </button>
                         <div class="frame">
                             <div class="image_container container_1">
-                                <img src="{{ asset("assets/images/homepage/solution.webp") }}" alt="" role="presentation" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/bloc1-solution.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <div class="image_container container_2">
-                                <img src="{{ asset("assets/images/homepage/problem.webp") }}" alt="" role="presentation" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/bloc1-problem.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
 
                             <p class="card_text problem_text">
                                 <b>Client perdu ?</b> <br> Parti sans explication...
                             </p>
                             <p class="card_text solution_text">
-                                Quelques étapes suffisent rétablir la relation client.
+                                Quelques étapes suffisent pour rétablir la relation client.
                             </p>
                         </div>
                         <button type="button" class="switch switch_to_solution" aria-label="Afficher la solution à ce problème" aria-pressed="false">
@@ -65,10 +65,10 @@
                         </button>
                         <div class="frame">
                             <div class="image_container container_1">
-                                <img src="{{ asset("assets/images/homepage/solution.webp") }}" alt="" role="presentation" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/bloc2-solution.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <div class="image_container container_2">
-                                <img src="{{ asset("assets/images/homepage/problem.webp") }}" alt="" role="presentation" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/bloc2-problem.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <p class="card_text problem_text">
                                 <b>Client silencieux ?</b> <br> Il ne dit rien&nbsp;... mais il pense beaucoup.
@@ -97,10 +97,10 @@
                         </button>
                         <div class="frame">
                             <div class="image_container container_1">
-                                <img src="{{ asset("assets/images/homepage/solution.webp") }}" alt="" role="presentation" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/bloc3-solution.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <div class="image_container container_2">
-                                <img src="{{ asset("assets/images/homepage/problem.webp") }}" alt="" role="presentation" loading="lazy">
+                                <img src="{{ asset("assets/images/homepage/bloc3-problem.webp") }}" alt="" role="presentation" loading="lazy">
                             </div>
                             <p class="card_text problem_text">
                                 <b>Client oublié ?</b> <br> Il s'est fondu dans la masse jusqu'à disparaître.
