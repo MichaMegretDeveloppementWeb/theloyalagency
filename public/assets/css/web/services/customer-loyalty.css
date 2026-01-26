@@ -16,7 +16,7 @@
 }
 
 #customer_loyalty .section_title{
-    font-size: min(3.5em, 10vw);
+    font-size: min(5em, 11vw);
     font-weight: 200;
     letter-spacing: 0.05em;
     color: var(--main-blue);
@@ -157,11 +157,6 @@
 
     #customer_loyalty .section_header{
         padding: 12vh 2em 0;
-    }
-
-    #customer_loyalty .section_title{
-        font-size: 3em;
-        margin-bottom: 2em;
     }
 
     #customer_loyalty .key_stat{

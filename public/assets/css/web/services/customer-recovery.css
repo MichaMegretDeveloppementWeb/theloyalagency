@@ -16,7 +16,7 @@
 }
 
 #customer_recovery .section_title{
-    font-size: min(3.5em, 10vw);
+    font-size: min(5em, 11vw);
     font-weight: 200;
     letter-spacing: 0.05em;
     color: var(--main-blue);
@@ -34,7 +34,7 @@
     width: 100%;
     max-width: 75em;
     margin: 0 auto;
-    padding: 8vh 1.5em 15vh;
+    padding: 8vh 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,13 +159,9 @@
         padding: 12vh 2em 0;
     }
 
-    #customer_recovery .section_title{
-        font-size: 3em;
-    }
-
     #customer_recovery .key_stat{
         flex-direction: row;
-        padding: 10vh 3em 18vh;
+        padding: 10vh 3em;
         gap: 0;
     }
 

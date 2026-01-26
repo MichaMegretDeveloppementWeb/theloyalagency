@@ -7,13 +7,12 @@
     <div class="benefits_container">
 
         <header class="benefits_header">
-            <h3 class="title">Ce que vous <em>gagnez</em></h3>
+            <h3 class="title">Ce que vous gagnez</h3>
         </header>
 
         <div class="benefits_list">
 
             <article class="benefit_item">
-                <span class="benefit_number">01</span>
                 <div class="benefit_separator"></div>
                 <div class="benefit_content">
                     <div class="benefit_icon">
@@ -27,7 +26,6 @@
             </article>
 
             <article class="benefit_item">
-                <span class="benefit_number">02</span>
                 <div class="benefit_separator"></div>
                 <div class="benefit_content">
                     <div class="benefit_icon">
@@ -41,7 +39,6 @@
             </article>
 
             <article class="benefit_item">
-                <span class="benefit_number">03</span>
                 <div class="benefit_separator"></div>
                 <div class="benefit_content">
                     <div class="benefit_icon">
@@ -55,7 +52,6 @@
             </article>
 
             <article class="benefit_item">
-                <span class="benefit_number">04</span>
                 <div class="benefit_separator"></div>
                 <div class="benefit_content">
                     <div class="benefit_icon">
@@ -69,7 +65,6 @@
             </article>
 
             <article class="benefit_item">
-                <span class="benefit_number">05</span>
                 <div class="benefit_separator"></div>
                 <div class="benefit_content">
                     <div class="benefit_icon">
@@ -83,7 +78,6 @@
             </article>
 
             <article class="benefit_item">
-                <span class="benefit_number">06</span>
                 <div class="benefit_separator"></div>
                 <div class="benefit_content">
                     <div class="benefit_icon">

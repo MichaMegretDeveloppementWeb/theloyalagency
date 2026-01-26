@@ -23,16 +23,18 @@
 }
 
 #benefits .benefits_header .title{
-    font-family: "Literata", Georgia, serif;
-    font-size: min(2.5em, 8vw);
-    font-weight: 300;
-    color: #333;
-    letter-spacing: 0.02em;
+    font-family: "TT Nooks", sans-serif;
+    font-size: min(3em, 7.5vw);
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 #benefits .benefits_header .title em{
-    font-style: italic;
-    color: var(--main-blue);
+    font-family: "TT Nooks", sans-serif;
 }
 
 
@@ -65,22 +67,6 @@
 
 
 
-
-
-/* =============================================
-   BENEFIT NUMBER
-============================================= */
-
-#benefits .benefit_number{
-    font-family: "Literata", Georgia, serif;
-    font-size: 0.85em;
-    font-weight: 400;
-    color: var(--main-blue);
-    opacity: 0.5;
-    line-height: 1;
-    width: 2em;
-    flex-shrink: 0;
-}
 
 
 
@@ -163,11 +149,6 @@
         gap: 2em;
     }
 
-    #benefits .benefit_number{
-        font-size: 0.9em;
-        width: 2.5em;
-    }
-
     #benefits .benefit_icon{
         width: 3em;
         height: 3em;
@@ -203,10 +184,6 @@
         margin-bottom: 8vh;
     }
 
-    #benefits .benefits_header .title{
-        font-size: 2.8em;
-    }
-
     #benefits .benefits_list{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -220,10 +197,6 @@
     #benefits .benefit_item:first-child,
     #benefits .benefit_item:nth-child(2){
         border-top: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    #benefits .benefit_number{
-        font-size: 0.9em;
     }
 
     #benefits .benefit_content{

@@ -25,7 +25,7 @@
 
     <x-web.services.method class="bg-white"/>
 
-    <x-web.services.recovery-conclusion-cta class="bg-cream"/>
+    <x-web.services.recovery-conclusion-cta class="bg-white"/>
 
     <x-web.services.philosophy class="bg-cream"/>
 
@@ -33,7 +33,7 @@
 
     <x-web.services.loyalty-steps class="bg-white"/>
 
-    <x-web.services.loyalty-conclusion-cta class="bg-cream"/>
+    <x-web.services.loyalty-conclusion-cta class="bg-white"/>
 
     <x-web.services.benefits class="bg-cream"/>
 
