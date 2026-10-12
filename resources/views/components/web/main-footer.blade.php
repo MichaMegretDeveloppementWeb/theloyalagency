@@ -42,8 +42,8 @@
                     <address>
                         <p>The Loyal Agency</p>
                         <p>Route cantonale 5, 1898 St-Gingolph, Suisse</p>
-                        <p>Tél : <a href="tel:+41782606787">078 260 67 87</a></p>
-                        <p>Email : <a href="mailto:info@theloyalagency.fr">info@theloyalagency.com</a></p>
+                        <p>Tél : <a href="tel:+41782606787">+41 78 260 67 87</a></p>
+                        <p>Email : <a href="mailto:info@theloyalagency.com">info@theloyalagency.com</a></p>
                     </address>
                 </div>
 

@@ -23,7 +23,7 @@
 
             <h3 class="contact_title">Par téléphone</h3>
 
-            <a href="tel:0687934647" class="contact_content">06 87 93 46 47</a>
+            <a href="tel:+41782606787" class="contact_content">+41 78 260 67 87</a>
 
         </li>
 
@@ -35,7 +35,7 @@
 
             <h3 class="contact_title">Par email</h3>
 
-            <a href="mailto:melinda@theloyalagency.com" class="contact_content">melinda@theloyalagency.com</a>
+            <a href="mailto:info@theloyalagency.com" class="contact_content">info@theloyalagency.com</a>
 
         </li>
 
