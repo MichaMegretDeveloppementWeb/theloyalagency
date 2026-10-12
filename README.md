@@ -1,66 +1,106 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# The Loyal Agency
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Site vitrine de Melinda Marin : Laravel 12, Blade, Livewire 3 et CSS/JavaScript sur mesure.
+Les pages publiques chargent directement les fichiers versionnés dans `public/assets`.
+Aucun build Vite ni installation Node n'est nécessaire pour leur déploiement actuel.
 
-## About Laravel
+## Déploiement SSH
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Dépôt : https://github.com/MichaMegretDeveloppementWeb/theloyalagency.git
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Branche : `main`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Le script cible **PHP 8.2** et une installation existante. Il privilégie
+`/opt/alt/php82/usr/bin/php` sur Hostinger. Vérifier aussi que le domaine utilise
+PHP 8.2 dans le panneau d'hébergement : choisir le binaire CLI ne change pas PHP côté web.
 
-## Learning Laravel
+Prérequis :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Git, Bash, `flock`, Composer et les extensions PHP requises par `composer.lock`.
+- Un clone sur la branche `main`, avec `origin` pointant vers ce dépôt (HTTPS ou SSH).
+- Un répertoire de travail propre ; les modifications du serveur doivent être sauvegardées
+  et réconciliées avant le déploiement. Le script ne les écrase pas.
+- Un `.env` serveur configuré, une `APP_KEY` existante, les accès à la base et au SMTP,
+  `APP_ENV=production`, `APP_DEBUG=false` et `APP_MAINTENANCE_DRIVER=file`.
+- Les dépendances déjà installées dans `vendor`.
+- `storage`, `storage/framework`, `storage/logs` et `bootstrap/cache` accessibles
+  en écriture au compte de déploiement et à PHP.
+- La racine web du domaine dirigée vers `public/`.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Le script ne modifie ni le `.env`, ni les permissions, ni la clé d'application.
+Il ne télécharge pas d'installateur Composer.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Première récupération du script sur le serveur existant
 
-## Laravel Sponsors
+Depuis la racine du projet sur le serveur, après publication du commit sur GitHub :
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+git status --short
+git remote get-url origin
+git branch --show-current
+git pull --ff-only origin main
+bash deploy.sh
+```
 
-### Premium Partners
+Si Git signale des modifications ou une divergence, les résoudre avant de poursuivre.
+Si un `deploy.sh` non suivi a été copié manuellement sur le serveur, le sauvegarder
+hors du dépôt avant le premier `git pull`.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Il n'est pas nécessaire que le script soit déjà présent pour le récupérer :
+le premier `git pull` l'ajoute. Le site est actuellement derrière une page d'attente ;
+elle reste en place avec la commande ci-dessus.
 
-## Contributing
+### Déploiements suivants
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+bash deploy.sh
+```
 
-## Code of Conduct
+Le script vérifie les prérequis, récupère `main`, refuse un historique divergent,
+place le site en maintenance si nécessaire, puis effectue :
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. La mise à jour Git en avance rapide uniquement.
+2. La vérification des prérequis PHP du verrou Composer.
+3. `composer install --no-dev` à partir de `composer.lock`.
+4. Les migrations avec `php artisan migrate --force`.
+5. La régénération des caches Laravel.
 
-## Security Vulnerabilities
+Un site déjà ouvert est rouvert après réussite. Un site déjà en maintenance reste
+en maintenance, avec son accès de prévisualisation existant. Pour ouvrir explicitement
+le site après les vérifications :
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+bash deploy.sh --publish
+```
 
-## License
+Cette option effectue également le déploiement complet avant l'ouverture.
+En cas d'échec après le début de l'intervention, le site reste en maintenance :
+corriger la cause et relancer le script. Il affiche le commit initial pour faciliter
+le diagnostic. Aucun retour arrière automatique du code ou de la base n'est effectué ;
+prévoir une sauvegarde de la base avant les migrations.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Pour préciser les chemins des exécutables :
+
+```bash
+PHP_BIN=/opt/alt/php82/usr/bin/php COMPOSER_BIN=/usr/local/bin/composer bash deploy.sh
+```
+
+`COMPOSER_BIN` doit désigner le fichier PHP de Composer ou un `composer.phar`,
+pas une commande contenant plusieurs arguments.
+
+### Nouvelle installation
+
+Le script ne propose pas de mode `--fresh` : il ne prépare pas un hébergement vide.
+Pour un nouveau clone, configurer d'abord le `.env`, la clé d'application, la base,
+les permissions et le domaine, puis installer les dépendances avec PHP 8.2 :
+
+```bash
+/opt/alt/php82/usr/bin/php /usr/local/bin/composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction
+/opt/alt/php82/usr/bin/php artisan down
+bash deploy.sh
+```
+
+Adapter les chemins PHP/Composer à l'hébergement. Le mode maintenance empêche
+l'ouverture par le script tant que la préparation n'est pas terminée.
+Le lien `public/storage` n'est pas nécessaire aux médias actuels, tous présents
+dans `public/assets`.
