@@ -53,8 +53,7 @@ Si un `deploy.sh` non suivi a été copié manuellement sur le serveur, le sauve
 hors du dépôt avant le premier `git pull`.
 
 Il n'est pas nécessaire que le script soit déjà présent pour le récupérer :
-le premier `git pull` l'ajoute. Le site est actuellement derrière une page d'attente ;
-elle reste en place avec la commande ci-dessus.
+le premier `git pull` l'ajoute. Le déploiement remet le site en ligne à la fin.
 
 ### Déploiements suivants
 
@@ -71,15 +70,8 @@ place le site en maintenance si nécessaire, puis effectue :
 4. Les migrations avec `php artisan migrate --force`.
 5. La régénération des caches Laravel.
 
-Un site déjà ouvert est rouvert après réussite. Un site déjà en maintenance reste
-en maintenance, avec son accès de prévisualisation existant. Pour ouvrir explicitement
-le site après les vérifications :
-
-```bash
-bash deploy.sh --publish
-```
-
-Cette option effectue également le déploiement complet avant l'ouverture.
+Chaque déploiement réussi se termine par `php artisan up`, même si le site était
+déjà en maintenance avant son lancement. Aucune option supplémentaire n'est nécessaire.
 En cas d'échec après le début de l'intervention, le site reste en maintenance :
 corriger la cause et relancer le script. Il affiche le commit initial pour faciliter
 le diagnostic. Aucun retour arrière automatique du code ou de la base n'est effectué ;
@@ -106,7 +98,7 @@ les permissions et le domaine, puis installer les dépendances avec PHP 8.2 :
 bash deploy.sh
 ```
 
-Adapter les chemins PHP/Composer à l'hébergement. Le mode maintenance empêche
-l'ouverture par le script tant que la préparation n'est pas terminée.
+Adapter les chemins PHP/Composer à l'hébergement. Le script remet le site en ligne
+après la réussite de toutes les étapes.
 Le lien `public/storage` n'est pas nécessaire aux médias actuels, tous présents
 dans `public/assets`.

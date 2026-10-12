@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # The Loyal Agency - deploiement d'une installation Laravel existante.
-# Usage : bash deploy.sh [--publish]
+# Usage : bash deploy.sh
 # PHP_BIN et COMPOSER_BIN designent les executables PHP/Composer.
-# Par defaut, un site deja en maintenance reste ferme apres le deploiement.
+# Chaque deploiement reussi se termine par artisan up.
 
 set -Eeuo pipefail
 
 # Le corps est charge avant git merge, qui peut remplacer ce meme fichier.
 main() {
-    local app_dir branch repository publish=false arg
+    local app_dir branch repository arg
     local php_bin composer_bin candidate origin current_branch target before
     local was_down=false maintenance_started=false
     app_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
@@ -17,11 +17,9 @@ main() {
 
     for arg in "$@"; do
         case "$arg" in
-            --publish) publish=true ;;
             --help|-h)
-                printf '%s\n' 'Usage : bash deploy.sh [--publish]' \
-                    'Sans option : conserve le mode maintenance initial.' \
-                    '--publish : ouvre le site uniquement apres un deploiement reussi.' \
+                printf '%s\n' 'Usage : bash deploy.sh' \
+                    'Remet le site en ligne avec artisan up apres un deploiement reussi.' \
                     'Prerequis : clone existant, .env configure, PHP 8.2 et Composer.'
                 return 0
                 ;;
@@ -151,13 +149,8 @@ main() {
     "$php_bin" artisan optimize:clear
     "$php_bin" artisan optimize
 
-    if [[ "$was_down" == false || "$publish" == true ]]; then
-        "$php_bin" artisan up
-        printf '%s\n' 'Deploiement termine : site ouvert.'
-    else
-        printf '%s\n' 'Deploiement termine : page d attente conservee.' \
-            'Pour publier apres verification : bash deploy.sh --publish'
-    fi
+    "$php_bin" artisan up
+    printf '%s\n' 'Deploiement termine : site ouvert.'
     trap - ERR INT TERM
     printf 'Commit deploye : %s\n' "$(git rev-parse --short HEAD)"
 }
