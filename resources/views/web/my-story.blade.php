@@ -1,6 +1,8 @@
-@section('title') L'histoire de Melinda Marin - Experte fidélisation client | The Loyal Agency @endsection
+@section('title') À propos de Melinda Marin - Experte fidélisation client | The Loyal Agency @endsection
 
-@section('description') Découvrez le parcours inspirant de Melinda Marin, fondatrice de The Loyal Agency. Comprenez ses motivations, ses inspirations, et tout ce qui fait sa légitimité pour vous fournir les meilleurs conseil en fidélisation et relationnel client @endsection
+@section('description') Découvrez Melinda Marin, fondatrice de The Loyal Agency, son parcours et son expertise en stratégie de rétention et fidélisation client. @endsection
+
+@section('canonical-url', route('about'))
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset("assets/css/web/my-story/main.css") . "?v=".now()->toDateTimeString() }}">

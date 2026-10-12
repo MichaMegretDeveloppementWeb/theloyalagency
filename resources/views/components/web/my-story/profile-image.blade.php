@@ -4,6 +4,16 @@
 
 <div id="profile_image_container">
 
-    <img src="{{ asset("assets/images/my-story/my-story-main-image.webp") }}" alt="Photo de profil de Melinda Marin, créatrice de The loyal agency, spécialisée dans l'optimisation de la relation client">
+    <img
+        src="{{ asset('assets/images/my-story/melinda-marin-portrait-960.webp') }}"
+        srcset="{{ asset('assets/images/my-story/melinda-marin-portrait-480.webp') }} 480w,
+                {{ asset('assets/images/my-story/melinda-marin-portrait-960.webp') }} 960w"
+        sizes="(max-width: 533px) 90vw, 480px"
+        width="960"
+        height="1440"
+        loading="lazy"
+        decoding="async"
+        alt="Melinda Marin, fondatrice de The Loyal Agency et experte en fidélisation client"
+    >
 
 </div>

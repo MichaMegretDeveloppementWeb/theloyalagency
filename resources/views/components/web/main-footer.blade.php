@@ -28,7 +28,7 @@
                     <h3>Liens utiles</h3>
                     <ul>
                         <li><a href="{{ route('homepage') }}">Accueil</a></li>
-                        <li><a href="{{ route('about') }}">Mon histoire</a></li>
+                        <li><a href="{{ route('about') }}">À propos</a></li>
                         <li><a href="{{ route('services') }}">Mon offre</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
                         <li><a href="{{ route('legal.privacy-policy') }}">Politique de confidentialité</a></li>

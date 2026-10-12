@@ -6,7 +6,7 @@
 
     <div class="title_container">
         <h1 class="title">
-            Mon Histoire
+            À propos
         </h1>
     </div>
 
@@ -17,7 +17,7 @@
         /
         <div>
             <span class="item current">
-                Mon Histoire
+                À propos
             </span>
         </div>
     </nav>

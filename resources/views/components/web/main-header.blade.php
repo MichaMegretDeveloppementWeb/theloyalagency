@@ -33,7 +33,7 @@
                     <div class="sub_line"></div>
                 </li>
                 <li class="link services">
-                    <a href="{{ route('about') }}">Mon histoire</a>
+                    <a href="{{ route('about') }}">À propos</a>
                     <div class="sub_line"></div>
                 </li>
                 <li class="link services">
