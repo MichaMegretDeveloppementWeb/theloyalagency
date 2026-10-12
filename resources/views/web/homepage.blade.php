@@ -36,7 +36,9 @@
     <x-web.homepage.cta/>
 
 
+    {{-- Avis temporairement masqués en attendant les témoignages clients définitifs.
     <x-web.homepage.reviews :$reviews/>
+    --}}
 
 
     {{--<x-web.homepage.satisfied-or-refunded/>--}}
