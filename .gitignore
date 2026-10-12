@@ -6,6 +6,12 @@
 /storage/*.key
 /storage/pail
 /vendor
+
+# Fichiers propres a l'hebergement, conserves sur le serveur
+/composer.phar
+/public_html
+/public/LogoSignatureEmails.png
+
 .env
 .env.backup
 .env.production

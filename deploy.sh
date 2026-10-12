@@ -78,7 +78,11 @@ main() {
             'Exemple : PHP_BIN=/opt/alt/php82/usr/bin/php bash deploy.sh' >&2
         return 1
     fi
-    composer_bin="${COMPOSER_BIN:-$(command -v composer || true)}"
+    composer_bin="${COMPOSER_BIN:-}"
+    if [[ -z "$composer_bin" && -f "$app_dir/composer.phar" ]]; then
+        composer_bin="$app_dir/composer.phar"
+    fi
+    composer_bin="${composer_bin:-$(command -v composer || true)}"
     if [[ -z "$composer_bin" ]]; then
         for candidate in "$HOME/bin/composer" "$HOME/composer.phar" /usr/local/bin/composer; do
             if [[ -f "$candidate" ]]; then composer_bin="$candidate"; break; fi

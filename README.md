@@ -29,6 +29,12 @@ Prérequis :
 
 Le script ne modifie ni le `.env`, ni les permissions, ni la clé d'application.
 Il ne télécharge pas d'installateur Composer.
+Un `composer.phar` placé à la racine est détecté automatiquement, sauf si
+`COMPOSER_BIN` est défini. Les fichiers propres au serveur `composer.phar`,
+`public_html` et `public/LogoSignatureEmails.png` sont ignorés par Git et conservés
+sur place. Ils ne sont donc pas inclus dans les sauvegardes du dépôt.
+Le script est versionné comme exécutable ; `bash deploy.sh` et `./deploy.sh`
+peuvent être utilisés sans modifier ses permissions.
 
 ### Première récupération du script sur le serveur existant
 
