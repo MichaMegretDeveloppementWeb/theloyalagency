@@ -14,7 +14,7 @@
     </div>
 
     <!-- Calendly inline widget begin -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/michamegret-dev/30min" style="min-width:320px;height:700px;" data-resize="true"></div>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/melinda-theloyalagency/appel-decouverte" style="min-width:320px;height:700px;" data-resize="true"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
     <!-- Calendly inline widget end -->
 

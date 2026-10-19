@@ -51,7 +51,7 @@
                     <h3>Suivez-moi</h3>
                     <ul>
                         <li>
-                            <a href="#" aria-label="LinkedIn" class="logo_container">
+                            <a href="https://www.linkedin.com/in/melinda-marin-the-loyal-agency" aria-label="LinkedIn" class="logo_container">
                                 <img src="{{ asset("assets/images/commons/linkedin-logo.webp") }}" alt="Logo LinkedIn">
                             </a>
                         </li>
